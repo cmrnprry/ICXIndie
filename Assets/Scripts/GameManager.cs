@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour
     private int Time = 1000;
 
     private string ChildName = "Vick";
-    private string ParentName = "Mom";
+    public string ParentName = "Mom";
     [HideInInspector] public float childTired = 0;
 
     [Header("Preform Action?")]

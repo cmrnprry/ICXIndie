@@ -26,7 +26,7 @@ namespace AYellowpaper.SerializedCollections
         public SerializedDictionary<string, StoreActions> BabyWords;
         public RectTransform BabySpeech_Parent;
         public GameObject Baby_Bubbles;
-        private float SpawnTime = 15f;
+        private float SpawnTime = 10f;
         private StoreActions CurrentAction = StoreActions.Reach;
 
 
@@ -119,11 +119,16 @@ namespace AYellowpaper.SerializedCollections
         {
             yield return new WaitForSeconds(SpawnTime);
 
-            int rand = Random.Range(0, BabyWords.Count - 1);
-            //string text = BabyWords[rand];
+
+            string text = ChooseMessage();
+
+            if (text.Contains("@"))
+            {
+               text = text.Replace("@", GameManager.Instance.ParentName);
+            }                
 
             GameObject obj = Instantiate(Baby_Bubbles, GetRandomPositionInBounds(), Quaternion.identity, BabySpeech_Parent);
-            //obj.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = text;
+            obj.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = text;
 
             if (BabySpeech_Parent.childCount >= 12)
                 BabyMeter += 15;
@@ -133,6 +138,19 @@ namespace AYellowpaper.SerializedCollections
                 BabyMeter += 5;
 
             StartCoroutine(SpawnTimer());
+        }
+
+        private string ChooseMessage()
+        {
+            List<string> list = new List<string>();
+            foreach (KeyValuePair<string, StoreActions> entry in BabyWords)
+            {
+                if (entry.Value == CurrentAction)
+                    list.Add(entry.Key);
+            }
+
+            int rand = Random.Range(0, list.Count);
+            return list[rand];
         }
 
         public void SpawnParentMessage(string message = "")
