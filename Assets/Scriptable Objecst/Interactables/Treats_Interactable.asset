@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f205b71468fc1343a3400c4a2862633, type: 3}
+  m_Name: Treats_Interactable
+  m_EditorClassIdentifier: 
+  Time_to_do: 25
+  completed: 0
+  Need_to_Buy: 0
+  Need_to_Prepare: 0
+  preparable_info:
+  - {fileID: 11400000, guid: b0e31d29255ddbd419eee2b8f8d51e7b, type: 2}
+  - {fileID: 11400000, guid: af1433db796d532478d3d4c6477131db, type: 2}
+  InteractionDescription: He lovers to forege for treats as a wolf
+  options:
+  - name: Hide peanut butter in mat
+    value: He goes crazy for peanut butter
+    need: 03000000
+    index: 0
+  - name: Hide chocolate in mat
+    value: Might make him sick
+    need: 04000000
+    index: 1
+  - name: Don't hide anything in the mat
+    value: Less effective, but still works
+    need: ffffffff
+    index: 2
+  items:
+  - item: 4
+    bought: 1
+    prepared: 1
+  - item: 3
+    bought: 1
+    prepared: 1
+  - item: -1
+    bought: 1
+    prepared: 1
+  CompletionText: {fileID: 11400000, guid: 7220f93fd6455dd4c96c15d4638e7edf, type: 2}

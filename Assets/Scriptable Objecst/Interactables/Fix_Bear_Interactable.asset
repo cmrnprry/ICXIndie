@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f205b71468fc1343a3400c4a2862633, type: 3}
+  m_Name: Fix_Bear_Interactable
+  m_EditorClassIdentifier: 
+  Time_to_do: 15
+  completed: 0
+  Need_to_Buy: 0
+  Need_to_Prepare: 0
+  preparable_info: []
+  InteractionDescription: Sew destroyed Teddy Bear
+  options:
+  - name: Sew the destroyed bear?
+    value: One of his favourite toys.
+    need: 08000000
+    index: 0
+  - name: Put it out ripped
+    value: He's been asking me to fix it but...
+    need: 
+    index: 1
+  items:
+  - item: 8
+    bought: 1
+    prepared: 1
+  CompletionText: {fileID: 11400000, guid: 3d58a3d6ecee9374f84a32be0828b6ad, type: 2}

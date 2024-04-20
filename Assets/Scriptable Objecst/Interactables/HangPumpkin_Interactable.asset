@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f205b71468fc1343a3400c4a2862633, type: 3}
+  m_Name: HangPumpkin_Interactable
+  m_EditorClassIdentifier: 
+  Time_to_do: 15
+  completed: 0
+  Need_to_Buy: 1
+  Need_to_Prepare: 0
+  preparable_info:
+  - {fileID: 11400000, guid: 956b7346f669ff84ea1919c00074384f, type: 2}
+  InteractionDescription: You've seen them do this for animals at the Zoo
+  options: []
+  items:
+  - item: 0
+    bought: 1
+    prepared: 0
+  - item: 2
+    bought: 1
+    prepared: 0
+  CompletionText: {fileID: 11400000, guid: 2d581d04826c37a428a0800d40fd9c58, type: 2}
