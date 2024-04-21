@@ -9,7 +9,7 @@ public abstract class ObjectAbstract : MonoBehaviour
 {
     [Header("Object Info")]
     [SerializeField]
-    public InteractableObject obj;
+    public InteractableObject interacton;
 
     [SerializeField]
     protected TextMeshProUGUI Description_Text;

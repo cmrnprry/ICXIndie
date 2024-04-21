@@ -22,9 +22,9 @@ MonoBehaviour:
   options: []
   items:
   - item: 0
-    bought: 1
+    bought: 0
     prepared: 0
   - item: 2
-    bought: 1
+    bought: 0
     prepared: 0
   CompletionText: {fileID: 11400000, guid: 2d581d04826c37a428a0800d40fd9c58, type: 2}

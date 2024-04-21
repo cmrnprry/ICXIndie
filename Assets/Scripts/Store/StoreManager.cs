@@ -12,27 +12,28 @@ namespace AYellowpaper.SerializedCollections
 {
     public enum StoreActions
     {
-        Any, Jump, Cry, Climb, Hang, Reach
+        Any = -1, Jump = 1, Cry = 0, Climb = 4, Hang = 2, Reach = 3
     }
     public class StoreManager : MonoBehaviour
     {
-        private Sequence mySequence;
+        private Sequence BackgroundSequence, ChildSequence;
 
         [SerializeField]
-        public int BabyMeter = 0; //will track how annoying baby is being
+        public float BabyMeter = 0; //will track how annoying baby is being
 
         [Header("Baby")]
         [SerializedDictionary("Description", "Child Actions")]
         public SerializedDictionary<string, StoreActions> BabyWords;
         public RectTransform BabySpeech_Parent;
         public GameObject Baby_Bubbles;
-        private float SpawnTime = 10f;
+        private float SpawnTime = 5f;
         private StoreActions CurrentAction = StoreActions.Reach;
+        public List<Image> BabyImages;
 
 
         [Header("Parent")]
-        [TextAreaAttribute(1, 2)]
-        public List<string> AdultWords;
+        [SerializedDictionary("Description", "Child Actions")]
+        public SerializedDictionary<string, StoreActions>  AdultWords;
         public TextMeshProUGUI ParentTextBox;
         private float time = 3f;
 
@@ -44,6 +45,9 @@ namespace AYellowpaper.SerializedCollections
         public TextMeshProUGUI Asile_Type, Switch_Left, Switch_Right;
         public Image Produce, Grocery, Hardware;
         private List<TextMeshProUGUI> ShoppingList;
+
+        private Coroutine ParentCoroutine;
+        private Coroutine SpawnCoroutine;
 
         public static StoreManager Instance { get; private set; }
 
@@ -63,19 +67,22 @@ namespace AYellowpaper.SerializedCollections
 
         private void Start()
         {
-            mySequence = DOTween.Sequence();
+            BackgroundSequence = DOTween.Sequence();
+            ChildSequence = DOTween.Sequence();
         }
 
         private void OnDisable()
         {
             DepopulateList();
+            StopCoroutine(SpawnCoroutine);
         }
 
         private void OnEnable()
         {
+            UpdateTimer();
             ShoppingList = new List<TextMeshProUGUI>();
             PopulateList();
-            StartCoroutine(SpawnTimer());
+            SpawnCoroutine = StartCoroutine(SpawnTimer());
         }
 
         private void Update()
@@ -85,23 +92,6 @@ namespace AYellowpaper.SerializedCollections
 
             if (BabyMeter <= 0)
                 BabyMeter = 0;
-
-            if (BabyMeter >= 100)
-            {
-                SpawnTime = 0.5f;
-            }
-            else if (BabyMeter >= 75)
-            {
-                SpawnTime = 1f;
-            }
-            else if (BabyMeter >= 50)
-            {
-                SpawnTime = 2.5f;
-            }
-            else if (BabyMeter >= 15)
-            {
-                SpawnTime = 4f;
-            }
         }
 
         public Vector2 GetRandomPositionInBounds()
@@ -115,35 +105,52 @@ namespace AYellowpaper.SerializedCollections
             return new Vector2(randPosX, randPosY);
         }
 
+        private void UpdateTimer()
+        {
+            SpawnTime =  8f + ((1f - 8f) * (BabyMeter / 100));
+        }
+
         private IEnumerator SpawnTimer()
         {
             yield return new WaitForSeconds(SpawnTime);
 
+            if (BabySpeech_Parent.childCount >= 20)
+                yield return new WaitUntil(() => BabySpeech_Parent.childCount < 20);
 
-            string text = ChooseMessage();
+            string text = ChooseMessage(BabyWords);
 
             if (text.Contains("@"))
             {
-               text = text.Replace("@", GameManager.Instance.ParentName);
-            }                
+                text = text.Replace("@", GameManager.Instance.ParentName);
+            }
 
-            GameObject obj = Instantiate(Baby_Bubbles, GetRandomPositionInBounds(), Quaternion.identity, BabySpeech_Parent);
+            Vector2 pos = GetRandomPositionInBounds();
+
+            if (CurrentAction == StoreActions.Cry || CurrentAction == StoreActions.Jump || CurrentAction == StoreActions.Hang)
+            {
+                var screenPoint = Input.mousePosition;
+                screenPoint.z = 10.0f; //distance of the plane from the camera
+                pos = Camera.main.ScreenToWorldPoint(screenPoint);
+            }
+
+            GameObject obj = Instantiate(Baby_Bubbles, pos, Quaternion.identity, BabySpeech_Parent);
             obj.transform.GetChild(0).GetComponent<TextMeshProUGUI>().text = text;
 
-            if (BabySpeech_Parent.childCount >= 12)
+            if (BabySpeech_Parent.childCount >= 10)
                 BabyMeter += 15;
-            else if (BabySpeech_Parent.childCount >= 7)
-                BabyMeter += 10;
             else if (BabySpeech_Parent.childCount >= 5)
+                BabyMeter += 10;
+            else if (BabySpeech_Parent.childCount >= 3)
                 BabyMeter += 5;
 
-            StartCoroutine(SpawnTimer());
+            CheckBaby();
+            SpawnCoroutine = StartCoroutine(SpawnTimer());
         }
 
-        private string ChooseMessage()
+        private string ChooseMessage(SerializedDictionary<string, StoreActions> words)
         {
             List<string> list = new List<string>();
-            foreach (KeyValuePair<string, StoreActions> entry in BabyWords)
+            foreach (KeyValuePair<string, StoreActions> entry in words)
             {
                 if (entry.Value == CurrentAction)
                     list.Add(entry.Key);
@@ -155,14 +162,23 @@ namespace AYellowpaper.SerializedCollections
 
         public void SpawnParentMessage(string message = "")
         {
-            int rand = Random.Range(0, AdultWords.Count - 1);
-            ParentTextBox.text = (message == "") ? AdultWords[rand] : message;
+            ParentTextBox.text = (message == "") ? ChooseMessage(AdultWords) : message;
+
+            if (ParentTextBox.text.Contains("@"))
+            {
+                ParentTextBox.text = ParentTextBox.text.Replace("@", GameManager.Instance.ChildName);
+            }
 
             ParentTextBox.gameObject.transform.parent.gameObject.SetActive(true);
 
-            BabyMeter -= 10;
+            int rand = Random.Range(1, 10);
+            if (rand < 5)
+                BabyMeter -= 10;
 
-            StartCoroutine(CloseParentMessage());
+            if (ParentCoroutine != null)
+                StopCoroutine(ParentCoroutine);
+
+            ParentCoroutine = StartCoroutine(CloseParentMessage());
         }
 
         private IEnumerator CloseParentMessage()
@@ -170,6 +186,8 @@ namespace AYellowpaper.SerializedCollections
             yield return new WaitForSeconds(time);
             ParentTextBox.gameObject.transform.parent.gameObject.SetActive(false);
             time = 3f;
+
+            ParentCoroutine = null;
         }
 
         private void PopulateList()
@@ -200,29 +218,65 @@ namespace AYellowpaper.SerializedCollections
 
         public void BuyItem(BuyableItems item)
         {
-            if (BabySpeech_Parent.childCount >= 10)
-            {
-                SpawnParentMessage("I need to calm the baby first.");
-                return;
-            }
-
-            if (GameManager.Instance.HasBought(item))
-            {
-                SpawnParentMessage("I already have this.");
-                return;
-            }
-
             GameManager.Instance.BuyItem(item);
-            BabyMeter += 15;  //TODO: MAKE THIS A BETTER VALUE
 
-            if (GameManager.Instance.NumberBought() >= 4)
+            BabyMeter += (item != BuyableItems.JunkFood) ? 15 : -10;
+
+            if (GameManager.Instance.NumberBought() >= 6)
                 BabyMeter += 15;
-            else if (GameManager.Instance.NumberBought() >= 3)
+            else if (GameManager.Instance.NumberBought() >= 4)
                 BabyMeter += 10;
             else if (GameManager.Instance.NumberBought() >= 2)
                 BabyMeter += 5;
 
-            SpawnParentMessage();
+            //SpawnParentMessage();
+            CheckBaby();
+        }
+
+        private void CheckBaby()
+        {
+            //everytime we change the babymeter, update teh timer
+            UpdateTimer();
+
+            var next = StoreActions.Reach;
+            if (BabyMeter <= 25) // he is reaching an dhappy
+            {
+                next = StoreActions.Reach;
+            }
+            else if (BabyMeter <= 40) //he is jumping and trying to get your attention
+            {
+                next = StoreActions.Jump;
+            }
+            else if (BabyMeter <= 60) // he is trying to help by climbing
+            {
+                next = StoreActions.Climb;
+            }
+            else if (BabyMeter <= 75) // he is pouting
+            {
+                next = StoreActions.Hang;
+            }
+            else //he is throwing a tantrum
+            {
+                next = StoreActions.Cry;
+            }
+
+            if (next != CurrentAction)
+                SwitchChildImage(next);
+        }
+
+        private void SwitchChildImage(StoreActions next)
+        {
+            ChildSequence = DOTween.Sequence();
+            var Current = BabyImages[(int)CurrentAction];
+            var Next = BabyImages[(int)next];
+
+            Next.gameObject.SetActive(true);
+            ChildSequence.Append(Current.DOFade(0, 0.85f)).Insert(0.1f, Next.DOFade(1, 0.85f)).OnComplete(() =>
+            {
+                Current.gameObject.SetActive(false);
+                CurrentAction = next;
+                ChildSequence = null;
+            });
         }
 
         //produce = 0
@@ -230,7 +284,7 @@ namespace AYellowpaper.SerializedCollections
         //other = 2
         public void SwitchAisleTo(bool IsLeft)
         {
-            if (mySequence != null && mySequence.active)
+            if (BackgroundSequence != null && BackgroundSequence.active)
                 return;
 
             Image nextImage = Produce;
@@ -271,8 +325,8 @@ namespace AYellowpaper.SerializedCollections
             current.gameObject.transform.SetAsFirstSibling();
 
             //Set up sequence
-            mySequence = DOTween.Sequence();
-            mySequence.Append(current.DOFade(0, 1.25f));
+            BackgroundSequence = DOTween.Sequence();
+            BackgroundSequence.Append(current.DOFade(0, 1.25f));
             next.gameObject.SetActive(true);
             current.raycastTarget = false;
             next.raycastTarget = false;
@@ -281,16 +335,16 @@ namespace AYellowpaper.SerializedCollections
             {
                 child.GetChild(0).gameObject.SetActive(false);
                 child.gameObject.GetComponent<Image>().raycastTarget = false;
-                mySequence.Insert(0f, child.gameObject.GetComponent<Image>().DOFade(0, 1.25f));
+                BackgroundSequence.Insert(0f, child.gameObject.GetComponent<Image>().DOFade(0, 1.25f));
             }
 
             foreach (Transform child in next.gameObject.transform)
             {
                 list.Add(child);
-                mySequence.Insert(0.1f, child.gameObject.GetComponent<Image>().DOFade(1, 1.25f));
+                BackgroundSequence.Insert(0.1f, child.gameObject.GetComponent<Image>().DOFade(1, 1.25f));
             }
 
-            mySequence.Insert(0.1f, next.DOFade(1, 1.25f)).OnComplete(() =>
+            BackgroundSequence.Insert(0.1f, next.DOFade(1, 1.25f)).OnComplete(() =>
             {
                 //turn off current (last) image
                 current.gameObject.SetActive(false);
@@ -302,7 +356,7 @@ namespace AYellowpaper.SerializedCollections
                     child.gameObject.GetComponent<Image>().raycastTarget = true;
                 });
 
-                mySequence = null;
+                BackgroundSequence = null;
             });
         }
 

@@ -34,12 +34,12 @@ MonoBehaviour:
     need: ffffffff
     index: 2
   items:
-  - item: 4
-    bought: 1
-    prepared: 1
   - item: 3
-    bought: 1
-    prepared: 1
+    bought: 0
+    prepared: 0
+  - item: 4
+    bought: 0
+    prepared: 0
   - item: -1
     bought: 1
     prepared: 1

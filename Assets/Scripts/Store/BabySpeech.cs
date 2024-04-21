@@ -34,9 +34,10 @@ namespace AYellowpaper.SerializedCollections
             if (corners >= 3)
             {
                 Destroy(this.gameObject);
-                StoreManager.Instance.BabyMeter -= 15;
+                StoreManager.Instance.BabyMeter -= 5;
             }
-
+            else
+                coroutine = StartCoroutine(ForceTimer());
 
             s.Kill();
             s = null;
@@ -104,6 +105,8 @@ namespace AYellowpaper.SerializedCollections
             {
                 float scale = Random.Range(1.5f, 2);
                 t = transform.DOScale(new Vector3(scale, scale, 0), time);
+
+                rand = 5;
             }
 
 
@@ -124,7 +127,7 @@ namespace AYellowpaper.SerializedCollections
                     t = transform.DORotate(new Vector3(0, 0, rotateZ), time);
                     break;
                 default:
-                    Debug.LogError("Could not perform Movement");
+                    Debug.LogWarning("Could not perform Movement");
                     break;
             }
 

@@ -6,15 +6,16 @@ using TMPro;
 
 public enum BuyableItems
 {
-    Pumpkin, Watermelon, Meat, Peanutbutter, Chocolate, Rope, Wood, Nails, Sewing, Banana, Null = -1
+    //junkfood is to appease baby at the store
+    Pumpkin, Watermelon, Meat, Peanutbutter, Chocolate, Rope, Wood, Nails, Sewing, Banana, Null = -1, JunkFood = -2
 }
 
 public class GameManager : MonoBehaviour
 {
     private int Time = 1000;
 
-    private string ChildName = "Vick";
-    public string ParentName = "Mom";
+    [HideInInspector] public string ChildName = "Vick";
+    [HideInInspector] public string ParentName = "Mom";
     [HideInInspector] public float childTired = 0;
 
     [Header("Preform Action?")]
@@ -23,6 +24,7 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI Reminder_Text;
     private ObjectAbstract Current_Interaction = null;
+    private PrepareableObjects Current_Preperation = null;
     [HideInInspector] public int Index = -1;
 
     [Header("Total Time")]
@@ -41,8 +43,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private Animator Transition;
 
-    private List<BuyableItems> BoughtItems = new List<BuyableItems>();
-    public List<InteractionObject> Objects = new List<InteractionObject>();
+    private List<BuyableItems> BoughtItems = new List<BuyableItems>(); // list of everythign we have bought
+    public List<InteractionObject> InteractionObjectList = new List<InteractionObject>(); //list of all the objects we can interact with at home
     private InteractableObject CurrentAction;
 
     public static bool FedChocolate;
@@ -66,6 +68,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         TotalTime_Text.text = $"Time Left: {Time.ToString()}";
+        Cursor.lockState = CursorLockMode.Confined;
     }
 
     public void SetParent(string change)
@@ -91,7 +94,7 @@ public class GameManager : MonoBehaviour
         bool Bought = false;
         if (BoughtItems != null)
         {
-            BoughtItems.ForEach(bought => { if (item.Contains(bought.ToString())) { Bought =  true; } });
+            BoughtItems.ForEach(bought => { if (item.Contains(bought.ToString())) { Bought = true; } });
         }
 
         return Bought;
@@ -108,11 +111,14 @@ public class GameManager : MonoBehaviour
     public void BuyItem(BuyableItems item)
     {
         BoughtItems.Add(item);
-        foreach (var obj in Objects)
-        {
-            obj.SetBuy(item);
-        }
 
+        if (item == BuyableItems.JunkFood || item == BuyableItems.Null || item == BuyableItems.Banana)
+            return;
+
+        foreach (var interaction in InteractionObjectList)
+        {
+            interaction.SetBuy(item);
+        }
     }
 
     public int NumberBought()
@@ -147,18 +153,19 @@ public class GameManager : MonoBehaviour
 
     public void TimeReminder(InteractableObject obj, PrepareObject io, int index = 0)
     {
-        var time = obj.preparable_info[index].Time_to_do;
+        var time = io.prepare.Time_to_do;
 
         CurrentAction = obj;
         ReminderParent.SetActive(true);
         Reminder_Text.text = $"This action will cost {time.ToString()}. You have {Time.ToString()} minutes left.\n Continue?";
         Current_Interaction = io;
+        Current_Preperation = io.prepare;
         Index = index;
     }
 
     public void PauseInteraction(bool on)
     {
-        foreach (var item in Objects)
+        foreach (var item in InteractionObjectList)
         {
             item.RaycastDetection(on);
 
@@ -175,11 +182,16 @@ public class GameManager : MonoBehaviour
 
         if (Current_Interaction.IsPreperation())
         {
-            ActionsPreformed.ActionPerformed(CurrentAction.preparable_info[Index]);
-            RemoveTime(CurrentAction.preparable_info[Index].Time_to_do);
+            //ActionsPreformed.ActionPerformed(CurrentAction.preparable_info[Index]);
+            foreach (var interaction in InteractionObjectList)
+            {
+                interaction.SetPrepare(Current_Preperation);
+            }
+            RemoveTime(Current_Preperation.Time_to_do);
         }
         else
         {
+            
             CheckDoubles();
             ActionsPreformed.ActionPerformed(CurrentAction, Index);
             RemoveTime(CurrentAction.Time_to_do);
@@ -196,9 +208,9 @@ public class GameManager : MonoBehaviour
 
     private void CheckDoubles()
     {
-        foreach (var item in Objects)
+        foreach (var item in InteractionObjectList)
         {
-            if (CurrentAction.name == item.obj.name && item.GetComponent<Image>().color.a < 1)
+            if (CurrentAction.name == item.interacton.name && item.GetComponent<Image>().color.a < 1)
             {
                 item.SetInteraction();
                 break;

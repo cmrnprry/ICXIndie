@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Prepare_ChocolateTreats
   m_EditorClassIdentifier: 
   Time_to_do: 30
+  preparedItem: 04000000
   completed: 0
   PreparationDescription: Make chocolate treats

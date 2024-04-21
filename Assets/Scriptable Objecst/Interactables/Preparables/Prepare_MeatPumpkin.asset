@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Prepare_MeatPumpkin
   m_EditorClassIdentifier: 
   Time_to_do: 60
+  preparedItem: 0000000002000000
   completed: 0
   PreparationDescription: Carve pumpkin and stuff with meat

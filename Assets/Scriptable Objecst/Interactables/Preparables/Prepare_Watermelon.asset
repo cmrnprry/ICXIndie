@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Prepare_Watermelon
   m_EditorClassIdentifier: 
   Time_to_do: 15
+  preparedItem: 01000000
   completed: 0
   PreparationDescription: Slice watermelon so the baby doesn't choke

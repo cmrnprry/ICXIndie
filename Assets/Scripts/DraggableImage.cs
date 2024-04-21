@@ -6,9 +6,6 @@ using UnityEngine.EventSystems;
 
 public class DraggableImage : MonoBehaviour, IDragHandler
 {
-    [SerializeField] private RectTransform rectTransform;
-    [SerializeField] private Canvas canvas;
-    private Vector3 offset;
 
     public void OnDrag(PointerEventData eventData)
     { 

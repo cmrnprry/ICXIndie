@@ -6,7 +6,7 @@ using TMPro;
 
 public class PrepareObject : ObjectAbstract
 {
-    private PrepareableObjects prepare;
+    public PrepareableObjects prepare;
     //public GameObject isMessy;
     public int index = 0;
     public List<GameObject> Objects; //Objects to turn on/off
@@ -17,8 +17,6 @@ public class PrepareObject : ObjectAbstract
 
     private void Start()
     {
-        prepare = obj.preparable_info[index];
-
         Description_Text.text = prepare.PreparationDescription;
         Description = Description_Text.gameObject.transform.parent.gameObject;
 
@@ -33,7 +31,7 @@ public class PrepareObject : ObjectAbstract
         if (prepare.completed || ChildObject.isMess)
             return;
 
-        GameManager.Instance.TimeReminder(obj, this, index);
+        GameManager.Instance.TimeReminder(interacton, this, index);
         base.OnClick();
     }
 
@@ -68,15 +66,6 @@ public class PrepareObject : ObjectAbstract
     {
         //set prepare to true
         prepare.completed = true;
-        
-        if (obj.name.ToLower().Contains("treats"))
-        {
-            var temp = obj.items[index];
-            temp.prepared = true;
-            obj.items[index] = temp;
-        }
-        else
-            obj.Need_to_Prepare = false;
 
         if (prepare.name.Contains("Watermelon"))
             OnWaterMelonPrepared.Invoke();

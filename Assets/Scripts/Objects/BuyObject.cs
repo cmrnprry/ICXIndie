@@ -19,16 +19,28 @@ namespace AYellowpaper.SerializedCollections
             next_color = Color.yellow;
             next_color.a = 1;
             mySequence = DOTween.Sequence();
-            //outline.gameObject.transform.parent.gameObject.GetComponent<Image>().alphaHitTestMinimumThreshold = 0.25f;
         }
 
         public override void OnClick()
         {
+            if (StoreManager.Instance.BabySpeech_Parent.childCount >= 10)
+            {
+                StoreManager.Instance.SpawnParentMessage("I need to calm the baby first.");
+                return;
+            }
+
+            if (GameManager.Instance.HasBought(Item))
+            {
+                StoreManager.Instance.SpawnParentMessage("I already have this.");
+                return;
+            }
+
+            mySequence = DOTween.Sequence();
             outline.gameObject.SetActive(false);
             mySequence.Append(Object.GetComponent<Image>().DOFade(0, .85f)).Insert(0.1f, BoughtItem.DOFade(1, .85f)).OnComplete(() =>
             {
-            //turn off current (last) image
-            Object.gameObject.SetActive(false);
+                //turn off current (last) image
+                Object.gameObject.SetActive(false);
                 StoreManager.Instance.BuyItem(Item);
             });
         }

@@ -15,13 +15,13 @@ MonoBehaviour:
   Time_to_do: 10
   completed: 0
   Need_to_Buy: 1
-  Need_to_Prepare: 0
+  Need_to_Prepare: 1
   preparable_info:
   - {fileID: 11400000, guid: 1c0a32208e2b5cd4eb80510f903399b1, type: 2}
   InteractionDescription: Wolves seem to like them as a treat.
   options: []
   items:
   - item: 1
-    bought: 1
+    bought: 0
     prepared: 0
   CompletionText: {fileID: 11400000, guid: b6a41df9583fb824eb6ab0a80e04732e, type: 2}

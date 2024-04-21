@@ -10,7 +10,7 @@ public class NightInteraction : ObjectAbstract
     {
         if (Description_Text != null)
         {
-            Description_Text.text = obj.InteractionDescription;
+            Description_Text.text = interacton.InteractionDescription;
             Description = Description_Text.gameObject.transform.parent.gameObject;
         }
         outline = GetComponent<Image>();

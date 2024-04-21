@@ -32,10 +32,10 @@ public class InteractionObject : ObjectAbstract
     {
         if (Description_Text != null)
         {
-            Description_Text.text = obj.InteractionDescription;
+            Description_Text.text = interacton.InteractionDescription;
             Description = Description_Text.gameObject.transform.parent.gameObject;
         }
-        
+
         outline = GetComponent<Image>();
         next_color = Color.yellow;
         next_color.a = 1;
@@ -53,21 +53,21 @@ public class InteractionObject : ObjectAbstract
     /// </summary>
     public override void OnClick()
     {
-        if (Option_Parent.gameObject.activeSelf || obj.completed)
+        if (Option_Parent.gameObject.activeSelf || interacton.completed)
             return;
 
         //if this action requaires you to buy/prepare something
-        if (obj.Need_to_Buy || obj.Need_to_Prepare && !obj.name.Contains("Treats"))
+        if (interacton.Need_to_Buy || interacton.Need_to_Prepare && !interacton.name.Contains("Treats"))
         {
-            bool buy = obj.Need_to_Buy;
-            bool prepare = obj.Need_to_Prepare;
+            bool buy = interacton.Need_to_Buy;
+            bool prepare = interacton.Need_to_Prepare;
 
-            foreach (var item in obj.items)
+            foreach (var item in interacton.items)
             {
-                if (obj.Need_to_Buy && item.bought)
+                if (interacton.Need_to_Buy && item.bought)
                     buy = false;
 
-                if (obj.Need_to_Prepare && item.prepared)
+                if (interacton.Need_to_Prepare && item.prepared)
                     prepare = false;
             }
 
@@ -88,13 +88,13 @@ public class InteractionObject : ObjectAbstract
             }
         }
 
-        if (obj.options != null && obj.options.Count > 0)
+        if (interacton.options != null && interacton.options.Count > 0)
         {
             DisplayOptions();
         }
         else
         {
-            GameManager.Instance.TimeReminder(obj, this);
+            GameManager.Instance.TimeReminder(interacton, this);
         }
 
         base.OnClick();
@@ -105,7 +105,7 @@ public class InteractionObject : ObjectAbstract
     /// </summary>
     public override void OnHoverEnter()
     {
-        if (obj.completed)
+        if (interacton.completed)
             return;
 
         base.OnHoverEnter();
@@ -116,7 +116,7 @@ public class InteractionObject : ObjectAbstract
     /// </summary>
     public override void OnHoverExit()
     {
-        if (Option_Parent.gameObject.activeSelf || obj.completed || !outline.raycastTarget)
+        if (Option_Parent.gameObject.activeSelf || interacton.completed || !outline.raycastTarget)
             return;
 
         foreach (Transform child in Option_Parent)
@@ -130,7 +130,7 @@ public class InteractionObject : ObjectAbstract
 
     public override void SetInteraction()
     {
-        if (obj.name.Contains("Bear"))
+        if (interacton.name.Contains("Bear"))
         {
             if (GameManager.Instance.Index == 0)
             {
@@ -142,7 +142,7 @@ public class InteractionObject : ObjectAbstract
                 outline.sprite = added;
                 outline.color = Color.white;
             }
-            obj.completed = true;
+            interacton.completed = true;
             Description.gameObject.SetActive(false);
 
             return;
@@ -160,7 +160,7 @@ public class InteractionObject : ObjectAbstract
             this.transform.parent.gameObject.GetComponent<Image>().enabled = false;
         }
 
-        obj.completed = true;
+        interacton.completed = true;
         Description.gameObject.SetActive(false);
     }
 
@@ -173,7 +173,7 @@ public class InteractionObject : ObjectAbstract
         Description.gameObject.SetActive(true);
         bool can_preform = true;
 
-        foreach (Option option in obj.options)
+        foreach (Option option in interacton.options)
         {
             can_preform = true;
 
@@ -209,7 +209,7 @@ public class InteractionObject : ObjectAbstract
 
     private void ClickOptionPossible(int index)
     {
-        GameManager.Instance.TimeReminder(obj, this, index);
+        GameManager.Instance.TimeReminder(interacton, this, index);
         Option_Parent.gameObject.SetActive(false);
     }
 
@@ -238,7 +238,7 @@ public class InteractionObject : ObjectAbstract
     {
         bool isPossible = false;
 
-        foreach (var i in obj.items)
+        foreach (var i in interacton.items)
         {
             if (i.item.ToString() == item.ToString())
             {
@@ -258,7 +258,7 @@ public class InteractionObject : ObjectAbstract
     {
         bool isPossible = false;
 
-        foreach (var i in obj.items)
+        foreach (var i in interacton.items)
         {
             if (i.item.ToString() == item.ToString())
             {
@@ -273,23 +273,46 @@ public class InteractionObject : ObjectAbstract
     {
         int index = 0;
         bool all_bought = true;
-        for (index = 0; index < obj.items.Count; index++)
+        if (interacton.items.Count <= 0)
+            return;
+
+        for (index = 0; index < interacton.items.Count; index++)
         {
-            if (obj.items[index].item.ToString() == item.ToString())
+            if (interacton.items[index].item.ToString() == item.ToString())
             {
-                var ii = obj.items[index];
+                var ii = interacton.items[index];
                 ii.bought = true;
-                obj.items[index] = ii;
+                interacton.items[index] = ii;
+
+                //ONLY treats have individual buying needs, others need you to buy everything
+                if (interacton.name.Contains("Treats"))
+                    ItemsBought[index].SetActive(true);
             }
 
-            if (!obj.items[index].bought)
+            if (!interacton.items[index].bought)
                 all_bought = false;
         }
 
-        //ONLY treats have individual buying needs, others need you to buy everything
-        if (obj.name.Contains("Treats"))
-            ItemsBought[index].SetActive(true);
-        else if (all_bought)
+
+        if (all_bought)
             ItemsBought[0].SetActive(true);
     }
+
+    public void SetPrepare(PrepareableObjects prepared)
+    {
+        int index = 0;
+        if (interacton.items.Count <= 0)
+            return;
+
+        for (index = 0; index < interacton.items.Count; index++)
+        {
+            if (prepared.preparedItem.Contains(interacton.items[index].item))
+            {
+                var ii = interacton.items[index];
+                ii.prepared = true;
+                interacton.items[index] = ii;
+            }
+        }
+    }
+
 }

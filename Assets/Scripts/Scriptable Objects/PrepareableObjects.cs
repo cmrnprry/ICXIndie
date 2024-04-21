@@ -6,6 +6,7 @@ using UnityEngine;
 public class PrepareableObjects : ScriptableObject
 {
     public int Time_to_do;
+    public List<BuyableItems> preparedItem;
     public bool completed;
 
     [TextAreaAttribute(1, 2)]

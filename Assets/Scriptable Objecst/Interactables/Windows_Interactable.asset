@@ -21,9 +21,9 @@ MonoBehaviour:
   options: []
   items:
   - item: 7
-    bought: 1
+    bought: 0
     prepared: 1
   - item: 6
-    bought: 1
+    bought: 0
     prepared: 1
   CompletionText: {fileID: 11400000, guid: d89614f564f54f14a9a799936fe93bd2, type: 2}

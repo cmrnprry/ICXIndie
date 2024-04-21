@@ -22,8 +22,8 @@ MonoBehaviour:
   items:
   - item: 7
     bought: 0
-    prepared: 0
-  - item: 8
+    prepared: 1
+  - item: 6
     bought: 0
-    prepared: 0
+    prepared: 1
   CompletionText: {fileID: 11400000, guid: 33837aafd8816df4a9d37c27bb717bb1, type: 2}
