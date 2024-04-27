@@ -48,6 +48,7 @@ namespace AYellowpaper.SerializedCollections
 
         private Coroutine ParentCoroutine;
         private Coroutine SpawnCoroutine;
+        private Coroutine TantrumCoroutine;
 
         public static StoreManager Instance { get; private set; }
 
@@ -258,10 +259,31 @@ namespace AYellowpaper.SerializedCollections
             else //he is throwing a tantrum
             {
                 next = StoreActions.Cry;
+                TantrumCoroutine = StartCoroutine(Tantrum(1.5f));
+            }
+
+            if (TantrumCoroutine != null && CurrentAction != StoreActions.Cry && next != StoreActions.Cry)
+            {
+                StopCoroutine(TantrumCoroutine);
+                TantrumCoroutine = null;
             }
 
             if (next != CurrentAction)
                 SwitchChildImage(next);
+        }
+
+        private IEnumerator Tantrum(float wait = 1.5f)
+        {
+            yield return new WaitForSeconds(wait);
+
+            if (CurrentAction != StoreActions.Cry)
+            {
+                TantrumCoroutine = null;
+                yield break;
+            }
+
+            SpawnParentMessage();
+            GameManager.Instance.RemoveTime(5);
         }
 
         private void SwitchChildImage(StoreActions next)
@@ -271,10 +293,11 @@ namespace AYellowpaper.SerializedCollections
             var Next = BabyImages[(int)next];
 
             Next.gameObject.SetActive(true);
+            CurrentAction = next;
+
             ChildSequence.Append(Current.DOFade(0, 0.85f)).Insert(0.1f, Next.DOFade(1, 0.85f)).OnComplete(() =>
             {
                 Current.gameObject.SetActive(false);
-                CurrentAction = next;
                 ChildSequence = null;
             });
         }
@@ -366,6 +389,28 @@ namespace AYellowpaper.SerializedCollections
             {
                 Destroy(child.gameObject);
             }
+        }
+    
+        public void ReturnHome()
+        {
+            int Time = 30;
+            if (CurrentAction == StoreActions.Cry)
+                Time += 15;
+            else if (CurrentAction == StoreActions.Hang)
+                Time += 5;
+
+            GameManager.Instance.RemoveTime(Time);
+        }
+
+        public void UpdateHomeMessage(TextMeshProUGUI box)
+        {
+            string text = "It will take 30 minutes to get home.";
+            if (CurrentAction == StoreActions.Cry)
+                text = "It will take 45 minutes to get home. I should calm him down first.";
+            else if (CurrentAction == StoreActions.Hang)
+                text = "It will take 35 minutes to get home when he's pouting like this.";
+
+            box.text = text;
         }
     }
 }
