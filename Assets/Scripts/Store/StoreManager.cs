@@ -76,10 +76,15 @@ namespace AYellowpaper.SerializedCollections
         private void OnDisable()
         {
             DepopulateList();
-            StopCoroutine(ParentCoroutine);
-            StopCoroutine(SpawnCoroutine);
-            StopCoroutine(TantrumCoroutine);
-            StopCoroutine(BabyMessageCoroutine);
+
+            if (ParentCoroutine != null)
+                StopCoroutine(ParentCoroutine);
+            if (SpawnCoroutine != null)
+                StopCoroutine(SpawnCoroutine);
+            if (TantrumCoroutine != null)
+                StopCoroutine(TantrumCoroutine);
+            if (BabyMessageCoroutine != null)
+                StopCoroutine(BabyMessageCoroutine);
         }
 
         private void OnEnable()
