@@ -33,7 +33,7 @@ namespace AYellowpaper.SerializedCollections
 
         [Header("Parent")]
         [SerializedDictionary("Description", "Child Actions")]
-        public SerializedDictionary<string, StoreActions>  AdultWords;
+        public SerializedDictionary<string, StoreActions> AdultWords;
         public TextMeshProUGUI ParentTextBox;
         private float time = 3f;
 
@@ -49,6 +49,7 @@ namespace AYellowpaper.SerializedCollections
         private Coroutine ParentCoroutine;
         private Coroutine SpawnCoroutine;
         private Coroutine TantrumCoroutine;
+        private Coroutine BabyMessageCoroutine;
 
         public static StoreManager Instance { get; private set; }
 
@@ -75,15 +76,21 @@ namespace AYellowpaper.SerializedCollections
         private void OnDisable()
         {
             DepopulateList();
+            StopCoroutine(ParentCoroutine);
             StopCoroutine(SpawnCoroutine);
+            StopCoroutine(TantrumCoroutine);
+            StopCoroutine(BabyMessageCoroutine);
         }
 
         private void OnEnable()
         {
-            UpdateTimer();
             ShoppingList = new List<TextMeshProUGUI>();
             PopulateList();
+
+            SpawnTime = 1.5f;
             SpawnCoroutine = StartCoroutine(SpawnTimer());
+            BabyMessageCoroutine = StartCoroutine(IncreaseBaby());
+            UpdateTimer();
         }
 
         private void Update()
@@ -108,15 +115,15 @@ namespace AYellowpaper.SerializedCollections
 
         private void UpdateTimer()
         {
-            SpawnTime =  8f + ((1f - 8f) * (BabyMeter / 100));
+            SpawnTime = 6.5f + ((1f - 6.5f) * (BabyMeter / 100));
         }
 
         private IEnumerator SpawnTimer()
         {
             yield return new WaitForSeconds(SpawnTime);
 
-            if (BabySpeech_Parent.childCount >= 20)
-                yield return new WaitUntil(() => BabySpeech_Parent.childCount < 20);
+            if (BabySpeech_Parent.childCount >= 15)
+                yield return new WaitUntil(() => BabySpeech_Parent.childCount < 15);
 
             string text = ChooseMessage(BabyWords);
 
@@ -224,11 +231,11 @@ namespace AYellowpaper.SerializedCollections
             BabyMeter += (item != BuyableItems.JunkFood) ? 15 : -10;
 
             if (GameManager.Instance.NumberBought() >= 6)
-                BabyMeter += 15;
+                BabyMeter += 7;
             else if (GameManager.Instance.NumberBought() >= 4)
-                BabyMeter += 10;
-            else if (GameManager.Instance.NumberBought() >= 2)
                 BabyMeter += 5;
+            else if (GameManager.Instance.NumberBought() >= 2)
+                BabyMeter += 3;
 
             //SpawnParentMessage();
             CheckBaby();
@@ -262,7 +269,7 @@ namespace AYellowpaper.SerializedCollections
                 TantrumCoroutine = StartCoroutine(Tantrum(1.5f));
             }
 
-            if (TantrumCoroutine != null && CurrentAction != StoreActions.Cry && next != StoreActions.Cry)
+            if (TantrumCoroutine != null && CurrentAction == StoreActions.Cry && next == StoreActions.Cry)
             {
                 StopCoroutine(TantrumCoroutine);
                 TantrumCoroutine = null;
@@ -272,7 +279,7 @@ namespace AYellowpaper.SerializedCollections
                 SwitchChildImage(next);
         }
 
-        private IEnumerator Tantrum(float wait = 1.5f)
+        private IEnumerator Tantrum(float wait = 2.5f)
         {
             yield return new WaitForSeconds(wait);
 
@@ -284,6 +291,35 @@ namespace AYellowpaper.SerializedCollections
 
             SpawnParentMessage();
             GameManager.Instance.RemoveTime(5);
+
+            TantrumCoroutine = StartCoroutine(Tantrum());
+        }
+
+        private IEnumerator IncreaseBaby(float wait = 2.5f)
+        {
+            yield return new WaitForSeconds(wait);
+
+            var removeTiem = false;
+            if (BabySpeech_Parent.childCount >= 10)
+            {
+                BabyMeter += 7;
+                removeTiem = true;
+            }
+            else if (BabySpeech_Parent.childCount >= 5)
+            {
+                BabyMeter += 3;
+                removeTiem = true;
+            }
+            else if (BabySpeech_Parent.childCount >= 3)
+            {
+                BabyMeter += 1;
+                removeTiem = true;
+            }
+
+            if (removeTiem)
+                GameManager.Instance.RemoveTime(3);
+
+            BabyMessageCoroutine = StartCoroutine(IncreaseBaby());
         }
 
         private void SwitchChildImage(StoreActions next)
@@ -390,7 +426,7 @@ namespace AYellowpaper.SerializedCollections
                 Destroy(child.gameObject);
             }
         }
-    
+
         public void ReturnHome()
         {
             int Time = 30;

@@ -67,8 +67,19 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        TotalTime_Text.text = $"Time Left: {Time.ToString()}";
-        Cursor.lockState = CursorLockMode.Confined;
+        TotalTime_Text.text = $"Time Left: {Time}";
+    }
+
+    //Checks to see what is bought or completed on start
+    private void CheckSave()
+    {
+        foreach (var item in InteractionObjectList)
+        {
+            if (item.interacton.completed)
+            {
+                item.SetInteraction();
+            }
+        }
     }
 
     public void SetParent(string change)
@@ -190,9 +201,8 @@ public class GameManager : MonoBehaviour
             RemoveTime(Current_Preperation.Time_to_do);
         }
         else
-        {
-            
-            CheckDoubles();
+        {            
+            CheckDoubles(CurrentAction);
             ActionsPreformed.ActionPerformed(CurrentAction, Index);
             RemoveTime(CurrentAction.Time_to_do);
         }
@@ -206,11 +216,11 @@ public class GameManager : MonoBehaviour
     }
 
 
-    private void CheckDoubles()
+    private void CheckDoubles(InteractableObject action)
     {
         foreach (var item in InteractionObjectList)
         {
-            if (CurrentAction.name == item.interacton.name && item.GetComponent<Image>().color.a < 1)
+            if (action.name == item.interacton.name && item.GetComponent<Image>().color.a < 1)
             {
                 item.SetInteraction();
                 break;
@@ -461,6 +471,8 @@ public class GameManager : MonoBehaviour
         EndText.alpha = 0;
         EndText.text = end;
         EndText.ForceMeshUpdate();
+
+        yield return new WaitForFixedUpdate();
         TMP_TextInfo textInfo = EndText.textInfo;
 
         while (index < array.Length)

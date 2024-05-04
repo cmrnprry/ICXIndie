@@ -14,6 +14,7 @@ namespace AYellowpaper.SerializedCollections
         private Sequence s = null;
         private Coroutine coroutine = null;
         private int CyclesAlive = 0;
+        private bool canMove = true;
 
         // Start is called before the first frame update
         void Start()
@@ -23,22 +24,23 @@ namespace AYellowpaper.SerializedCollections
 
             coroutine = StartCoroutine(ForceTimer());
         }
-
         public override void OnPointerUp(PointerEventData pointerEventData)
         {
             base.OnPointerUp(pointerEventData);
 
             int corners = CheckIfOnScreen();
-            if (corners >= 2)
+            if (corners <= 2)
                 StoreManager.Instance.SpawnParentMessage();
-            if (corners >= 3)
+
+            if (corners <= 1)
             {
-                Destroy(this.gameObject);
                 StoreManager.Instance.BabyMeter -= 5;
+                Destroy(this.gameObject);
             }
             else
                 coroutine = StartCoroutine(ForceTimer());
 
+            canMove = true;
             s.Kill();
             s = null;
             AddForce();
@@ -49,6 +51,7 @@ namespace AYellowpaper.SerializedCollections
             base.OnPointerDown(pointerEventData);
 
             StopCoroutine(coroutine);
+            canMove = false;
             t.Kill();
             t = null;
             var time = 1.5f;
@@ -72,16 +75,34 @@ namespace AYellowpaper.SerializedCollections
 
         int CheckIfOnScreen()
         {
-            Vector3[] objectCorners = new Vector3[4];
-            rect_transform.GetWorldCorners(objectCorners);
-            int isObjectOverflowing = 0;
+            Vector3[] Corners = new Vector3[4];
+            rect_transform.GetWorldCorners(Corners);
+            int isObjectOverflowing = 4;
 
-            foreach (Vector3 corner in objectCorners)
+            Corners[0].z = 10.0f;
+            Corners[1].z = 10.0f;
+            Corners[2].z = 10.0f;
+            Corners[3].z = 10.0f;
+
+
+            var one = Camera.main.WorldToScreenPoint(Corners[0]);
+            var two = Camera.main.WorldToScreenPoint(Corners[1]);
+            var three = Camera.main.WorldToScreenPoint(Corners[2]);
+            var four = Camera.main.WorldToScreenPoint(Corners[3]);
+
+            if (Corners != null)
             {
-                if (!screenRect.Contains(corner))
-                {
-                    isObjectOverflowing += 1;
-                }
+                if (one.x <= 0 || one.x >= Screen.width || one.y <= 0 || one.y >= Screen.height)
+                    isObjectOverflowing -= 1;
+
+                if (two.x <= 0 || two.x >= Screen.width || two.y <= 0 || two.y >= Screen.height)
+                    isObjectOverflowing -= 1;
+
+                if (three.x <= 0 || three.x >= Screen.width || three.y <= 0 || three.y >= Screen.height)
+                    isObjectOverflowing -= 1;
+
+                if (four.x <= 0 || four.x >= Screen.width || four.y <= 0 || four.y >= Screen.height)
+                    isObjectOverflowing -= 1;
             }
 
             return isObjectOverflowing;
@@ -91,8 +112,13 @@ namespace AYellowpaper.SerializedCollections
         {
             float time = Random.Range(0.5f, 2.5f);
             yield return new WaitForSeconds(time);
-            AddForce();
-            CyclesAlive += 1;
+
+            if (canMove)
+            {
+                AddForce();
+                CyclesAlive += 1;
+            }
+
         }
 
         private void AddForce()
@@ -100,6 +126,9 @@ namespace AYellowpaper.SerializedCollections
             int rand = Random.Range(0, 4);
             float time = Random.Range(0.25f, 1.5f);
             var ToPosition = StoreManager.Instance.GetRandomPositionInBounds();
+
+            if (!canMove)
+                rand = 3;
 
             if (CyclesAlive == 4)
             {
@@ -133,7 +162,8 @@ namespace AYellowpaper.SerializedCollections
 
             t.OnComplete(() =>
             {
-                coroutine = StartCoroutine(ForceTimer());
+                if (canMove)
+                    coroutine = StartCoroutine(ForceTimer());
             });
         }
 

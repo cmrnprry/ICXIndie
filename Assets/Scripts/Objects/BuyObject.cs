@@ -29,7 +29,7 @@ namespace AYellowpaper.SerializedCollections
                 return;
             }
 
-            if (GameManager.Instance.HasBought(Item))
+            if (Item != BuyableItems.JunkFood && GameManager.Instance.HasBought(Item))
             {
                 StoreManager.Instance.SpawnParentMessage("I already have this.");
                 return;

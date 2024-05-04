@@ -8,7 +8,7 @@ public class NightInteraction : ObjectAbstract
     // Start is called before the first frame update
     void Start()
     {
-        if (Description_Text != null)
+        if (Description_Text != null && interacton != null)
         {
             Description_Text.text = interacton.InteractionDescription;
             Description = Description_Text.gameObject.transform.parent.gameObject;

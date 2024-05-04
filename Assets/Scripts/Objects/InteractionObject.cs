@@ -46,6 +46,9 @@ public class InteractionObject : ObjectAbstract
         if (useAlphaOverImage)
             outline.alphaHitTestMinimumThreshold = 0.8f;
 
+        if (interacton.completed)
+            SetInteraction();
+
     }
 
     /// <summary>
