@@ -5158,17 +5158,6 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
---- !u!114 &463347779 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5381791009397723874, guid: 63a56fb2e2b1d1d47ab0371518b253b4, type: 3}
-  m_PrefabInstance: {fileID: 1248286742}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &465482799
 GameObject:
   m_ObjectHideFlags: 0
@@ -10959,11 +10948,11 @@ MonoBehaviour:
         - m_Target: {fileID: 843057110}
           m_TargetAssemblyTypeName: NightInteraction, Assembly-CSharp
           m_MethodName: OnClick
-          m_Mode: 1
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 2
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -10980,8 +10969,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9aa3f969b0b38bc4e8398c00d0216f38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interacton: {fileID: 0}
+  interacton: {fileID: 11400000, guid: eebaea3425a957742ba25ad6ed287970, type: 2}
   Description_Text: {fileID: 604165557}
+  Parent_Text: {fileID: 0}
 --- !u!114 &843057111
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11151,17 +11141,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &844640200 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 5381791009397723874, guid: 63a56fb2e2b1d1d47ab0371518b253b4, type: 3}
-  m_PrefabInstance: {fileID: 1358599366}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &846084414
 GameObject:
   m_ObjectHideFlags: 0
@@ -11982,11 +11961,11 @@ MonoBehaviour:
         - m_Target: {fileID: 877894176}
           m_TargetAssemblyTypeName: NightInteraction, Assembly-CSharp
           m_MethodName: OnClick
-          m_Mode: 1
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 3
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -12003,8 +11982,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9aa3f969b0b38bc4e8398c00d0216f38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interacton: {fileID: 0}
+  interacton: {fileID: 11400000, guid: 71323bd3c09be4100bdc0b9ee2039a6e, type: 2}
   Description_Text: {fileID: 504914076}
+  Parent_Text: {fileID: 0}
 --- !u!114 &877894177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12043,6 +12023,124 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 877894173}
   m_CullTransparentMesh: 1
+--- !u!1001 &878975252
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1461079111}
+    m_Modifications:
+    - target: {fileID: 1715710857632783654, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
+      propertyPath: m_Name
+      value: Description Panel
+      objectReference: {fileID: 0}
+    - target: {fileID: 1715710857632783654, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
+      propertyPath: m_text
+      value: Oh no he bit me!
+      objectReference: {fileID: 0}
+    - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
+      propertyPath: m_fontSize
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
+      propertyPath: m_fontSizeMax
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803291690563349963, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803291690563349963, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803291690563349963, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803291690563349963, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803291690563349963, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803291690563349963, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803291690563349963, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803291690563349963, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: -600
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803291690563349963, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 700
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803291690563349963, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803291690563349963, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803291690563349963, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803291690563349963, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803291690563349963, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803291690563349963, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803291690563349963, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803291690563349963, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803291690563349963, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 460
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803291690563349963, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803291690563349963, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4803291690563349963, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
+--- !u!224 &878975253 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 4803291690563349963, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
+  m_PrefabInstance: {fileID: 878975252}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &884893197
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15665,7 +15763,7 @@ PrefabInstance:
     - target: {fileID: 9173186010274982796, guid: 63a56fb2e2b1d1d47ab0371518b253b4, type: 3}
       propertyPath: Description_Text
       value: 
-      objectReference: {fileID: 463347779}
+      objectReference: {fileID: 0}
     - target: {fileID: 9173186010274982796, guid: 63a56fb2e2b1d1d47ab0371518b253b4, type: 3}
       propertyPath: useAlphaOverImage
       value: 0
@@ -15839,6 +15937,18 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 1634235638}
+          m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+          m_MethodName: SetGloves
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
           m_CallState: 2
 --- !u!222 &1248286748
 CanvasRenderer:
@@ -17791,7 +17901,7 @@ PrefabInstance:
     - target: {fileID: 9173186010274982796, guid: 63a56fb2e2b1d1d47ab0371518b253b4, type: 3}
       propertyPath: Description_Text
       value: 
-      objectReference: {fileID: 844640200}
+      objectReference: {fileID: 0}
     - target: {fileID: 9173186010274982796, guid: 63a56fb2e2b1d1d47ab0371518b253b4, type: 3}
       propertyPath: useImageOverSprite
       value: 1
@@ -17972,6 +18082,18 @@ MonoBehaviour:
         - m_Target: {fileID: 1248286744}
           m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
           m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
+        - m_Target: {fileID: 1634235638}
+          m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+          m_MethodName: SetGloves
           m_Mode: 6
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -19728,6 +19850,7 @@ RectTransform:
   - {fileID: 183371813}
   - {fileID: 958030560}
   - {fileID: 171804662}
+  - {fileID: 878975253}
   m_Father: {fileID: 1739798186}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -22278,6 +22401,7 @@ MonoBehaviour:
   ChildName: Vick
   ParentName: Mom
   childTired: 0
+  wearingGloves: 0
   ReminderParent: {fileID: 1965413639}
   Reminder_Text: {fileID: 1930554467}
   Index: -1
@@ -24122,7 +24246,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1739798186
 RectTransform:
   m_ObjectHideFlags: 0
@@ -26774,11 +26898,11 @@ MonoBehaviour:
         - m_Target: {fileID: 1894513598}
           m_TargetAssemblyTypeName: NightInteraction, Assembly-CSharp
           m_MethodName: OnClick
-          m_Mode: 1
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 1
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -26795,8 +26919,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9aa3f969b0b38bc4e8398c00d0216f38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interacton: {fileID: 0}
+  interacton: {fileID: 11400000, guid: eebaea3425a957742ba25ad6ed287970, type: 2}
   Description_Text: {fileID: 737487000}
+  Parent_Text: {fileID: 0}
 --- !u!114 &1894513599
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32981,11 +33106,11 @@ MonoBehaviour:
         - m_Target: {fileID: 9200467815425666678}
           m_TargetAssemblyTypeName: NightInteraction, Assembly-CSharp
           m_MethodName: OnClick
-          m_Mode: 1
+          m_Mode: 3
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 4
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
@@ -33002,8 +33127,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9aa3f969b0b38bc4e8398c00d0216f38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  interacton: {fileID: 0}
+  interacton: {fileID: 11400000, guid: 469f55834d2ff7e479a551943d56b47d, type: 2}
   Description_Text: {fileID: 5381791010146127063}
+  Parent_Text: {fileID: 0}
 --- !u!114 &9200467815726815578
 MonoBehaviour:
   m_ObjectHideFlags: 0

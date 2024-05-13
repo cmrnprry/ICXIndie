@@ -2,9 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class NightInteraction : ObjectAbstract
 {
+    public TextMeshProUGUI Parent_Text;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,23 +20,37 @@ public class NightInteraction : ObjectAbstract
         next_color.a = 1;
     }
 
-    public override void OnClick()
+    public void OnClick(int flag)
     {
-        var parent = GameObject.Find("NightYard").transform;
+        bool wiggle = (GameManager.Instance.childTired >= 10) ? true : false;
+        string text = "";
 
-        if (!parent.GetChild(0).gameObject.activeSelf)
+        if (GameManager.Instance.wearingGloves)
         {
-            //player gets bit and baby escapes
-            Description_Text.text = "Ouch! He bit me!";
+            text = $"Sonuvah- {GameManager.Instance.ChildName}, that <i>hurt</i>!";
+
+            if (!wiggle || flag == 4)
+                text += "But least I got him.";
+            else
+                text += $"{GameManager.Instance.ChildName}- Hey! Stop- wiggling!";
+
         }
         else
         {
-            //if tired = baby captured
-            if (GameManager.Instance.childTired >= 10)
-                Description_Text.text = "Got him.";
+            if (wiggle || flag == 4)
+                text += "Got him!";
             else
-                Description_Text.text = "He wiggled out of my grip and escaped!";
-            //if not == baby escaped
+                text += $"{GameManager.Instance.ChildName}- Hey! Stop- wiggling!";
+
         }
+
+
+
+
+        Parent_Text.gameObject.transform.parent.gameObject.SetActive(true);
+        Parent_Text.text = text;
+
+
+        StartCoroutine(GameManager.Instance.LastBit(flag));
     }
 }

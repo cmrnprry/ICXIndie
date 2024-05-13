@@ -17,6 +17,7 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public string ChildName = "Vick";
     [HideInInspector] public string ParentName = "Mom";
     [HideInInspector] public float childTired = 0;
+    [HideInInspector] public bool wearingGloves = false;
 
     [Header("Preform Action?")]
     [SerializeField]
@@ -201,7 +202,7 @@ public class GameManager : MonoBehaviour
             RemoveTime(Current_Preperation.Time_to_do);
         }
         else
-        {            
+        {
             CheckDoubles(CurrentAction);
             ActionsPreformed.ActionPerformed(CurrentAction, Index);
             RemoveTime(CurrentAction.Time_to_do);
@@ -583,4 +584,73 @@ public class GameManager : MonoBehaviour
         ChildName = name;
     }
 
+    public void SetGloves(bool value)
+    {
+        wearingGloves = value;
+    }
+
+    public IEnumerator LastBit(int flag)
+    {
+        yield return new WaitForSecondsRealtime(3.5f);
+        Transition.gameObject.SetActive(true);
+        yield return new WaitForSecondsRealtime(0.5f);
+        NightTime.SetActive(false);
+        end = "";
+        EndGame.SetActive(true);
+        bool wiggle = (childTired >= 10) ? true : false;
+
+
+        if (wearingGloves)
+        {
+            EndingText($"{ChildName} snaps at you, but the thick gloves prevent him from breaking the skin.");
+            EndingText("You tell him a firm \"No!\", and he puts his ears backs, pouting.");
+
+            if (!wiggle || flag == 4)
+            {
+                EndingText($"You manage to wrangle {ChildName} back into the house, dispite his attempts to wiggle away.");
+                EndingText("He gives in quickly, and settles into your arms, quickly falling asleep.");
+                EndingText($"You double check all the doors and windows, and wait out the rest of the nigth with {ChildName}.");
+            }
+            else
+            {
+                EndingText($"You try to wrangle {ChildName} back into the house, but he fights you every step of the way.");
+                EndingText("He whines and pants, continously nipping at your hands and arms, trying to break free.");
+                EndingText("He suddenly stops, looks at you and snaps at your face.");
+                EndingText("You stumble back, losing your grip and he leaps from your arms, and over the fence.");
+                EndingText("You say a string of curses before running after him.");
+            }
+        }
+        else
+        {
+            EndingText($"{ChildName} snaps at you, sinking his teeth into your hand.");
+
+
+            if (!wiggle || flag == 4)
+            {
+                EndingText($"You supress a curse, but keep your grip on {ChildName}.");
+                EndingText("He continues to try wriggle out of your grip, but you give him one sharp glare and he settles down.");
+                EndingText($"You carry {ChildName} back into the house, check the windows and doors, and place him down next to you while you clean your wound.");
+                EndingText($"{ChildName}, sits next to you, ears back, and purposely doesn't look at you. He eventually noses your arm, and licks your hand in an apology.");
+                EndingText("You pat his head with your bandaged hand, and the two of you spend the rest of the night curled up on the couch together.");
+            }
+            else
+            {
+                EndingText($"You supress a curse, but lose your grip on {ChildName}.");
+                EndingText("He takes the chance, leaps out of your grasp and over the fence.");
+                EndingText($"You rush into the house, hastily wrap your wound, and run after him.");
+            }
+        }
+
+        Debug.Log("here 3");
+
+
+        yield return new WaitForSecondsRealtime(0.5f);
+
+        Debug.Log("here 4");
+        Transition.SetTrigger("Toggle");
+
+        yield return new WaitForSecondsRealtime(0.5f);
+        Debug.Log("here 5");
+        StartCoroutine(ShowEndText());
+    }
 }
