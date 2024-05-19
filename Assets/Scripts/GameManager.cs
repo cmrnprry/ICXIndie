@@ -7,7 +7,7 @@ using TMPro;
 public enum BuyableItems
 {
     //junkfood is to appease baby at the store
-    Pumpkin, Watermelon, Meat, Peanutbutter, Chocolate, Rope, Wood, Nails, Sewing, Banana, Null = -1, JunkFood = -2
+    Pumpkin, Watermelon, Meat, Peanutbutter, Chocolate, Rope, Wood, Nails, Needle, Thread, Banana, Null = -1, JunkFood = -2, Default = -3
 }
 
 public class GameManager : MonoBehaviour
@@ -597,7 +597,7 @@ public class GameManager : MonoBehaviour
         NightTime.SetActive(false);
         end = "";
         EndGame.SetActive(true);
-        bool wiggle = (childTired >= 10) ? true : false;
+        bool wiggle = (childTired >= 10) ? false : true;
 
 
         if (wearingGloves)
@@ -641,16 +641,9 @@ public class GameManager : MonoBehaviour
             }
         }
 
-        Debug.Log("here 3");
 
-
-        yield return new WaitForSecondsRealtime(0.5f);
-
-        Debug.Log("here 4");
+        StartCoroutine(ShowEndText());
         Transition.SetTrigger("Toggle");
 
-        yield return new WaitForSecondsRealtime(0.5f);
-        Debug.Log("here 5");
-        StartCoroutine(ShowEndText());
     }
 }

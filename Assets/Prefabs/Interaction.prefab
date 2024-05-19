@@ -192,7 +192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 646784bce4953d9469aa973b72463288, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  obj: {fileID: 0}
+  interacton: {fileID: 0}
   Description_Text: {fileID: 5381791009397723874}
   ItemsBought: []
   added: {fileID: 0}
@@ -322,7 +322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.70980394, g: 0.7176471, b: 0.6784314, a: 1}
+  m_Color: {r: 0.8509804, g: 0.8509804, b: 0.8509804, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -412,7 +412,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_fontSize
-      value: 22.05
+      value: 27.9
       objectReference: {fileID: 0}
     - target: {fileID: 4803291690563349963, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_Pivot.x

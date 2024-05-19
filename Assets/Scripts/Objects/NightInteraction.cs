@@ -25,27 +25,24 @@ public class NightInteraction : ObjectAbstract
         bool wiggle = (GameManager.Instance.childTired >= 10) ? true : false;
         string text = "";
 
-        if (GameManager.Instance.wearingGloves)
+        if (!GameManager.Instance.wearingGloves)
         {
             text = $"Sonuvah- {GameManager.Instance.ChildName}, that <i>hurt</i>!";
 
             if (!wiggle || flag == 4)
-                text += "But least I got him.";
+                text += " Ack, but least I got him.";
             else
-                text += $"{GameManager.Instance.ChildName}- Hey! Stop- wiggling!";
+                text += $" {GameManager.Instance.ChildName}- Hey! Stop- wiggling!";
 
         }
         else
         {
-            if (wiggle || flag == 4)
+            if (!wiggle || flag == 4)
                 text += "Got him!";
             else
                 text += $"{GameManager.Instance.ChildName}- Hey! Stop- wiggling!";
 
         }
-
-
-
 
         Parent_Text.gameObject.transform.parent.gameObject.SetActive(true);
         Parent_Text.text = text;

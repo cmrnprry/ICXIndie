@@ -6,11 +6,41 @@ using UnityEngine.EventSystems;
 
 public class DraggableImage : MonoBehaviour, IDragHandler
 {
-
+    public bool LockMovement = false;
+    public Vector3 PositiveIgnore, NegativeIgnore;
     public void OnDrag(PointerEventData eventData)
-    { 
-        var screenPoint = Input.mousePosition;
+    {
+        Vector3 currentPostion = transform.position;
+        Vector3 screenPoint = Input.mousePosition;
         screenPoint.z = 10.0f; //distance of the plane from the camera
-        transform.position = Camera.main.ScreenToWorldPoint(screenPoint);
+
+        Vector3 LockedPosition = Camera.main.ScreenToWorldPoint(screenPoint);
+        if (LockMovement)
+        {
+            LockedPosition = new Vector3(LockedPosition.x, transform.position.y, LockedPosition.z);
+        }
+
+        Debug.Log("Locked: " + LockedPosition);
+        Debug.Log("Current: " + currentPostion);
+
+        if (!LockMovement && LockedPosition.y >= PositiveIgnore.y)
+        {
+            LockedPosition = new Vector3(LockedPosition.x, currentPostion.y, LockedPosition.z);
+        }
+        if (!LockMovement && LockedPosition.y <= NegativeIgnore.y)
+        {
+            LockedPosition = new Vector3(LockedPosition.x, currentPostion.y, LockedPosition.z);
+        }
+        if (LockedPosition.x >= PositiveIgnore.x)
+        {
+            LockedPosition = new Vector3(currentPostion.x, LockedPosition.y, LockedPosition.z);
+        }
+        if (LockedPosition.x <= NegativeIgnore.x)
+        {
+            LockedPosition = new Vector3(currentPostion.x, LockedPosition.y, LockedPosition.z);
+        }
+
+        transform.position = LockedPosition;
+
     }
 }
