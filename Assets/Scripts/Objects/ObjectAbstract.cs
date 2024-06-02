@@ -15,6 +15,9 @@ public abstract class ObjectAbstract : MonoBehaviour
     protected TextMeshProUGUI Description_Text;
     protected GameObject Description;
 
+    [Header("Audio")]
+    public AudioSource source;
+
     protected Image outline;
     protected Color next_color;
     protected string OptionChoice;
@@ -50,6 +53,7 @@ public abstract class ObjectAbstract : MonoBehaviour
     public virtual void SetInteraction()
     {
         Description.gameObject.SetActive(false);
+        source.Play();
     }
 
     //////////////////////////////////////// HELPERS ////////////////////////////////////////////

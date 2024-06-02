@@ -8,7 +8,7 @@ public class DraggableImage : MonoBehaviour, IDragHandler
 {
     public bool LockMovement = false;
     public Vector3 PositiveIgnore, NegativeIgnore;
-    public void OnDrag(PointerEventData eventData)
+    public virtual void OnDrag(PointerEventData eventData)
     {
         Vector3 currentPostion = transform.position;
         Vector3 screenPoint = Input.mousePosition;
@@ -20,14 +20,11 @@ public class DraggableImage : MonoBehaviour, IDragHandler
             LockedPosition = new Vector3(LockedPosition.x, transform.position.y, LockedPosition.z);
         }
 
-        Debug.Log("Locked: " + LockedPosition);
-        Debug.Log("Current: " + currentPostion);
-
-        if (!LockMovement && LockedPosition.y >= PositiveIgnore.y)
+        if (LockedPosition.y >= PositiveIgnore.y)
         {
             LockedPosition = new Vector3(LockedPosition.x, currentPostion.y, LockedPosition.z);
         }
-        if (!LockMovement && LockedPosition.y <= NegativeIgnore.y)
+        if (LockedPosition.y <= NegativeIgnore.y)
         {
             LockedPosition = new Vector3(LockedPosition.x, currentPostion.y, LockedPosition.z);
         }

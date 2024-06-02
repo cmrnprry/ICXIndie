@@ -16,6 +16,8 @@ public class ChildObject : ObjectAbstract
     public List<Image> Mess;
     public List<Image> Eat;
 
+    public AudioClip blender, watermelon;
+
     private void OnEnable()
     {
         PrepareObject.OnPrepareItem += ChildBoredMeter;
@@ -86,9 +88,12 @@ public class ChildObject : ObjectAbstract
         //check what mess to make
         isMess = true;
         var mess = 1;
+        source.clip = watermelon;
+
         if (!WatermelonPrepared)
         {
             mess = 0;
+            source.clip = blender;
         }
 
         //Set temp outline
@@ -97,6 +102,7 @@ public class ChildObject : ObjectAbstract
         if (mess == 1)
             Mess[2].gameObject.SetActive(false);
 
+        source.PlayDelayed(0.85f);
         FadeChildImage(temp_outline);
     }
 

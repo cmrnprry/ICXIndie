@@ -42,8 +42,10 @@ namespace AYellowpaper.SerializedCollections
         public Transform ListParent;
 
         [Header("Switch Asiles")]
+        public List<Sprite> Icons;
         public TextMeshProUGUI Asile_Type, Switch_Left, Switch_Right;
-        public Image Produce, Grocery, Hardware;
+        public Image Asile_Left, Asile_Right;
+        public Image Produce_BG, Frozen_BG, Repair_BG;
         private List<TextMeshProUGUI> ShoppingList;
 
         private Coroutine ParentCoroutine;
@@ -79,10 +81,13 @@ namespace AYellowpaper.SerializedCollections
 
             if (ParentCoroutine != null)
                 StopCoroutine(ParentCoroutine);
+
             if (SpawnCoroutine != null)
                 StopCoroutine(SpawnCoroutine);
+
             if (TantrumCoroutine != null)
                 StopCoroutine(TantrumCoroutine);
+
             if (BabyMessageCoroutine != null)
                 StopCoroutine(BabyMessageCoroutine);
         }
@@ -211,22 +216,23 @@ namespace AYellowpaper.SerializedCollections
                 var button = child.gameObject.GetComponent<Button>();
 
                 ShoppingList.Add(text);
-                button.onClick.AddListener(delegate
-                {
-                    StrikeItem(text);
-                });
 
                 if (GameManager.Instance.HasBought(text.text))
                     text.fontStyle = FontStyles.Strikethrough;
             }
         }
 
-        private void StrikeItem(TextMeshProUGUI text)
+        public void StrikeItem(TextMeshProUGUI text)
         {
             if (text.fontStyle == FontStyles.Strikethrough)
                 text.fontStyle = FontStyles.Normal;
             else
                 text.fontStyle = FontStyles.Strikethrough;
+        }
+
+        public void StrikeItem(Image text)
+        {
+            text.gameObject.SetActive(!text.gameObject.activeSelf);
         }
 
         public void BuyItem(BuyableItems item)
@@ -351,28 +357,36 @@ namespace AYellowpaper.SerializedCollections
             if (BackgroundSequence != null && BackgroundSequence.active)
                 return;
 
-            Image nextImage = Produce;
+            Image nextImage = Produce_BG;
             string current = Asile_Type.text;
+
             Asile_Type.text = (IsLeft) ? Switch_Left.text : Switch_Right.text;
-            nextImage = (Asile_Type.text == "Grocery Aisle") ? Grocery : ((Asile_Type.text == "Hardware Aisle") ? Hardware : Produce);
+            nextImage = (Asile_Type.text == "Frozen Aisle") ? Frozen_BG : ((Asile_Type.text == "Repairs Aisle") ? Repair_BG : Produce_BG);
+            int index = (current == "Frozen Aisle") ? 1 : ((current == "Repairs Aisle") ? 2 : 0);
 
             if (!IsLeft)
+            {
                 Switch_Right.text = current;
+                Asile_Right.sprite = Icons[index];
+            }
             else
+            {
                 Switch_Left.text = current;
+                Asile_Left.sprite = Icons[index];
+            }
 
             switch (current)
             {
-                case "Grocery Aisle":
-                    SwitchBackgrounds(Grocery, nextImage);
-                    break;
-
-                case "Hardware Aisle":
-                    SwitchBackgrounds(Hardware, nextImage);
-                    break;
-
                 case "Produce Aisle":
-                    SwitchBackgrounds(Produce, nextImage);
+                    SwitchBackgrounds(Produce_BG, nextImage);
+                    break;
+
+                case "Frozen Aisle":
+                    SwitchBackgrounds(Frozen_BG, nextImage);
+                    break;
+
+                case "Repairs Aisle":
+                    SwitchBackgrounds(Repair_BG, nextImage);
                     break;
 
                 default:
@@ -384,6 +398,9 @@ namespace AYellowpaper.SerializedCollections
         private void SwitchBackgrounds(Image current, Image next)
         {
             var list = new List<Transform>();
+            //Asile_Left
+            //Asile_Right
+            //Produce_BG, Frozen_BG, Repair_BG
 
             //force current image to be on top of the next
             current.gameObject.transform.SetAsFirstSibling();
@@ -426,10 +443,10 @@ namespace AYellowpaper.SerializedCollections
 
         private void DepopulateList()
         {
-            foreach (Transform child in ListParent)
-            {
-                Destroy(child.gameObject);
-            }
+            //foreach (Transform child in ListParent)
+            //{
+            //    Destroy(child.gameObject);
+            //}
         }
 
         public void ReturnHome()

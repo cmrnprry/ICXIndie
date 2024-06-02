@@ -2,18 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 using DG.Tweening;
 
 public class MainMenuScript : MonoBehaviour
 {
     [Header("Loading Screen")]
     public GameObject mm;
+    public GameObject pause;
     public GameObject game;
 
     [Header("Transition Screen")]
     public Image TransitionScreen;
 
-    public Dropdown drop;
+    public TMP_Dropdown drop;
 
     public void ShowScreen(GameObject Menu)
     {

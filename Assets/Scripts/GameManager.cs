@@ -44,6 +44,15 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private Animator Transition;
 
+    [Header("Audio")]
+    public AudioSource NightSource;
+    public List<AudioClip> nightclips;
+    public AudioSource BGMSource;
+    public AudioClip BGM, BGM_Scary;
+
+    [Header("Ending")]
+    public List<Sprite> Ending_Sprites;
+
     private List<BuyableItems> BoughtItems = new List<BuyableItems>(); // list of everythign we have bought
     public List<InteractionObject> InteractionObjectList = new List<InteractionObject>(); //list of all the objects we can interact with at home
     private InteractableObject CurrentAction;
@@ -69,6 +78,7 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         TotalTime_Text.text = $"Time Left: {Time}";
+        StartCoroutine(FinishAudioIntro());
     }
 
     //Checks to see what is bought or completed on start
@@ -216,7 +226,6 @@ public class GameManager : MonoBehaviour
         Current_Interaction = null;
     }
 
-
     private void CheckDoubles(InteractableObject action)
     {
         foreach (var item in InteractionObjectList)
@@ -229,6 +238,34 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    ///////////////////////////////////////////////////////// AUDIO /////////////////////////////////////////////////////////
+
+    private IEnumerator FinishAudioIntro()
+    {
+        // Cache the WaitForSeconds call, this is done because
+        // like any other class WaitForSeconds causes garbage because it is heap allocated.
+        // Therefore we cache it to simply reuse the same class instance.
+        var waitForClipRemainingTime = new WaitForSeconds(GetClipRemainingTime(BGMSource));
+        yield return waitForClipRemainingTime;
+        BGMSource.clip = BGM;
+        BGMSource.Play();
+        BGMSource.loop = true;
+    }
+
+    private bool IsReversePitch(AudioSource source)
+    {
+        return source.pitch < 0f;
+    }
+
+    private float GetClipRemainingTime(AudioSource source)
+    {
+        // Calculate the remainingTime of the given AudioSource,
+        // if we keep playing with the same pitch.
+        float remainingTime = (source.clip.length - source.time) / source.pitch;
+        return IsReversePitch(source) ?
+            (source.clip.length + remainingTime) :
+            remainingTime;
+    }
 
     ///////////////////////////////////////////////////////// SECOND PHASE /////////////////////////////////////////////////////////
     private Coroutine routine = null;
@@ -524,13 +561,19 @@ public class GameManager : MonoBehaviour
             if (action.intObject.name.Contains("Patch"))
             {
                 patch = true;
+                NightSource.clip = nightclips[0];
             }
             else if (action.intObject.name.Contains("Traps"))
             {
                 if (action.option.need.Count > 0)
+                {
                     trap = 1;
+                    NightSource.clip = nightclips[1];
+                }
                 else
+                {
                     trap = -1;
+                }
             }
             else if (action.intObject.name.Contains("Tire"))
             {
@@ -558,6 +601,7 @@ public class GameManager : MonoBehaviour
             if (trap <= 0 && patch)
                 objTire.GetChild(1).gameObject.SetActive(true);
 
+            NightSource.clip = nightclips[2];
         }
         else
         {
@@ -565,6 +609,8 @@ public class GameManager : MonoBehaviour
 
             if (trap <= 0)
                 objTire.GetChild(3).gameObject.SetActive(true);
+
+            NightSource.clip = nightclips[3];
         }
 
         var objPatch = GameObject.Find("Patch").transform;
