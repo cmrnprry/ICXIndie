@@ -20,6 +20,7 @@ namespace AYellowpaper.SerializedCollections
 
         [SerializeField]
         public float BabyMeter = 0; //will track how annoying baby is being
+        [HideInInspector] public bool InStore = false;
 
         [Header("Baby")]
         [SerializedDictionary("Description", "Child Actions")]
@@ -29,6 +30,10 @@ namespace AYellowpaper.SerializedCollections
         private float SpawnTime = 5f;
         private StoreActions CurrentAction = StoreActions.Reach;
         public List<Image> BabyImages;
+
+        [Header("Audio")]
+        public List<AudioClip> BabyCrying;
+        public AudioSource Store;
 
 
         [Header("Parent")]
@@ -94,6 +99,7 @@ namespace AYellowpaper.SerializedCollections
 
         private void OnEnable()
         {
+            InStore = true;
             ShoppingList = new List<TextMeshProUGUI>();
             PopulateList();
 
@@ -125,7 +131,7 @@ namespace AYellowpaper.SerializedCollections
 
         private void UpdateTimer()
         {
-            SpawnTime = 6.5f + ((1f - 6.5f) * (BabyMeter / 100));
+            SpawnTime = 6.5f + ((2f - 6.5f) * (BabyMeter / 100));
         }
 
         private IEnumerator SpawnTimer()
@@ -217,8 +223,8 @@ namespace AYellowpaper.SerializedCollections
 
                 ShoppingList.Add(text);
 
-                if (GameManager.Instance.HasBought(text.text))
-                    text.fontStyle = FontStyles.Strikethrough;
+                //if (GameManager.Instance.HasBought(text.text))
+                //    text.fontStyle = FontStyles.Strikethrough;
             }
         }
 
@@ -261,23 +267,54 @@ namespace AYellowpaper.SerializedCollections
             if (BabyMeter <= 25) // he is reaching an dhappy
             {
                 next = StoreActions.Reach;
+
+                if (GameManager.Instance.GetTime() > 100)
+                {
+                    GameManager.Instance.AdjustVolume(1f, 5, 0);
+                    GameManager.Instance.AdjustVolume(0, 5, 1);
+                }
+
             }
             else if (BabyMeter <= 40) //he is jumping and trying to get your attention
             {
                 next = StoreActions.Jump;
+
+                if (GameManager.Instance.GetTime() > 100)
+                {
+                    GameManager.Instance.AdjustVolume(1f, 5, 0);
+                    GameManager.Instance.AdjustVolume(0, 5, 1);
+                }
             }
             else if (BabyMeter <= 60) // he is trying to help by climbing
             {
                 next = StoreActions.Climb;
+
+                if (GameManager.Instance.GetTime() > 100)
+                {
+                    GameManager.Instance.AdjustVolume(1f, 5, 0);
+                    GameManager.Instance.AdjustVolume(.5f, 5, 1);
+                }
             }
             else if (BabyMeter <= 75) // he is pouting
             {
                 next = StoreActions.Hang;
+
+                if (GameManager.Instance.GetTime() > 100)
+                {
+                    GameManager.Instance.AdjustVolume(.45f, 5, 0);
+                    GameManager.Instance.AdjustVolume(.65f, 5, 1);
+                }
             }
             else //he is throwing a tantrum
             {
                 next = StoreActions.Cry;
                 TantrumCoroutine = StartCoroutine(Tantrum(1.5f));
+
+                if (GameManager.Instance.GetTime() > 100)
+                {
+                    GameManager.Instance.AdjustVolume(.25f, 5, 0);
+                    GameManager.Instance.AdjustVolume(1, 5, 1);
+                }
             }
 
             if (TantrumCoroutine != null && CurrentAction == StoreActions.Cry && next == StoreActions.Cry)
@@ -302,6 +339,10 @@ namespace AYellowpaper.SerializedCollections
 
             SpawnParentMessage();
             GameManager.Instance.RemoveTime(5);
+            if (Store.clip == BabyCrying[0])
+                Store.clip = BabyCrying[1];
+            else
+                Store.clip = BabyCrying[0];
 
             TantrumCoroutine = StartCoroutine(Tantrum());
         }
@@ -457,6 +498,7 @@ namespace AYellowpaper.SerializedCollections
             else if (CurrentAction == StoreActions.Hang)
                 Time += 5;
 
+            InStore = false;
             GameManager.Instance.RemoveTime(Time);
         }
 

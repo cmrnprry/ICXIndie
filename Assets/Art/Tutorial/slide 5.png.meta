@@ -1,0 +1,5403 @@
+fileFormatVersion: 2
+guid: 6d25be9c5560a504aac22b1e4499822e
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: slide 5_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6601
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8e2382ccea093c44b6cb04a908524d3
+      internalID: 2055804979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_1
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 6601
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a265d43c9f52c7440aef81891e2559cc
+      internalID: 1640477266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_2
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 6601
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d52453168eac0e4783d634bddc0f636
+      internalID: -283923093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_3
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 6601
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56823259ab856864d98555ee6940ee4b
+      internalID: 550153164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_4
+      rect:
+        serializedVersion: 2
+        x: 2024
+        y: 6601
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a06b5b821556f0d429caf5eb401d82b0
+      internalID: -1711941659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_5
+      rect:
+        serializedVersion: 2
+        x: 2530
+        y: 6601
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: feb0dd85b9288094e8cd2fe32b4e6bcf
+      internalID: 1154373356
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_6
+      rect:
+        serializedVersion: 2
+        x: 3036
+        y: 6601
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 990ffc8216028f44781f3f0ca9df065b
+      internalID: 1687965741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_7
+      rect:
+        serializedVersion: 2
+        x: 3542
+        y: 6601
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f8cdc13d98020e4fa551389e68d199c
+      internalID: 1330228472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_8
+      rect:
+        serializedVersion: 2
+        x: 4048
+        y: 6601
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6508de854bb2a85448b61781ed3be1c8
+      internalID: -425296144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_9
+      rect:
+        serializedVersion: 2
+        x: 4554
+        y: 6601
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da3b21e039a22104dbcbc7639a4b1821
+      internalID: -2102953270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6314
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc5de51aacd0add4988dfb10ba314a81
+      internalID: 1147491495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_11
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 6314
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78f3acc65b8923c43a44a15c71c8a523
+      internalID: 1495585190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_12
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 6314
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba952fa6e3cd7e94d87b1385986ef301
+      internalID: -2002354407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_13
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 6314
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd287631b5a13a8499be7ff825e5842e
+      internalID: -219654801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_14
+      rect:
+        serializedVersion: 2
+        x: 2024
+        y: 6314
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19d14dbacf0d5c149b40e5a5a752e6d8
+      internalID: 1060046078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_15
+      rect:
+        serializedVersion: 2
+        x: 2530
+        y: 6314
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e809ef18d4c993448fbc669218a84e3
+      internalID: 147972345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_16
+      rect:
+        serializedVersion: 2
+        x: 3036
+        y: 6314
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 838f1168b5cb57b47a042178dbef0fc3
+      internalID: 1163561277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_17
+      rect:
+        serializedVersion: 2
+        x: 3542
+        y: 6314
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 722c47eb2cc933943a26883a657dc2fc
+      internalID: 2080838104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_18
+      rect:
+        serializedVersion: 2
+        x: 4048
+        y: 6314
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f93a89b446793d4bb59784c6c880394
+      internalID: 1083369497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_19
+      rect:
+        serializedVersion: 2
+        x: 4554
+        y: 6314
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7edad8a697510eb41a7609387db59500
+      internalID: 1298588648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6027
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c063b7ce799606a40a8c783eeff63c62
+      internalID: 1934056093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_21
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 6027
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f463801b96ce1844eb53db0fb1d80391
+      internalID: -255795017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_22
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 6027
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a88a8be862a37254e94e2ce07300fbcb
+      internalID: -1595025931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_23
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 6027
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f21a16803bd5f9648ab500052059428a
+      internalID: -1315773094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_24
+      rect:
+        serializedVersion: 2
+        x: 2024
+        y: 6027
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a58409eb97594ca43a4d7722bae28ec1
+      internalID: 1879825655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_25
+      rect:
+        serializedVersion: 2
+        x: 2530
+        y: 6027
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0723d566429e37d4593bc95e7c0fbe9d
+      internalID: 653468314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_26
+      rect:
+        serializedVersion: 2
+        x: 3036
+        y: 6027
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11cd1d9abc485bc4b9d69979ac321ba6
+      internalID: 404572427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_27
+      rect:
+        serializedVersion: 2
+        x: 3542
+        y: 6027
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c520062764619164d9f4418d365ad3ca
+      internalID: -130567536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_28
+      rect:
+        serializedVersion: 2
+        x: 4048
+        y: 6027
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cd8c6c4be575744e80c4499c55a6d5f
+      internalID: -143788934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_29
+      rect:
+        serializedVersion: 2
+        x: 4554
+        y: 6027
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2c12138d1452464fa13a9631387a277
+      internalID: 1257268702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5740
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4acf60bb37b85ea499fa71008ed70036
+      internalID: 1239200146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_31
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 5740
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c011c84a4fda62c468ddfcaa6ba6e999
+      internalID: 319997888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_32
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 5740
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8b3350d70598584abd61bfacdd1c5ed
+      internalID: 2077159466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_33
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 5740
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8173ed479e6c6e4dac5124348f625fd
+      internalID: -814271279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_34
+      rect:
+        serializedVersion: 2
+        x: 2024
+        y: 5740
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1006efc3ea1acf54288a5f58a3b5e227
+      internalID: -1184682821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_35
+      rect:
+        serializedVersion: 2
+        x: 2530
+        y: 5740
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 164c26de6af3ce24cbbcf3b5c4c775a2
+      internalID: -2109919717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_36
+      rect:
+        serializedVersion: 2
+        x: 3036
+        y: 5740
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f16bcf39f3f7aee479e78198b2b8e43a
+      internalID: -1115793660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_37
+      rect:
+        serializedVersion: 2
+        x: 3542
+        y: 5740
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2f42a8f431a3384e83973985150f3b8
+      internalID: -996906488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_38
+      rect:
+        serializedVersion: 2
+        x: 4048
+        y: 5740
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb55b9f7a80e37e40831c41d8e3a2446
+      internalID: -327660444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_39
+      rect:
+        serializedVersion: 2
+        x: 4554
+        y: 5740
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0de2dd66f031a5846b4a806703e026db
+      internalID: 918841425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5453
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05bd28730aa84504f8dc882b4db1030a
+      internalID: 870416167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_41
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 5453
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7cb37a505caca549b06e4d90c946a3a
+      internalID: -1505970917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_42
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 5453
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d3fac4d17717c84c94bf91239075e9d
+      internalID: -732905755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_43
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 5453
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbed0bff5bfa4864c8b38d40528648ab
+      internalID: -720286253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_44
+      rect:
+        serializedVersion: 2
+        x: 2024
+        y: 5453
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2e2a1e747d7aa44fa2b885f92cef05d
+      internalID: -536497063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_45
+      rect:
+        serializedVersion: 2
+        x: 2530
+        y: 5453
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5431939db0deff34e80ac928d9050494
+      internalID: -525136895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_46
+      rect:
+        serializedVersion: 2
+        x: 3036
+        y: 5453
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 273c7dfe514ce0347b22d64ce87c288f
+      internalID: 1715692186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_47
+      rect:
+        serializedVersion: 2
+        x: 3542
+        y: 5453
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d6e6974d1b56e244b10d6a3cf72e747
+      internalID: 497886209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_48
+      rect:
+        serializedVersion: 2
+        x: 4048
+        y: 5453
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22cfc9322f3f47a4da89110e3839e55f
+      internalID: -318251454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_49
+      rect:
+        serializedVersion: 2
+        x: 4554
+        y: 5453
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83b9674b0588f0d44834e66599894fcb
+      internalID: -1056163867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_50
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5166
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 176f800a18a27a242ba452010936f55f
+      internalID: 1093658550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_51
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 5166
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1549dae2a2c5474c8921162fd3ef6e0
+      internalID: 1477394446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_52
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 5166
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffdbb9dfe2b2e344c9714e0daab4e063
+      internalID: -155109301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_53
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 5166
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 923a7463d78f9a34ebb27981dc6a4a72
+      internalID: 647316019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_54
+      rect:
+        serializedVersion: 2
+        x: 2024
+        y: 5166
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1cc78d2f47c4704fbad4bc36bfab6fb
+      internalID: 501739060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_55
+      rect:
+        serializedVersion: 2
+        x: 2530
+        y: 5166
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7108689ef42e5744a83aec66fd8addbf
+      internalID: 1267629913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_56
+      rect:
+        serializedVersion: 2
+        x: 3036
+        y: 5166
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e3378d06b8e1424cb1987c386856a9f
+      internalID: -1789356251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_57
+      rect:
+        serializedVersion: 2
+        x: 3542
+        y: 5166
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff622ff1a5e8a2548bb1221da899da8a
+      internalID: -974161085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_58
+      rect:
+        serializedVersion: 2
+        x: 4048
+        y: 5166
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47be41d552ddd31458cf7f8042042ebd
+      internalID: 701394956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_59
+      rect:
+        serializedVersion: 2
+        x: 4554
+        y: 5166
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5728af0a16c66114097ed91dd6f67f94
+      internalID: 1160369197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_60
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4879
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5771404d5286b245aa714160590679f
+      internalID: -1797524888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_61
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 4879
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 445fdbc614065824c8ff1f776befd2bd
+      internalID: -772810065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_62
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 4879
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c9820a576b89bf4f84c810aaa19dabb
+      internalID: -929348174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_63
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 4879
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b75ed078e5f3a324485b23fa2f054d90
+      internalID: -1891449049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_64
+      rect:
+        serializedVersion: 2
+        x: 2024
+        y: 4879
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1e566ca43e0b8842973a66aea44e7d1
+      internalID: 615443478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_65
+      rect:
+        serializedVersion: 2
+        x: 2530
+        y: 4879
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c4a50b3fc5ed9540a55ef7d75f93a3e
+      internalID: -1253720225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_66
+      rect:
+        serializedVersion: 2
+        x: 3036
+        y: 4879
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d79128de793a3f42b2029936f3c3768
+      internalID: -927563577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_67
+      rect:
+        serializedVersion: 2
+        x: 3542
+        y: 4879
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 469eb0c6d1a008c41bce9559abfd5580
+      internalID: 328138702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_68
+      rect:
+        serializedVersion: 2
+        x: 4048
+        y: 4879
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cf63920d2a2db341a74faadc22deac3
+      internalID: 685299169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_69
+      rect:
+        serializedVersion: 2
+        x: 4554
+        y: 4879
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 429ea26b5f4dbe64aa2da38884666ef0
+      internalID: 553652243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_70
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4592
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81d9c539df7515e499b82e78eb8b97ff
+      internalID: -419654010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_71
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 4592
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9249a59cae50c74db9c59d1d1f4efe7
+      internalID: -780133761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_72
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 4592
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bae3a98ee1b1ff47aabc65c71b61529
+      internalID: 450943324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_73
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 4592
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e6472b8d860fc2489bf59a89e8d1030
+      internalID: -1936042181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_74
+      rect:
+        serializedVersion: 2
+        x: 2024
+        y: 4592
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09f1038d24e8fb844bc3d7e2c6ed9c91
+      internalID: -475369814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_75
+      rect:
+        serializedVersion: 2
+        x: 2530
+        y: 4592
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2348f315b0a4ce4b95d8666eba7fd6f
+      internalID: 1905435218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_76
+      rect:
+        serializedVersion: 2
+        x: 3036
+        y: 4592
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dca055642b677f64dab61e92cda27048
+      internalID: 319587286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_77
+      rect:
+        serializedVersion: 2
+        x: 3542
+        y: 4592
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a1c12cd8491fb24aa4762a19fcceb19
+      internalID: 1296823648
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_78
+      rect:
+        serializedVersion: 2
+        x: 4048
+        y: 4592
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d450f72f629e0e44ea3e7b34deedd92c
+      internalID: 2124805924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_79
+      rect:
+        serializedVersion: 2
+        x: 4554
+        y: 4592
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30fc7c7d4b813404cae873c78888a256
+      internalID: -123637481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4305
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d345d069aaeefd64da56a7313bdfad0c
+      internalID: -2118063167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_81
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 4305
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f55f7baa4c73d647ad3902667b3cc5f
+      internalID: 102434001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_82
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 4305
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 209c0287a06ce3447b999a81e09baeff
+      internalID: 336159669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_83
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 4305
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cab14faea468fe47997caa0da83a16f
+      internalID: 1403382467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_84
+      rect:
+        serializedVersion: 2
+        x: 2024
+        y: 4305
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a8ab32b0ec7d314188af0aecfa68878
+      internalID: -2037938677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_85
+      rect:
+        serializedVersion: 2
+        x: 2530
+        y: 4305
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e3973b1f6e8e284a892df0043743352
+      internalID: -2054192917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_86
+      rect:
+        serializedVersion: 2
+        x: 3036
+        y: 4305
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79300e00367ff544ca977c56a521a7d9
+      internalID: 1832290414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_87
+      rect:
+        serializedVersion: 2
+        x: 3542
+        y: 4305
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ae2d66379736764caa3f841a0df99b8
+      internalID: -604937338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_88
+      rect:
+        serializedVersion: 2
+        x: 4048
+        y: 4305
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbe1006cb46b4e24d8e5621c6b762334
+      internalID: -225983321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_89
+      rect:
+        serializedVersion: 2
+        x: 4554
+        y: 4305
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3685789392131c94a8b4acc472c70193
+      internalID: 1383743627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_90
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 4018
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 364f0534dac957448973bd2fe1880ebe
+      internalID: 1735978348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_91
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 4018
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f85869a525e55bd44af222c0d1e65c9a
+      internalID: -105344840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_92
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 4018
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0117de557ff785943b2d3bb5b2696814
+      internalID: 281199619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_93
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 4018
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7eabe2ef7b5adf7449ceb83d952632f1
+      internalID: -1942553935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_94
+      rect:
+        serializedVersion: 2
+        x: 2024
+        y: 4018
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40f4c85e30c3e0e47982e6f4058dcaed
+      internalID: -1512606852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_95
+      rect:
+        serializedVersion: 2
+        x: 2530
+        y: 4018
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f124798eb2eb45d448753ff33f7379b6
+      internalID: -11411361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_96
+      rect:
+        serializedVersion: 2
+        x: 3036
+        y: 4018
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 258bc2b8e9a543444a5ffdc035240650
+      internalID: 1236383187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_97
+      rect:
+        serializedVersion: 2
+        x: 3542
+        y: 4018
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65b1689566a367e4b87a44059f1cb2b6
+      internalID: -1424638386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_98
+      rect:
+        serializedVersion: 2
+        x: 4048
+        y: 4018
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30c115d649dad0846aa0c93c01717d98
+      internalID: -777045139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_99
+      rect:
+        serializedVersion: 2
+        x: 4554
+        y: 4018
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1402071c432d02b4393eb1a9b585d7c9
+      internalID: -962258587
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_100
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3731
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71747a0e7c05e11428f401346c19a51d
+      internalID: 2063254048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_101
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 3731
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ae2c3a518a95884184efa33f8481a1a
+      internalID: 782159283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_102
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 3731
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9425050f2b414aa49ac3a639c66e4b96
+      internalID: 150214950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_103
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 3731
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd29b4dedeaaf0e47948441374439c95
+      internalID: 2079462256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_104
+      rect:
+        serializedVersion: 2
+        x: 2024
+        y: 3731
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e0152c65a9009241b3211a730923d64
+      internalID: 261018822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_105
+      rect:
+        serializedVersion: 2
+        x: 2530
+        y: 3731
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c7f8773d7ee96c49b41f79472fb7dc9
+      internalID: -925281169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_106
+      rect:
+        serializedVersion: 2
+        x: 3036
+        y: 3731
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34a54b6815555e149af5b718327c204e
+      internalID: 1292998664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_107
+      rect:
+        serializedVersion: 2
+        x: 3542
+        y: 3731
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78425fb6e612c164da4ff1b6d5895b5e
+      internalID: -338648143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_108
+      rect:
+        serializedVersion: 2
+        x: 4048
+        y: 3731
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f77ff6c7654a11345a7459231e471948
+      internalID: -216069483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_109
+      rect:
+        serializedVersion: 2
+        x: 4554
+        y: 3731
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d954b393cf3537349adfcb10b0e69a19
+      internalID: -283155005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_110
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3444
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d1186e48d1fe4f48aca912f3b7796a5
+      internalID: -2019880631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_111
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 3444
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d2f888164090f74e9a6eba996a47e57
+      internalID: 142532172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_112
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 3444
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 790154bf9fd89f34082fd24ed8f6262d
+      internalID: -1725279057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_113
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 3444
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0fcb9682b9711f4a928e406d7db40b2
+      internalID: -835593988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_114
+      rect:
+        serializedVersion: 2
+        x: 2024
+        y: 3444
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82c301f910522c441b0f50eb41076bf7
+      internalID: -883271328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_115
+      rect:
+        serializedVersion: 2
+        x: 2530
+        y: 3444
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 693241daa999abf49ae29a52953e1cc6
+      internalID: 622507552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_116
+      rect:
+        serializedVersion: 2
+        x: 3036
+        y: 3444
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8569edc4803b75241b2e199414f5cf05
+      internalID: 400093900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_117
+      rect:
+        serializedVersion: 2
+        x: 3542
+        y: 3444
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 713c75389228243469f53f783f6b504b
+      internalID: -1535631761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_118
+      rect:
+        serializedVersion: 2
+        x: 4048
+        y: 3444
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8207eaaf94825db4abf515812e396897
+      internalID: 713036393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_119
+      rect:
+        serializedVersion: 2
+        x: 4554
+        y: 3444
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef3960c6aafd90841ad67b7659516ce2
+      internalID: 927774540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_120
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3157
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05789df80884b924596bb23b9907b5e3
+      internalID: 559633688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_121
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 3157
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff7616a60afe8784486c7fc92cd2aa43
+      internalID: -1181496747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_122
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 3157
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc33aee3c1a27584a81daa69b1e8a6ed
+      internalID: -1155227484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_123
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 3157
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20c7b7c3535971946944fa292008e30f
+      internalID: -664880269
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_124
+      rect:
+        serializedVersion: 2
+        x: 2024
+        y: 3157
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 800c64eb5ce7ec142bee33287e15218c
+      internalID: 568675544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_125
+      rect:
+        serializedVersion: 2
+        x: 2530
+        y: 3157
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77e86b4a46788ff4bad8a01a49bfd5db
+      internalID: 1533064700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_126
+      rect:
+        serializedVersion: 2
+        x: 3036
+        y: 3157
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef4a637267b73fc4e9075006f6505fc4
+      internalID: 72211737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_127
+      rect:
+        serializedVersion: 2
+        x: 3542
+        y: 3157
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fe3eac6712a5ae41bdb7a484c06907b
+      internalID: 1901157043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_128
+      rect:
+        serializedVersion: 2
+        x: 4048
+        y: 3157
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6e488b7798f1d54396dbf6fb4e4961e
+      internalID: 1504668551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_129
+      rect:
+        serializedVersion: 2
+        x: 4554
+        y: 3157
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbaa21fb58afd4f469dcf2c45bccb7f2
+      internalID: 385619079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_130
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2870
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a8463d45ac9f8b4d882ad973f39b21f
+      internalID: 550674386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_131
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 2870
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2afef4f2e9c9864289aa5d6aa8df6ed
+      internalID: -1989236496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_132
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 2870
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a498606682b50d54d8a0d9cb91405bf7
+      internalID: 2095807546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_133
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 2870
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94632e2ef8320744b8d6a943bbe15a00
+      internalID: 623477150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_134
+      rect:
+        serializedVersion: 2
+        x: 2024
+        y: 2870
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ed3dbfefb3951145888c716cf0ba39d
+      internalID: -272866082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_135
+      rect:
+        serializedVersion: 2
+        x: 2530
+        y: 2870
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f425f02613161a428679a70ecf2a3f3
+      internalID: -1523022131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_136
+      rect:
+        serializedVersion: 2
+        x: 3036
+        y: 2870
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 616d346aab3bd4142b60367bbdeeca0d
+      internalID: 1364505973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_137
+      rect:
+        serializedVersion: 2
+        x: 3542
+        y: 2870
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82594a856f0a4bb4485acbf8df02ae3c
+      internalID: 797846535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_138
+      rect:
+        serializedVersion: 2
+        x: 4048
+        y: 2870
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbbc55cd5f7fdd447a390a197bbb9183
+      internalID: 669078440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_139
+      rect:
+        serializedVersion: 2
+        x: 4554
+        y: 2870
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbe13dc0a41922f478d4fdfd015901ef
+      internalID: 1044115114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_140
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2583
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: acdb764e52c065d488386a83798b9ace
+      internalID: 1191855488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_141
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 2583
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57880a4eb1ab85c4286faed6271dc1c5
+      internalID: 2032427282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_142
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 2583
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf5890896e7684f478ebd210d58be312
+      internalID: 1893225031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_143
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 2583
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfc7cc4428784bb40b273d26ccebe787
+      internalID: -77562407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_144
+      rect:
+        serializedVersion: 2
+        x: 2024
+        y: 2583
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76e2ceb84815c1c4689e32673f556866
+      internalID: 182365122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_145
+      rect:
+        serializedVersion: 2
+        x: 2530
+        y: 2583
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 181c30fad98f26e4e930ca58b9d93b40
+      internalID: 499626989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_146
+      rect:
+        serializedVersion: 2
+        x: 3036
+        y: 2583
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eec6d7d90340ad542901b30b87684847
+      internalID: -32844492
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_147
+      rect:
+        serializedVersion: 2
+        x: 3542
+        y: 2583
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1866f714f3ad0e49a67c4a49a8aa79a
+      internalID: -1443107852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_148
+      rect:
+        serializedVersion: 2
+        x: 4048
+        y: 2583
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2109cd36425448045be9a58e3afaff96
+      internalID: -649030972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_149
+      rect:
+        serializedVersion: 2
+        x: 4554
+        y: 2583
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6e1612dcfbabf0439dbfe07125cf3a1
+      internalID: 1645442902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_150
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2296
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a6ca3ee39c593243b2f8f0485917cf8
+      internalID: 177162938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_151
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 2296
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae2cc52e5df3e2549ace5cd13d44a281
+      internalID: 805679785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_152
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 2296
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b52db20bfffa21a40b68f067811563cd
+      internalID: -1286274424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_153
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 2296
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 239e215ba2edc9a4583ae6d1f4b321cc
+      internalID: 488309166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_154
+      rect:
+        serializedVersion: 2
+        x: 2024
+        y: 2296
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fc9ea8cdddf97549bee6733132320b9
+      internalID: -1861372003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_155
+      rect:
+        serializedVersion: 2
+        x: 2530
+        y: 2296
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad907394935d6bc4bb4ff5d78b21469a
+      internalID: -51280452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_156
+      rect:
+        serializedVersion: 2
+        x: 3036
+        y: 2296
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 438cc4bdd098eca4fb91948eefb73e96
+      internalID: 639722076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_157
+      rect:
+        serializedVersion: 2
+        x: 3542
+        y: 2296
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b65bd981bef00e46b23344a896e4845
+      internalID: -904647726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_158
+      rect:
+        serializedVersion: 2
+        x: 4048
+        y: 2296
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3ef0db44e59dd0418dc9bae0100f25b
+      internalID: 1120070531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_159
+      rect:
+        serializedVersion: 2
+        x: 4554
+        y: 2296
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 879470ea670f63e48a6aebfad57adbb1
+      internalID: 65771643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_160
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2009
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 171fbb2e768bfc34ead4cd6ceb69d749
+      internalID: -658251342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_161
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 2009
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f01feb1c4acf7e49a4b9a085c086c41
+      internalID: 2035439241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_162
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 2009
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc2b8b9bca8aa064f9e1954f9c86c7d5
+      internalID: 1375460593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_163
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 2009
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02c2be730d87d04428198f9ca66c10b3
+      internalID: 1036220128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_164
+      rect:
+        serializedVersion: 2
+        x: 2024
+        y: 2009
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15e09fb7988de73468bd1a498cd21454
+      internalID: 1671542610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_165
+      rect:
+        serializedVersion: 2
+        x: 2530
+        y: 2009
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d52c85c2148a3d4899d95b88d86e8b3
+      internalID: -623045438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_166
+      rect:
+        serializedVersion: 2
+        x: 3036
+        y: 2009
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e07a4271f76367a4885657cf6a055631
+      internalID: 791334463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_167
+      rect:
+        serializedVersion: 2
+        x: 3542
+        y: 2009
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f26db0c18ebffe48a7b69a75761021a
+      internalID: -1494949299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_168
+      rect:
+        serializedVersion: 2
+        x: 4048
+        y: 2009
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7e5053107f6df94cb2e3e19aee6a688
+      internalID: 646826165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_169
+      rect:
+        serializedVersion: 2
+        x: 4554
+        y: 2009
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cd11e34b38d8134d8620b8ff746e4bb
+      internalID: 4940328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_170
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1722
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 905b3c3740ac63e49aa944e4e104ac20
+      internalID: 2026817050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_171
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 1722
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9297cb7722638449a19958fd7418155
+      internalID: -1136481024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_172
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 1722
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcb63dd29afced147923a7ad9dd47d5c
+      internalID: 1493993650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_173
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 1722
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edfd1227adae4a243beba6bf27f8154b
+      internalID: -1850696671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_174
+      rect:
+        serializedVersion: 2
+        x: 2024
+        y: 1722
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c3abdb8f61ec784791bdbc81ebd9d5c
+      internalID: 1522436662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_175
+      rect:
+        serializedVersion: 2
+        x: 2530
+        y: 1722
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f007a7591cc8db45bde7395555d2eac
+      internalID: 20656902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_176
+      rect:
+        serializedVersion: 2
+        x: 3036
+        y: 1722
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf2e741d89d0b9f43ab1f8b893b169f3
+      internalID: -2067313406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_177
+      rect:
+        serializedVersion: 2
+        x: 3542
+        y: 1722
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 122f8cc4a65570a41af8c62e6215bd75
+      internalID: -1920068524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_178
+      rect:
+        serializedVersion: 2
+        x: 4048
+        y: 1722
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55c94f1b977f853428cfc15148ecb171
+      internalID: 806519046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_179
+      rect:
+        serializedVersion: 2
+        x: 4554
+        y: 1722
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6670680bdee96494aa422788418d8498
+      internalID: -1524072707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_180
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1435
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ef87e996b9f65346aa79a5727c151a8
+      internalID: -1638118882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_181
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 1435
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb03f377298fc864ebc0a486803d646c
+      internalID: 1721613695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_182
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 1435
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 359f9ec038c626545991e2cceeeb8604
+      internalID: -793900781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_183
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 1435
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbe3a94ba184f1847b3eb3df74fa7cdf
+      internalID: 1330202329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_184
+      rect:
+        serializedVersion: 2
+        x: 2024
+        y: 1435
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2df5fa32f9073d548930b334d07f50e9
+      internalID: 2080848920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_185
+      rect:
+        serializedVersion: 2
+        x: 2530
+        y: 1435
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0a514dda850d214e82f7f560fca0573
+      internalID: 1485362336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_186
+      rect:
+        serializedVersion: 2
+        x: 3036
+        y: 1435
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c43fcf60fd8d77e4f8c3571f6ae6d47d
+      internalID: -484176722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_187
+      rect:
+        serializedVersion: 2
+        x: 3542
+        y: 1435
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caaea5528930e1b4da5e1ea74c614095
+      internalID: -1004636063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_188
+      rect:
+        serializedVersion: 2
+        x: 4048
+        y: 1435
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a67f481d1379b2c4cae8ccff13afa682
+      internalID: 341442030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_189
+      rect:
+        serializedVersion: 2
+        x: 4554
+        y: 1435
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01c6ba3c5b4bdd94a8ce274de3d1c608
+      internalID: 171298705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_190
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1148
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85c2a883660bc3043b5c476ad220b7c9
+      internalID: -926105828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_191
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 1148
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81f062a98b8f0a84b89302bdff971c22
+      internalID: 1307872752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_192
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 1148
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc5434cfd1d01684a9b246fdc7246e4d
+      internalID: 1692078092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_193
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 1148
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16bbbdb2dc4e8ed4a9abba04853b8a6b
+      internalID: -648261590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_194
+      rect:
+        serializedVersion: 2
+        x: 2024
+        y: 1148
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bc15f0f786a0eb4ea172f1a95c53d6c
+      internalID: -386010827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_195
+      rect:
+        serializedVersion: 2
+        x: 2530
+        y: 1148
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e101802ef0c9950499d727592cf87e93
+      internalID: -690123970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_196
+      rect:
+        serializedVersion: 2
+        x: 3036
+        y: 1148
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bffadd61b0fde548944d6e54555fe97
+      internalID: 578433981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_197
+      rect:
+        serializedVersion: 2
+        x: 3542
+        y: 1148
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32c5dde1f75fdc14fb7f218c3ebd8d44
+      internalID: -1862613416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_198
+      rect:
+        serializedVersion: 2
+        x: 4048
+        y: 1148
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 701d02bf7c70e7d40867f3874aaa058b
+      internalID: 1029844056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_199
+      rect:
+        serializedVersion: 2
+        x: 4554
+        y: 1148
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebbb34ad5f6f7814e893e9e633d6da4f
+      internalID: -2032147626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_200
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 861
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e3d0ddbde062194587009ccf58b35d7
+      internalID: 340782144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_201
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 861
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b7170e4b48e0344db283ed137eae33f
+      internalID: 1645520431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_202
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 861
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71847a5cd3d87f34cbb7f7cf18f503da
+      internalID: 443089467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_203
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 861
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d6ef94584b14d84ea712ade93966c2e
+      internalID: -1378791833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_204
+      rect:
+        serializedVersion: 2
+        x: 2024
+        y: 861
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c13a40d93fcf77e4892446801a87dff4
+      internalID: -826318930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_205
+      rect:
+        serializedVersion: 2
+        x: 2530
+        y: 861
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61496bc6c3e59ee45bb5bf98d107c13a
+      internalID: -1269616034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_206
+      rect:
+        serializedVersion: 2
+        x: 3036
+        y: 861
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3e4ae864a79d6e4c8b3be692b3795f1
+      internalID: -1732895098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_207
+      rect:
+        serializedVersion: 2
+        x: 3542
+        y: 861
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04e9ca87d27e3a945bdc896b40b75ff7
+      internalID: -971606392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_208
+      rect:
+        serializedVersion: 2
+        x: 4048
+        y: 861
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e379b60b68e9e7045baa8ed1dbdd5b7b
+      internalID: -248581204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_209
+      rect:
+        serializedVersion: 2
+        x: 4554
+        y: 861
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc99ad0744271464c82b02d138a1faf2
+      internalID: -33566552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_210
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 574
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffe6dec812320bb4897420cba675ac62
+      internalID: -1741877920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_211
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 574
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d6b0d7f32946fe4c825f92862dec247
+      internalID: -1922827278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_212
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 574
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7728ddde861bd1041bba41856e03103c
+      internalID: 1788167896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_213
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 574
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1e1a8d34d7b9c44faf215c66ef35a0e
+      internalID: 392756391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_214
+      rect:
+        serializedVersion: 2
+        x: 2024
+        y: 574
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: beb1387f64157214ebadc011c9b04c24
+      internalID: -431908301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_215
+      rect:
+        serializedVersion: 2
+        x: 2530
+        y: 574
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cbd47a1a38ce974d90efab20f331760
+      internalID: -1125998610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_216
+      rect:
+        serializedVersion: 2
+        x: 3036
+        y: 574
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 189f2d7284f296841a42f2d26aa3864e
+      internalID: 223108998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_217
+      rect:
+        serializedVersion: 2
+        x: 3542
+        y: 574
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a74cbac4758c59a44b19afa654d4a0d2
+      internalID: -1216545324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_218
+      rect:
+        serializedVersion: 2
+        x: 4048
+        y: 574
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 458bd65506e311a469f51d320e04a7c8
+      internalID: -20665670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_219
+      rect:
+        serializedVersion: 2
+        x: 4554
+        y: 574
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb309827cb1abac4e92eb7174e2b0bb1
+      internalID: -1295458339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_220
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 287
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5dbf0eb9b1f61e4386b6f7823f3c9f1
+      internalID: -203865726
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_221
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 287
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c33a65f9ff4e8f646b884285415d5c2b
+      internalID: 103437177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_222
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 287
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9ec543813f953c4cab3418a15e6f160
+      internalID: 1352895077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_223
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 287
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9dda03ba88c2d7343a29eab4a1a2a30e
+      internalID: 67103512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_224
+      rect:
+        serializedVersion: 2
+        x: 2024
+        y: 287
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56b0df8ccd296614d8c59e8dae7bf5e9
+      internalID: 1232470958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_225
+      rect:
+        serializedVersion: 2
+        x: 2530
+        y: 287
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9cdb83bd0885ec41a25244fb8cc0f57
+      internalID: -461487807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_226
+      rect:
+        serializedVersion: 2
+        x: 3036
+        y: 287
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86fb38d0dff8ee04e9a080bae7776a34
+      internalID: 215193245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_227
+      rect:
+        serializedVersion: 2
+        x: 3542
+        y: 287
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b153fbe12bff4a040ae741540869e5b6
+      internalID: -138478443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_228
+      rect:
+        serializedVersion: 2
+        x: 4048
+        y: 287
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b62fa771ae07fc8478e42bcf13bbd3cb
+      internalID: -438662209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_229
+      rect:
+        serializedVersion: 2
+        x: 4554
+        y: 287
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 037a6d36d353d194995f6cf194322f48
+      internalID: 908148089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_230
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6058e1085c1734c4e9b1b1b59beb490e
+      internalID: 997670372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_231
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 0
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfb27b8099656ff4ca5657152fdda4e5
+      internalID: 1738815787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_232
+      rect:
+        serializedVersion: 2
+        x: 1012
+        y: 0
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c67324a2b60bb94985d07df712981f0
+      internalID: -787594232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_233
+      rect:
+        serializedVersion: 2
+        x: 1518
+        y: 0
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 758a4f2287f48d04ab3dfd2969851b98
+      internalID: 897820415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_234
+      rect:
+        serializedVersion: 2
+        x: 2024
+        y: 0
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 671b27c99d4c3c4429ff97d9be01ebcb
+      internalID: 1976881598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_235
+      rect:
+        serializedVersion: 2
+        x: 2530
+        y: 0
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 663e3e89e18d41d4792fd258496fac4e
+      internalID: -14453329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_236
+      rect:
+        serializedVersion: 2
+        x: 3036
+        y: 0
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0321c88725cc76440808c6662acb5e72
+      internalID: 1212975440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_237
+      rect:
+        serializedVersion: 2
+        x: 3542
+        y: 0
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff1935b5343264c49bea2b13d5fe9316
+      internalID: 1451126248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_238
+      rect:
+        serializedVersion: 2
+        x: 4048
+        y: 0
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 816ef6f7685d17f45817e43327c399e5
+      internalID: -192099531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: slide 5_239
+      rect:
+        serializedVersion: 2
+        x: 4554
+        y: 0
+        width: 506
+        height: 287
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a76cee4cdc864114fb579928db8b2483
+      internalID: 2085687265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      slide 5_0: 2055804979
+      slide 5_1: 1640477266
+      slide 5_10: 1147491495
+      slide 5_100: 2063254048
+      slide 5_101: 782159283
+      slide 5_102: 150214950
+      slide 5_103: 2079462256
+      slide 5_104: 261018822
+      slide 5_105: -925281169
+      slide 5_106: 1292998664
+      slide 5_107: -338648143
+      slide 5_108: -216069483
+      slide 5_109: -283155005
+      slide 5_11: 1495585190
+      slide 5_110: -2019880631
+      slide 5_111: 142532172
+      slide 5_112: -1725279057
+      slide 5_113: -835593988
+      slide 5_114: -883271328
+      slide 5_115: 622507552
+      slide 5_116: 400093900
+      slide 5_117: -1535631761
+      slide 5_118: 713036393
+      slide 5_119: 927774540
+      slide 5_12: -2002354407
+      slide 5_120: 559633688
+      slide 5_121: -1181496747
+      slide 5_122: -1155227484
+      slide 5_123: -664880269
+      slide 5_124: 568675544
+      slide 5_125: 1533064700
+      slide 5_126: 72211737
+      slide 5_127: 1901157043
+      slide 5_128: 1504668551
+      slide 5_129: 385619079
+      slide 5_13: -219654801
+      slide 5_130: 550674386
+      slide 5_131: -1989236496
+      slide 5_132: 2095807546
+      slide 5_133: 623477150
+      slide 5_134: -272866082
+      slide 5_135: -1523022131
+      slide 5_136: 1364505973
+      slide 5_137: 797846535
+      slide 5_138: 669078440
+      slide 5_139: 1044115114
+      slide 5_14: 1060046078
+      slide 5_140: 1191855488
+      slide 5_141: 2032427282
+      slide 5_142: 1893225031
+      slide 5_143: -77562407
+      slide 5_144: 182365122
+      slide 5_145: 499626989
+      slide 5_146: -32844492
+      slide 5_147: -1443107852
+      slide 5_148: -649030972
+      slide 5_149: 1645442902
+      slide 5_15: 147972345
+      slide 5_150: 177162938
+      slide 5_151: 805679785
+      slide 5_152: -1286274424
+      slide 5_153: 488309166
+      slide 5_154: -1861372003
+      slide 5_155: -51280452
+      slide 5_156: 639722076
+      slide 5_157: -904647726
+      slide 5_158: 1120070531
+      slide 5_159: 65771643
+      slide 5_16: 1163561277
+      slide 5_160: -658251342
+      slide 5_161: 2035439241
+      slide 5_162: 1375460593
+      slide 5_163: 1036220128
+      slide 5_164: 1671542610
+      slide 5_165: -623045438
+      slide 5_166: 791334463
+      slide 5_167: -1494949299
+      slide 5_168: 646826165
+      slide 5_169: 4940328
+      slide 5_17: 2080838104
+      slide 5_170: 2026817050
+      slide 5_171: -1136481024
+      slide 5_172: 1493993650
+      slide 5_173: -1850696671
+      slide 5_174: 1522436662
+      slide 5_175: 20656902
+      slide 5_176: -2067313406
+      slide 5_177: -1920068524
+      slide 5_178: 806519046
+      slide 5_179: -1524072707
+      slide 5_18: 1083369497
+      slide 5_180: -1638118882
+      slide 5_181: 1721613695
+      slide 5_182: -793900781
+      slide 5_183: 1330202329
+      slide 5_184: 2080848920
+      slide 5_185: 1485362336
+      slide 5_186: -484176722
+      slide 5_187: -1004636063
+      slide 5_188: 341442030
+      slide 5_189: 171298705
+      slide 5_19: 1298588648
+      slide 5_190: -926105828
+      slide 5_191: 1307872752
+      slide 5_192: 1692078092
+      slide 5_193: -648261590
+      slide 5_194: -386010827
+      slide 5_195: -690123970
+      slide 5_196: 578433981
+      slide 5_197: -1862613416
+      slide 5_198: 1029844056
+      slide 5_199: -2032147626
+      slide 5_2: -283923093
+      slide 5_20: 1934056093
+      slide 5_200: 340782144
+      slide 5_201: 1645520431
+      slide 5_202: 443089467
+      slide 5_203: -1378791833
+      slide 5_204: -826318930
+      slide 5_205: -1269616034
+      slide 5_206: -1732895098
+      slide 5_207: -971606392
+      slide 5_208: -248581204
+      slide 5_209: -33566552
+      slide 5_21: -255795017
+      slide 5_210: -1741877920
+      slide 5_211: -1922827278
+      slide 5_212: 1788167896
+      slide 5_213: 392756391
+      slide 5_214: -431908301
+      slide 5_215: -1125998610
+      slide 5_216: 223108998
+      slide 5_217: -1216545324
+      slide 5_218: -20665670
+      slide 5_219: -1295458339
+      slide 5_22: -1595025931
+      slide 5_220: -203865726
+      slide 5_221: 103437177
+      slide 5_222: 1352895077
+      slide 5_223: 67103512
+      slide 5_224: 1232470958
+      slide 5_225: -461487807
+      slide 5_226: 215193245
+      slide 5_227: -138478443
+      slide 5_228: -438662209
+      slide 5_229: 908148089
+      slide 5_23: -1315773094
+      slide 5_230: 997670372
+      slide 5_231: 1738815787
+      slide 5_232: -787594232
+      slide 5_233: 897820415
+      slide 5_234: 1976881598
+      slide 5_235: -14453329
+      slide 5_236: 1212975440
+      slide 5_237: 1451126248
+      slide 5_238: -192099531
+      slide 5_239: 2085687265
+      slide 5_24: 1879825655
+      slide 5_25: 653468314
+      slide 5_26: 404572427
+      slide 5_27: -130567536
+      slide 5_28: -143788934
+      slide 5_29: 1257268702
+      slide 5_3: 550153164
+      slide 5_30: 1239200146
+      slide 5_31: 319997888
+      slide 5_32: 2077159466
+      slide 5_33: -814271279
+      slide 5_34: -1184682821
+      slide 5_35: -2109919717
+      slide 5_36: -1115793660
+      slide 5_37: -996906488
+      slide 5_38: -327660444
+      slide 5_39: 918841425
+      slide 5_4: -1711941659
+      slide 5_40: 870416167
+      slide 5_41: -1505970917
+      slide 5_42: -732905755
+      slide 5_43: -720286253
+      slide 5_44: -536497063
+      slide 5_45: -525136895
+      slide 5_46: 1715692186
+      slide 5_47: 497886209
+      slide 5_48: -318251454
+      slide 5_49: -1056163867
+      slide 5_5: 1154373356
+      slide 5_50: 1093658550
+      slide 5_51: 1477394446
+      slide 5_52: -155109301
+      slide 5_53: 647316019
+      slide 5_54: 501739060
+      slide 5_55: 1267629913
+      slide 5_56: -1789356251
+      slide 5_57: -974161085
+      slide 5_58: 701394956
+      slide 5_59: 1160369197
+      slide 5_6: 1687965741
+      slide 5_60: -1797524888
+      slide 5_61: -772810065
+      slide 5_62: -929348174
+      slide 5_63: -1891449049
+      slide 5_64: 615443478
+      slide 5_65: -1253720225
+      slide 5_66: -927563577
+      slide 5_67: 328138702
+      slide 5_68: 685299169
+      slide 5_69: 553652243
+      slide 5_7: 1330228472
+      slide 5_70: -419654010
+      slide 5_71: -780133761
+      slide 5_72: 450943324
+      slide 5_73: -1936042181
+      slide 5_74: -475369814
+      slide 5_75: 1905435218
+      slide 5_76: 319587286
+      slide 5_77: 1296823648
+      slide 5_78: 2124805924
+      slide 5_79: -123637481
+      slide 5_8: -425296144
+      slide 5_80: -2118063167
+      slide 5_81: 102434001
+      slide 5_82: 336159669
+      slide 5_83: 1403382467
+      slide 5_84: -2037938677
+      slide 5_85: -2054192917
+      slide 5_86: 1832290414
+      slide 5_87: -604937338
+      slide 5_88: -225983321
+      slide 5_89: 1383743627
+      slide 5_9: -2102953270
+      slide 5_90: 1735978348
+      slide 5_91: -105344840
+      slide 5_92: 281199619
+      slide 5_93: -1942553935
+      slide 5_94: -1512606852
+      slide 5_95: -11411361
+      slide 5_96: 1236383187
+      slide 5_97: -1424638386
+      slide 5_98: -777045139
+      slide 5_99: -962258587
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

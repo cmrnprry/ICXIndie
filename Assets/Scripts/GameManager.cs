@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using DG.Tweening;
 
 public enum BuyableItems
 {
@@ -21,7 +22,7 @@ namespace AYellowpaper.SerializedCollections
 {
     public class GameManager : MonoBehaviour
     {
-        private int Time = 300;
+        private int Time = 350;
 
         [HideInInspector] public string ChildName = "Vick";
         [HideInInspector] public string ParentName = "Mom";
@@ -169,7 +170,52 @@ namespace AYellowpaper.SerializedCollections
                 return;
             }
 
+            if (Time <= 100 || (StoreManager.Instance != null && !StoreManager.Instance.InStore))
+                CheckTimeLeft();
+
+
             TotalTime_Text.text = $"Time Left: {Time.ToString()}";
+        }
+
+        public int GetTime()
+        {
+            return Time;
+        }
+
+        public void CheckTimeLeft()
+        {
+            float BGM_To = 1f;
+            float Scary_To = 1f;
+
+            if (Time >= 200)
+            {
+                BGM_To = 1;
+                Scary_To = 0;
+            }
+            else if (Time >= 100)
+            {
+                BGM_To = 0.85f;
+                Scary_To = 0.25f;
+            }
+            else if (Time >= 75)
+            {
+                BGM_To = .5f;
+                Scary_To = .5f;
+            }
+            else if (Time >= 50)
+            {
+                BGM_To = .35f;
+                Scary_To = .65f;
+            }
+            else
+            {
+                BGM_To = .25f;
+                Scary_To = 1;
+            }
+
+
+            AdjustVolume(BGM_To, 1, 0);
+            AdjustVolume(Scary_To, 1, 1);
         }
 
         public void TimeReminder(InteractableObject obj, InteractionObject io, int index = -1)
@@ -249,6 +295,23 @@ namespace AYellowpaper.SerializedCollections
         }
 
         ///////////////////////////////////////////////////////// AUDIO /////////////////////////////////////////////////////////
+
+        public void AdjustVolume(float to, float duration, int flag)
+        {
+            //0 = bgm, 1 = scary, 2 = both
+            if (flag == 0 || flag == 2)
+            {
+                if (BGMSource.volume != to)
+                    BGMSource.DOFade(to, duration);
+            }
+
+            if (flag == 1 || flag == 2)
+            {
+                if (ScarySource.volume != to)
+                    ScarySource.DOFade(to, duration);
+            }
+
+        }
 
         private IEnumerator FinishAudioIntro()
         {
