@@ -17,7 +17,7 @@ MonoBehaviour:
   Need_to_Buy: 0
   Need_to_Prepare: 0
   preparable_info: []
-  InteractionDescription: Sew destroyed Teddy Bear
+  InteractionDescription: The teddy bear I've been meaning to fix...
   options:
   - name: Sew the destroyed bear?
     value: One of his favourite toys.

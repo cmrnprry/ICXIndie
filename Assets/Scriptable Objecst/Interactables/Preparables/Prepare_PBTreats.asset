@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Time_to_do: 30
   preparedItem: 03000000
-  completed: 0
+  completed: 1
   PreparationDescription: Make peanutbutter treats

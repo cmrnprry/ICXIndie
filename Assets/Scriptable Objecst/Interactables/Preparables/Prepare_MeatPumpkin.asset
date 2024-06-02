@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Time_to_do: 60
   preparedItem: 0000000002000000
-  completed: 0
+  completed: 1
   PreparationDescription: Carve pumpkin and stuff with meat

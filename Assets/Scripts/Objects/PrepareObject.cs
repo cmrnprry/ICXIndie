@@ -4,91 +4,94 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class PrepareObject : ObjectAbstract
+namespace AYellowpaper.SerializedCollections
 {
-    public PrepareableObjects prepare;
-    //public GameObject isMessy;
-    public int index = 0;
-    public List<GameObject> Objects; //Objects to turn on/off
-
-    public delegate void ClickAction();
-    public static event ClickAction OnPrepareItem;
-    public static event ClickAction OnWaterMelonPrepared;
-
-    private void Start()
+    public class PrepareObject : ObjectAbstract
     {
-        Description_Text.text = prepare.PreparationDescription;
-        Description = Description_Text.gameObject.transform.parent.gameObject;
+        public PrepareableObjects prepare;
+        //public GameObject isMessy;
+        public int index = 0;
+        public List<GameObject> Objects; //Objects to turn on/off
 
-        outline = GetComponent<Image>();
-        next_color = Color.yellow;
-        next_color.a = 1;
-        outline.gameObject.transform.parent.gameObject.GetComponent<Image>().alphaHitTestMinimumThreshold = 0.25f;
-    }
+        public delegate void ClickAction();
+        public static event ClickAction OnPrepareItem;
+        public static event ClickAction OnWaterMelonPrepared;
 
-    public override void OnClick()
-    {
-        if (prepare.completed || ChildObject.isMess)
-            return;
-
-        GameManager.Instance.TimeReminder(interacton, this, index);
-        base.OnClick();
-    }
-
-    /// <summary>
-    /// Hover mouse over interactable object
-    /// </summary>
-    public override void OnHoverEnter()
-    {
-        if (prepare.completed)
-            return;
-
-        if (ChildObject.isMess)
-            Description_Text.text = "I have clean this up before he makes a bigger mess";
-        else
-            Description_Text.text = prepare.PreparationDescription;
-
-        base.OnHoverEnter();
-    }
-
-    /// <summary>
-    /// mouse leavesinteractable object hover area
-    /// </summary>
-    public override void OnHoverExit()
-    {
-        if (prepare.completed)
-            return;
-
-        base.OnHoverExit();
-    }
-
-    public override void SetInteraction()
-    {
-        //set prepare to true
-        prepare.completed = true;
-
-        if (prepare.name.Contains("Watermelon"))
-            OnWaterMelonPrepared.Invoke();
-
-        OnPrepareItem.Invoke();
-
-        foreach (GameObject o in Objects)
+        private void Start()
         {
-            o.SetActive(!o.activeSelf);
+            Description_Text.text = prepare.PreparationDescription;
+            Description = Description_Text.gameObject.transform.parent.gameObject;
+
+            outline = GetComponent<Image>();
+            next_color = Color.yellow;
+            next_color.a = 1;
+            outline.gameObject.transform.parent.gameObject.GetComponent<Image>().alphaHitTestMinimumThreshold = 0.25f;
         }
 
-        outline.gameObject.transform.parent.gameObject.SetActive(false);
-    }
+        public override void OnClick()
+        {
+            if (prepare.completed || ChildObject.isMess)
+                return;
 
-    //////////////////////////////////////// HELPERS ////////////////////////////////////////////
-    public override bool IsPreperation()
-    {
-        return true;
-    }
+            GameManager.Instance.TimeReminder(interacton, this, index);
+            base.OnClick();
+        }
 
-    public void CloseInteraction()
-    {
-        GameManager.Instance.CancelAction();
-        OnHoverExit();
+        /// <summary>
+        /// Hover mouse over interactable object
+        /// </summary>
+        public override void OnHoverEnter()
+        {
+            if (prepare.completed)
+                return;
+
+            if (ChildObject.isMess)
+                Description_Text.text = "I have clean this up before he makes a bigger mess";
+            else
+                Description_Text.text = prepare.PreparationDescription;
+
+            base.OnHoverEnter();
+        }
+
+        /// <summary>
+        /// mouse leavesinteractable object hover area
+        /// </summary>
+        public override void OnHoverExit()
+        {
+            if (prepare.completed)
+                return;
+
+            base.OnHoverExit();
+        }
+
+        public override void SetInteraction()
+        {
+            //set prepare to true
+            prepare.completed = true;
+
+            if (prepare.name.Contains("Watermelon"))
+                OnWaterMelonPrepared.Invoke();
+
+            OnPrepareItem.Invoke();
+
+            foreach (GameObject o in Objects)
+            {
+                o.SetActive(!o.activeSelf);
+            }
+
+            outline.gameObject.transform.parent.gameObject.SetActive(false);
+        }
+
+        //////////////////////////////////////// HELPERS ////////////////////////////////////////////
+        public override bool IsPreperation()
+        {
+            return true;
+        }
+
+        public void CloseInteraction()
+        {
+            GameManager.Instance.CancelAction();
+            OnHoverExit();
+        }
     }
 }

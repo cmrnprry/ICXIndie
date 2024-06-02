@@ -63,4 +63,17 @@ public static class ActionsPreformed
 
         return "";
     }
+
+    public static int FindOptionIndex(string name)
+    {
+        foreach (var action in actions)
+        {
+            if (action.intObject.name.Contains(name))
+            {
+                return action.option.index;
+            }
+        }
+
+        return -1;
+    }
 }

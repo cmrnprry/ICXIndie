@@ -15,7 +15,7 @@ MonoBehaviour:
   Time_to_do: 15
   completed: 0
   Need_to_Buy: 1
-  Need_to_Prepare: 0
+  Need_to_Prepare: 1
   preparable_info:
   - {fileID: 11400000, guid: 956b7346f669ff84ea1919c00074384f, type: 2}
   InteractionDescription: You've seen them do this for animals at the Zoo

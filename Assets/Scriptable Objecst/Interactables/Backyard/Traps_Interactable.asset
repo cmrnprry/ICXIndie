@@ -21,11 +21,11 @@ MonoBehaviour:
   options:
   - name: Add peanutbutter treats as bait?
     value: 
-    need: 04000000
+    need: 03000000
     index: 0
   - name: Add chocolate as bait?
     value: 
-    need: 05000000
+    need: 04000000
     index: 0
   - name: Don't add any bait.
     value: 
