@@ -19,11 +19,5 @@ MonoBehaviour:
   preparable_info: []
   InteractionDescription: Grab him before he escapes!
   options: []
-  items:
-  - item: 5
-    bought: 0
-    prepared: 0
-  - item: 4
-    bought: 0
-    prepared: 0
+  items: []
   CompletionText: {fileID: 11400000, guid: 48e6abaa777e05447a49141888619ce0, type: 2}

@@ -148,9 +148,9 @@ namespace AYellowpaper.SerializedCollections
             if (item == BuyableItems.JunkFood || item == BuyableItems.Null || item == BuyableItems.Banana)
                 return;
 
-            foreach (var interaction in InteractionObjectList)
+            for(int ii = 0; ii < InteractionObjectList.Count; ii++)
             {
-                interaction.SetBuy(item);
+                InteractionObjectList[ii].SetBuy(item);
             }
         }
 
@@ -224,7 +224,13 @@ namespace AYellowpaper.SerializedCollections
 
             CurrentAction = obj;
             ReminderParent.SetActive(true);
-            Reminder_Text.text = $"This action will cost {time.ToString()}. You have {Time.ToString()} minutes left.\n Continue?";
+
+            if (Time < time)
+            {
+                Reminder_Text.text = $"This action will cost {time.ToString()}, but you only have {Time.ToString()} minutes left.\n The day will end if you do this. Continue?";
+            }
+            else
+                Reminder_Text.text = $"This action will cost {time.ToString()}. You have {Time.ToString()} minutes left.\n Continue?";
             Current_Interaction = io;
             Index = index;
         }
@@ -768,6 +774,7 @@ namespace AYellowpaper.SerializedCollections
             yield return new WaitForSecondsRealtime(0.5f);
             NightTime.SetActive(false);
             Ending_Text.Clear();
+            Ending_Image.gameObject.SetActive(false);
 
             foreach (Transform child in Ending_Parent)
             {
@@ -788,7 +795,7 @@ namespace AYellowpaper.SerializedCollections
                 {
                     EndingText($"You manage to wrangle {ChildName} back into the house, dispite his attempts to wiggle away.");
                     EndingText("He gives in quickly, and settles into your arms, quickly falling asleep.");
-                    EndingText($"You double check all the doors and windows, and wait out the rest of the nigth with {ChildName}.");
+                    EndingText($"You double check all the doors and windows, and wait out the rest of the night with {ChildName}.");
                 }
                 else
                 {
@@ -822,6 +829,7 @@ namespace AYellowpaper.SerializedCollections
 
 
             StartCoroutine(ShowEndText());
+            Finished = true;
             Transition.SetTrigger("Toggle");
 
         }

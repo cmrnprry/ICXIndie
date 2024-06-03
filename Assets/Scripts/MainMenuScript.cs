@@ -23,10 +23,10 @@ namespace AYellowpaper.SerializedCollections
         public void ShowScreen(GameObject Menu)
         {
             TransitionScreen.gameObject.SetActive(true);
-            TransitionScreen.DOFade(1, 0.5f).OnComplete(() =>
+            TransitionScreen.DOFade(1, 0.25f).OnComplete(() =>
             {
                 Menu.SetActive(!Menu.activeSelf);
-                TransitionScreen.DOFade(0, 0.5f).OnComplete(() =>
+                TransitionScreen.DOFade(0, 0.25f).OnComplete(() =>
                 {
                     TransitionScreen.gameObject.SetActive(false);
                 });

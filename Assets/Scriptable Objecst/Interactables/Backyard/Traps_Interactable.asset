@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Time_to_do: 30
   completed: 0
-  Need_to_Buy: 0
-  Need_to_Prepare: 0
+  Need_to_Buy: 1
+  Need_to_Prepare: 1
   preparable_info: []
   InteractionDescription: Set traps? If he gets out, these should catch him.
   options:
