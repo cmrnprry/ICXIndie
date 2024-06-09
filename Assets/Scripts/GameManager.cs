@@ -85,6 +85,9 @@ namespace AYellowpaper.SerializedCollections
             {
                 Instance = this;
             }
+
+            Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
+            Screen.SetResolution(1920, 1080, true, Screen.currentResolution.refreshRate);
         }
 
         private void Start()

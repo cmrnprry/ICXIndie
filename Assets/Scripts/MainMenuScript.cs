@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using DG.Tweening;
 using UnityEngine.SceneManagement;
+using System;
 
 namespace AYellowpaper.SerializedCollections
 {
@@ -18,7 +19,7 @@ namespace AYellowpaper.SerializedCollections
         [Header("Transition Screen")]
         public Image TransitionScreen;
 
-        public TMP_Dropdown drop;
+        public TMP_Dropdown Name_Drop, ScreenType_Drop, ScreenSize_Drop;
 
         public void ShowScreen(GameObject Menu)
         {
@@ -61,7 +62,7 @@ namespace AYellowpaper.SerializedCollections
 
         public void SetName(int name)
         {
-            GameManager.Instance.SetName(drop.options[name].text);
+            GameManager.Instance.SetName(Name_Drop.options[name].text);
         }
 
         public void StartGame()
@@ -90,6 +91,35 @@ namespace AYellowpaper.SerializedCollections
                 return true;
 
             return false;
+        }
+
+        public void SetScreenSize(int size)
+        {
+            string screen = ScreenSize_Drop.options[size].text;
+            var array = screen.Split(' ');
+            int width = Int32.Parse(array[0]);
+            int height = Int32.Parse(array[2]);
+            bool isFull = (Screen.fullScreenMode == FullScreenMode.FullScreenWindow) ? true : false;
+            Screen.SetResolution(width, height, isFull, Screen.currentResolution.refreshRate);
+        }
+
+        public void SetScreenType(int type)
+        {
+            string screen = ScreenType_Drop.options[type].text;
+            switch (screen)
+            {
+                case "Full Screen":
+                    Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
+                    break;
+                case "Full Screen Windowed":
+                    Screen.fullScreenMode = FullScreenMode.ExclusiveFullScreen;
+                    break;
+                case "Windowed":
+                    Screen.fullScreenMode = FullScreenMode.Windowed;
+                    break;
+            }
+
+            
         }
     }
 }
