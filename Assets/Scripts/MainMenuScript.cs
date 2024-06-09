@@ -29,6 +29,7 @@ namespace AYellowpaper.SerializedCollections
                 TransitionScreen.DOFade(0, 0.25f).OnComplete(() =>
                 {
                     TransitionScreen.gameObject.SetActive(false);
+                    GameManager.CanPause = CanPause();
                 });
             });
         }
@@ -73,6 +74,7 @@ namespace AYellowpaper.SerializedCollections
                 TransitionScreen.DOFade(0, 1f).OnComplete(() =>
                 {
                     TransitionScreen.gameObject.SetActive(false);
+                    GameManager.CanPause = CanPause();
                 });
             });
         }
@@ -80,6 +82,14 @@ namespace AYellowpaper.SerializedCollections
         public void QuitGame()
         {
             Application.Quit();
+        }
+
+        public bool CanPause()
+        {
+            if (!mm.activeSelf)
+                return true;
+
+            return false;
         }
     }
 }

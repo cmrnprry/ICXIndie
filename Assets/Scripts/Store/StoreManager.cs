@@ -45,6 +45,7 @@ namespace AYellowpaper.SerializedCollections
         [Header("Shopping List")]
         public GameObject List_Item;
         public Transform ListParent;
+        public TextMeshProUGUI Home_Text;
 
         [Header("Switch Asiles")]
         public List<Sprite> Icons;
@@ -323,6 +324,7 @@ namespace AYellowpaper.SerializedCollections
                 TantrumCoroutine = null;
             }
 
+            UpdateHomeMessage();
             if (next != CurrentAction)
                 SwitchChildImage(next);
         }
@@ -383,7 +385,7 @@ namespace AYellowpaper.SerializedCollections
             Next.gameObject.SetActive(true);
             CurrentAction = next;
 
-            ChildSequence.Append(Current.DOFade(0, 0.85f)).Insert(0.1f, Next.DOFade(1, 0.85f)).OnComplete(() =>
+            ChildSequence.Append(Current.DOFade(0, 0.5f)).Insert(0.1f, Next.DOFade(1, 0.5f)).OnComplete(() =>
             {
                 Current.gameObject.SetActive(false);
                 ChildSequence = null;
@@ -494,23 +496,23 @@ namespace AYellowpaper.SerializedCollections
         {
             int Time = 30;
             if (CurrentAction == StoreActions.Cry)
-                Time += 15;
+                Time += 20;
             else if (CurrentAction == StoreActions.Hang)
-                Time += 5;
+                Time += 10;
 
             InStore = false;
             GameManager.Instance.RemoveTime(Time);
         }
 
-        public void UpdateHomeMessage(TextMeshProUGUI box)
+        public void UpdateHomeMessage()
         {
             string text = "It will take 30 minutes to get home.";
             if (CurrentAction == StoreActions.Cry)
-                text = "It will take 45 minutes to get home. I should calm him down first.";
+                text = "It will take 50 minutes to get home. I should calm him down first.";
             else if (CurrentAction == StoreActions.Hang)
-                text = "It will take 35 minutes to get home when he's pouting like this.";
+                text = "It will take 40 minutes to get home when he's pouting like this.";
 
-            box.text = text;
+            Home_Text.text = text;
         }
     }
 }

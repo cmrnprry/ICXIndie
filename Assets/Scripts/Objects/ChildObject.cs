@@ -18,7 +18,8 @@ namespace AYellowpaper.SerializedCollections
         public List<Image> Mess;
         public List<Image> Eat;
 
-        public AudioClip blender, watermelon;
+        public List<AudioClip> blender, watermelon;
+        public List<AudioClip> bored_sounds;
 
         private void OnEnable()
         {
@@ -38,7 +39,11 @@ namespace AYellowpaper.SerializedCollections
             Description = Description_Text.gameObject.transform.parent.gameObject;
 
             outline = Outlines[0];
-            next_color = Color.yellow;
+
+            var newcolor = Color.yellow;
+            ColorUtility.TryParseHtmlString("#CFC55D", out newcolor);
+            next_color = newcolor;
+
             next_color.a = 1;
             outline.gameObject.transform.parent.gameObject.GetComponent<Image>().alphaHitTestMinimumThreshold = 0.5f;
 
@@ -90,13 +95,13 @@ namespace AYellowpaper.SerializedCollections
             //check what mess to make
             isMess = true;
             var mess = 1;
-            source.clip = blender;
+            source.clip = blender[0];
 
             //if watermelon is NOT prepared, mess with it
             if (!WatermelonPrepared)
             {
                 mess = 0;
-                source.clip = watermelon;
+                source.clip = watermelon[0];
             }
 
             //Set temp outline
@@ -105,8 +110,8 @@ namespace AYellowpaper.SerializedCollections
             if (mess == 1)
                 Mess[2].gameObject.SetActive(false);
 
-            source.PlayDelayed(0.85f);
-            FadeChildImage(temp_outline);
+            source.PlayDelayed(0.15f);
+            FadeChildImage(temp_outline, true);
         }
 
         public void FeedChild(int isChocolate)
@@ -115,10 +120,12 @@ namespace AYellowpaper.SerializedCollections
             {
                 FedChocolate = true;
                 GameManager.FedChocolate = true;
+                source.clip = blender[1];
             }
             else
             {
                 FedWatermelon = true;
+                source.clip = watermelon[1];
             }
 
             isMess = false;
@@ -127,7 +134,8 @@ namespace AYellowpaper.SerializedCollections
             //Set temp outline
             var temp_outline = Eat[isChocolate];
 
-            FadeChildImage(temp_outline);
+            source.PlayDelayed(0.15f);
+            FadeChildImage(temp_outline, true);
         }
 
         public void ChildBoredMeter()
@@ -144,10 +152,10 @@ namespace AYellowpaper.SerializedCollections
             //Set temp outline
             var temp_outline = Outlines[BoredMeter];
 
-            FadeChildImage(temp_outline);
+            FadeChildImage(temp_outline, false);
         }
 
-        private void FadeChildImage(Image temp_outline)
+        private void FadeChildImage(Image temp_outline, bool isMess)
         {
             RaycastDetection(false, temp_outline);
             Sequence mySequence = DOTween.Sequence();
@@ -160,7 +168,14 @@ namespace AYellowpaper.SerializedCollections
             CurrentImage.transform.GetChild(0).gameObject.SetActive(false);
 
             //Fade current image out and next image in
-            mySequence.Append(CurrentImage.GetComponent<Image>().DOFade(0, .85f)).Insert(0.1f, NextImage.GetComponent<Image>().DOFade(1, .85f)).OnComplete(() =>
+
+            if (!isMess)
+            {
+                int index = (Random.Range(0, 3));
+                if (index <= 1)
+                    source.PlayOneShot(bored_sounds[index]);
+            }
+            mySequence.Append(CurrentImage.GetComponent<Image>().DOFade(0, .5f)).Insert(0.1f, NextImage.GetComponent<Image>().DOFade(1, .5f)).OnComplete(() =>
             {
                 //turn off current (last) image
                 CurrentImage.SetActive(false);
@@ -169,8 +184,11 @@ namespace AYellowpaper.SerializedCollections
                 outline = temp_outline;
                 outline.gameObject.SetActive(true);
 
+                var newcolor = Color.yellow;
+                ColorUtility.TryParseHtmlString("#CFC55D", out newcolor);
+
                 //Ensure the outline colors are correct
-                next_color = Color.yellow;
+                next_color = newcolor;
                 outline.color = Color.black;
 
                 //Set next to bve current
@@ -178,6 +196,9 @@ namespace AYellowpaper.SerializedCollections
 
                 //Turn Raycast back on
                 RaycastDetection(true);
+
+                //play sound
+
             });
         }
 

@@ -10,7 +10,9 @@ namespace AYellowpaper.SerializedCollections
         private void Start()
         {
             outline = GetComponent<Image>();
-            next_color = Color.yellow;
+            var newcolor = Color.yellow;
+            ColorUtility.TryParseHtmlString("#CFC55D", out newcolor);
+            next_color = newcolor;
             next_color.a = 1;
         }
     }

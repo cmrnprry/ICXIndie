@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f205b71468fc1343a3400c4a2862633, type: 3}
   m_Name: Bed_Interactable
   m_EditorClassIdentifier: 
-  Time_to_do: 10
+  Time_to_do: 15
   completed: 0
   Need_to_Buy: 0
   Need_to_Prepare: 0
   preparable_info: []
-  InteractionDescription: Good place for the baby to take naps
+  InteractionDescription: His favourite place to sleep through the night.
   options: []
   items: []
   CompletionText: {fileID: 11400000, guid: a88d157533cff584392abadfcc056736, type: 2}

@@ -17,13 +17,13 @@ MonoBehaviour:
   Need_to_Buy: 0
   Need_to_Prepare: 0
   preparable_info: []
-  InteractionDescription: The TV distracts the baby for a short while
+  InteractionDescription: The TV distracts the him for a short while.
   options:
-  - name: Cartoons
+  - name: Cartoons?
     value: He loves these in human form.
     need: 
     index: 0
-  - name: Nature Shows
+  - name: Nature Shows?
     value: Your friend leaves these on for her dogs.
     need: 
     index: 1

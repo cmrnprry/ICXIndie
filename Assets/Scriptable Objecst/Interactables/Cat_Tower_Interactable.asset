@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f205b71468fc1343a3400c4a2862633, type: 3}
   m_Name: Cat_Tower_Interactable
   m_EditorClassIdentifier: 
-  Time_to_do: 15
+  Time_to_do: 20
   completed: 0
   Need_to_Buy: 0
   Need_to_Prepare: 0

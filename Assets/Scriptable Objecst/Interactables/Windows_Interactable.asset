@@ -17,7 +17,7 @@ MonoBehaviour:
   Need_to_Buy: 1
   Need_to_Prepare: 0
   preparable_info: []
-  InteractionDescription: Board up windows to prevent an escape
+  InteractionDescription: Board up windows to prevent an escape.
   options: []
   items:
   - item: 7

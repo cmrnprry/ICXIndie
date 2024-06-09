@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using DG.Tweening;
 
 namespace AYellowpaper.SerializedCollections
 {
@@ -23,7 +24,11 @@ namespace AYellowpaper.SerializedCollections
             Description = Description_Text.gameObject.transform.parent.gameObject;
 
             outline = GetComponent<Image>();
-            next_color = Color.yellow;
+
+            var newcolor = Color.yellow;
+            ColorUtility.TryParseHtmlString("#CFC55D", out newcolor);
+            next_color = newcolor;
+
             next_color.a = 1;
             outline.gameObject.transform.parent.gameObject.GetComponent<Image>().alphaHitTestMinimumThreshold = 0.25f;
         }
@@ -68,18 +73,24 @@ namespace AYellowpaper.SerializedCollections
         {
             //set prepare to true
             prepare.completed = true;
+            if (source.clip != null)
+                source.Play();
 
             if (prepare.name.Contains("Watermelon"))
                 OnWaterMelonPrepared.Invoke();
 
             OnPrepareItem.Invoke();
+            outline.enabled = false;
 
-            foreach (GameObject o in Objects)
+            Sequence mySequence = DOTween.Sequence();
+            mySequence.Append(this.gameObject.transform.parent.gameObject.GetComponent<Image>().DOFade(0, 0.55f)).OnComplete(() =>
             {
-                o.SetActive(!o.activeSelf);
-            }
-
-            outline.gameObject.transform.parent.gameObject.SetActive(false);
+                outline.gameObject.transform.parent.gameObject.SetActive(false);
+                foreach (GameObject o in Objects)
+                {
+                    o.SetActive(!o.activeSelf);
+                }
+            });
         }
 
         //////////////////////////////////////// HELPERS ////////////////////////////////////////////

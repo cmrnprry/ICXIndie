@@ -38,14 +38,18 @@ namespace AYellowpaper.SerializedCollections
             }
 
             outline = GetComponent<Image>();
-            next_color = Color.yellow;
+
+            var newcolor = Color.yellow;
+            ColorUtility.TryParseHtmlString("#CFC55D", out newcolor);
+            next_color = newcolor;
+
             next_color.a = 1;
 
             if (useImageOverSprite)
                 outline.gameObject.transform.parent.gameObject.GetComponent<Image>().alphaHitTestMinimumThreshold = 0.25f;
 
             if (useAlphaOverImage)
-                outline.alphaHitTestMinimumThreshold = 0.8f;
+                outline.alphaHitTestMinimumThreshold = 0.35f;
 
             if (interacton.completed)
                 SetInteraction();
@@ -166,6 +170,7 @@ namespace AYellowpaper.SerializedCollections
 
             interacton.completed = true;
             Description.gameObject.SetActive(false);
+            source.Play();
         }
 
 

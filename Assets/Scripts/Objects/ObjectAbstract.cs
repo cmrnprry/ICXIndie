@@ -47,7 +47,10 @@ namespace AYellowpaper.SerializedCollections
             if (Description != null)
                 Description.gameObject.SetActive(false);
 
-            if (outline.color == Color.yellow)
+            var newcolor = Color.yellow;
+            ColorUtility.TryParseHtmlString("#CFC55D", out newcolor);
+
+            if (outline.color == newcolor)
                 SetObjectColor();
         }
 

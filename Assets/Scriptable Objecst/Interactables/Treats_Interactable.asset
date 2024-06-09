@@ -19,18 +19,18 @@ MonoBehaviour:
   preparable_info:
   - {fileID: 11400000, guid: b0e31d29255ddbd419eee2b8f8d51e7b, type: 2}
   - {fileID: 11400000, guid: af1433db796d532478d3d4c6477131db, type: 2}
-  InteractionDescription: He lovers to forege for treats as a wolf
+  InteractionDescription: He lovers to forege for treats as a wolf.
   options:
-  - name: Hide peanut butter in mat
-    value: He goes crazy for peanut butter
+  - name: Hide peanut butter in mat?
+    value: He goes crazy for peanut butter.
     need: 03000000
     index: 0
-  - name: Hide chocolate in mat
-    value: Might make him sick
+  - name: Hide chocolate in mat?
+    value: Might make him sick, but he loves chocolate.
     need: 04000000
     index: 1
-  - name: Don't hide anything in the mat
-    value: Less effective, but still works
+  - name: Don't hide anything in the mat?
+    value: Less effective, but still works.
     need: ffffffff
     index: 2
   items:

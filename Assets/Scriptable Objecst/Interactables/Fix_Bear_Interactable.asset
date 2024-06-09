@@ -23,7 +23,7 @@ MonoBehaviour:
     value: One of his favourite toys.
     need: 08000000
     index: 0
-  - name: Put it out ripped
+  - name: Put it out ripped?
     value: He's been asking me to fix it but...
     need: 
     index: 1

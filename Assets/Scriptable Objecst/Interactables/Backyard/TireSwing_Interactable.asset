@@ -17,7 +17,8 @@ MonoBehaviour:
   Need_to_Buy: 0
   Need_to_Prepare: 0
   preparable_info: []
-  InteractionDescription: Put this up?
+  InteractionDescription: Put away tire swing? If he gets out this should help prevent
+    an escape.
   options: []
   items: []
   CompletionText: {fileID: 11400000, guid: da9730d0a37dfaf42975a5f68c7f1e81, type: 2}
