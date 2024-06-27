@@ -19,22 +19,22 @@ namespace AYellowpaper.SerializedCollections
         [Header("Transition Screen")]
         public Image TransitionScreen;
 
-        public TMP_Dropdown Name_Drop, ScreenType_Drop, ScreenSize_Drop;
+        public TMP_Dropdown Name_Drop, Noun_Drop, ScreenType_Drop, ScreenSize_Drop;
 
         public void ShowScreen(GameObject Menu)
         {
             TransitionScreen.gameObject.SetActive(true);
-            TransitionScreen.DOFade(1, 0.25f).OnComplete(() =>
+            TransitionScreen.DOFade(1, 0.15f).OnComplete(() =>
             {
                 Menu.SetActive(!Menu.activeSelf);
-                TransitionScreen.DOFade(0, 0.25f).OnComplete(() =>
+                TransitionScreen.DOFade(0, 0.15f).OnComplete(() =>
                 {
                     TransitionScreen.gameObject.SetActive(false);
                     GameManager.CanPause = CanPause();
                 });
             });
         }
-
+        
         public void Reload()
         {
             SceneManager.LoadScene(0);
@@ -63,6 +63,11 @@ namespace AYellowpaper.SerializedCollections
         public void SetName(int name)
         {
             GameManager.Instance.SetName(Name_Drop.options[name].text);
+        }
+
+        public void SetPronouns(int noun)
+        {
+            GameManager.Instance.SetChildPronoun(Noun_Drop.options[noun].text);
         }
 
         public void StartGame()

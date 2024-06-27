@@ -17,6 +17,10 @@ public enum EndingActions
     Bitten = 0, Teddy = 1, TV = 2, Bed = 3, Trap = 4, Vomit = 5, Happy = 6, None = -1, Run_away = 108, Bone_crunching = 100, Scratching = 101, Toy_Playing = 102, Jump = 103, Sniffs = 104, TV_Break = 105, Munch = 106, Ripping = 107
 }
 
+public enum Pronouns
+{
+}
+
 
 namespace AYellowpaper.SerializedCollections
 {
@@ -26,6 +30,7 @@ namespace AYellowpaper.SerializedCollections
         public static bool CanPause = false;
 
         [HideInInspector] public string ChildName = "Vick";
+        [HideInInspector] public List<string> ChildNoun = new List<string> {"they", "them", "their" };
         [HideInInspector] public string ParentName = "Mom";
         [HideInInspector] public float childTired = 0;
         [HideInInspector] public bool wearingGloves = false;
@@ -111,6 +116,18 @@ namespace AYellowpaper.SerializedCollections
         public void SetParent(string change)
         {
             ParentName = change;
+        }
+
+        public void SetChildPronoun(string noun)
+        {
+            var split = noun.Split(" /");
+            ChildNoun[0] = split[0];
+            ChildNoun[1] = split[1];
+            ChildNoun[2] = split[2];
+
+            Debug.Log(ChildNoun[0]);
+            Debug.Log(ChildNoun[1]);
+            Debug.Log(ChildNoun[2]);
         }
 
         /// <summary>
