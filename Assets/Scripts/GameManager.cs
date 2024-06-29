@@ -138,10 +138,10 @@ namespace AYellowpaper.SerializedCollections
 
         public string SetChildName(string text)
         {
-            string change = "";
+            string change = text;
             if (text.Contains("@"))
                 change = text.Replace("@", ChildName);
-            else
+            else if (previous != "")
                 change = text.Replace(previous, ChildName);
 
             return change;
@@ -149,10 +149,10 @@ namespace AYellowpaper.SerializedCollections
 
         public string SetParentName(string text)
         {
-            string change = "";
+            string change = text;
             if (text.Contains("@"))
                 change = text.Replace("@", ParentName);
-            else
+            else if (previous != "")
                 change = text.Replace(previous, ParentName);
 
             return change;

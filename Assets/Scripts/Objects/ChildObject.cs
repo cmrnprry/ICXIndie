@@ -73,9 +73,9 @@ namespace AYellowpaper.SerializedCollections
                 return;
 
             if (isMess)
-                Description_Text.text = "I have to have somethign to occupy him while I clean.";
+                Description_Text.text = "I have to have something to occupy @ while I clean.";
             else
-                Description_Text.text = "Can chat for a bit or give him a treat.";
+                Description_Text.text = "Can chat for a bit or give @ a treat.";
 
             Description.gameObject.SetActive(true);
 
