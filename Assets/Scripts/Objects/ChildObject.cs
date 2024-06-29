@@ -17,9 +17,14 @@ namespace AYellowpaper.SerializedCollections
         public List<Image> Outlines;
         public List<Image> Mess;
         public List<Image> Eat;
+        public List<Image> Clickable;
 
         public List<AudioClip> blender, watermelon;
         public List<AudioClip> bored_sounds;
+
+        [Header("Buttons")]
+        public Button Watermelon;
+        public TextMeshProUGUI WatermelonText;
 
         private void OnEnable()
         {
@@ -37,7 +42,6 @@ namespace AYellowpaper.SerializedCollections
         private void Start()
         {
             Description = Description_Text.gameObject.transform.parent.gameObject;
-
             outline = Outlines[0];
 
             var newcolor = Color.yellow;
@@ -71,7 +75,7 @@ namespace AYellowpaper.SerializedCollections
             if (isMess)
                 Description_Text.text = "I have to have somethign to occupy him while I clean.";
             else
-                Description_Text.text = "A sweet treat might distract him for a bit.";
+                Description_Text.text = "Can chat for a bit or give him a treat.";
 
             Description.gameObject.SetActive(true);
 
@@ -84,10 +88,18 @@ namespace AYellowpaper.SerializedCollections
         /// </summary>
         public override void OnHoverExit()
         {
-            if ((FedChocolate && FedWatermelon) || Options.gameObject.activeSelf)
+            if ((FedChocolate && FedWatermelon) || Description.gameObject.activeSelf)
                 return;
 
             base.OnHoverExit();
+        }
+
+        public void FlipInteration(bool isOn)
+        {
+            foreach (Image item in Clickable)
+            {
+                item.raycastTarget = !isOn;
+            }
         }
 
         private void CauseMess()
@@ -215,8 +227,8 @@ namespace AYellowpaper.SerializedCollections
         public void WaterMelonPrepared()
         {
             var parent = Options.transform;
-            parent.GetChild(0).gameObject.SetActive(true);
-            parent.GetChild(1).gameObject.SetActive(false);
+            Watermelon.interactable = true;
+            WatermelonText.text = "Feed Watermelon";
             WatermelonPrepared = true;
         }
 

@@ -60,9 +60,9 @@ namespace AYellowpaper.SerializedCollections
             }
         }
 
-        public void SetName(int name)
+        public void SetParentName(int name)
         {
-            GameManager.Instance.SetName(Name_Drop.options[name].text);
+            GameManager.Instance.SetParent(Name_Drop.options[name].text);
         }
 
         public void SetPronouns(int noun)

@@ -144,10 +144,7 @@ namespace AYellowpaper.SerializedCollections
 
             string text = ChooseMessage(BabyWords);
 
-            if (text.Contains("@"))
-            {
-                text = text.Replace("@", GameManager.Instance.ParentName);
-            }
+            text = GameManager.Instance.SetParentName(text);
 
             Vector2 pos = GetRandomPositionInBounds();
 
@@ -189,10 +186,7 @@ namespace AYellowpaper.SerializedCollections
         {
             ParentTextBox.text = (message == "") ? ChooseMessage(AdultWords) : message;
 
-            if (ParentTextBox.text.Contains("@"))
-            {
-                ParentTextBox.text = ParentTextBox.text.Replace("@", GameManager.Instance.ChildName);
-            }
+            ParentTextBox.text = GameManager.Instance.SetChildName(ParentTextBox.text);
 
             ParentTextBox.gameObject.transform.parent.gameObject.SetActive(true);
 

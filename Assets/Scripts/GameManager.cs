@@ -29,7 +29,7 @@ namespace AYellowpaper.SerializedCollections
         private int Time = 350;
         public static bool CanPause = false;
 
-        [HideInInspector] public string ChildName = "Vick";
+        [HideInInspector] public string ChildName = "Chris"; private string previous = "";
         [HideInInspector] public List<string> ChildNoun = new List<string> {"they", "them", "their" };
         [HideInInspector] public string ParentName = "Mom";
         [HideInInspector] public float childTired = 0;
@@ -74,6 +74,11 @@ namespace AYellowpaper.SerializedCollections
         public List<InteractionObject> InteractionObjectList = new List<InteractionObject>(); //list of all the objects we can interact with at home
         private InteractableObject CurrentAction;
 
+        public delegate void SettingsChange();
+        public static event SettingsChange OnChangeParent;
+        public static event SettingsChange OnChangeChildName;
+        public static event SettingsChange OnChangeChildNouns;
+
         public static bool FedChocolate;
 
         public static GameManager Instance { get; private set; }
@@ -97,6 +102,7 @@ namespace AYellowpaper.SerializedCollections
 
         private void Start()
         {
+            ChildName = "Chris";
             TotalTime_Text.text = $"Time Left: {Time}";
             StartCoroutine(FinishAudioIntro());
         }
@@ -128,6 +134,28 @@ namespace AYellowpaper.SerializedCollections
             Debug.Log(ChildNoun[0]);
             Debug.Log(ChildNoun[1]);
             Debug.Log(ChildNoun[2]);
+        }
+
+        public string SetChildName(string text)
+        {
+            string change = "";
+            if (text.Contains("@"))
+                change = text.Replace("@", ChildName);
+            else
+                change = text.Replace(previous, ChildName);
+
+            return change;
+        }
+
+        public string SetParentName(string text)
+        {
+            string change = "";
+            if (text.Contains("@"))
+                change = text.Replace("@", ParentName);
+            else
+                change = text.Replace(previous, ParentName);
+
+            return change;
         }
 
         /// <summary>
@@ -829,7 +857,11 @@ namespace AYellowpaper.SerializedCollections
 
         public void SetName(string name)
         {
+            previous = ChildName;
             ChildName = name;
+
+            OnChangeChildName.Invoke();
+            Debug.Log(name);
         }
 
         public void SetGloves(bool value)
