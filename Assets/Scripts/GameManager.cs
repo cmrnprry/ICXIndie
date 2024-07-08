@@ -30,7 +30,7 @@ namespace AYellowpaper.SerializedCollections
         public static bool CanPause = false;
 
         [HideInInspector] public string ChildName = "Chris"; private string previous = "";
-        [HideInInspector] public List<string> ChildNoun = new List<string> {"they", "them", "their" };
+        [HideInInspector] public List<string> ChildNoun = new List<string> { "they", "them", "their" };
         [HideInInspector] public string ParentName = "Mom";
         [HideInInspector] public float childTired = 0;
         [HideInInspector] public bool wearingGloves = false;
@@ -103,7 +103,7 @@ namespace AYellowpaper.SerializedCollections
         private void Start()
         {
             ChildName = "Chris";
-            TotalTime_Text.text = $"Time Left: {Time}";
+            TotalTime_Text.text = $"Time Left: {Time} min";
             StartCoroutine(FinishAudioIntro());
         }
 
@@ -210,20 +210,38 @@ namespace AYellowpaper.SerializedCollections
 
         public void RemoveTime(int time)
         {
+            Sequence scaleTime = DOTween.Sequence();
+            RectTransform rect = TotalTime_Text.gameObject.GetComponent<RectTransform>();
             Time -= time;
+            if (Time <= 100)
+            {
+                Color color = Color.red;
+                ColorUtility.TryParseHtmlString("#A42707", out color);
+                TotalTime_Text.color = color;
+            }
+
+            scaleTime.Append(rect.DOScale(1.5f, 0.35f)).Insert(0, rect.DOAnchorPos(new Vector2(465, -75), 0.35f)).OnStart(() =>
+            {
+
+                TotalTime_Text.text = $"Time Left: {Time} min";
+
+            }).Insert(0.65f, rect.DOScale(1, 1.5f)).Insert(0.65f, rect.DOAnchorPos(new Vector2(315, -50), 1.5f)).OnComplete(() =>
+            {
+                Color color = Color.red;
+                ColorUtility.TryParseHtmlString("#D9D2D1", out color);
+
+                TotalTime_Text.color = color;
+            });
+
 
             if (Time <= 0)
             {
                 EndDayTimer();
-                print("Next Phase");
                 return;
             }
 
             if (Time <= 100 || (StoreManager.Instance != null && !StoreManager.Instance.InStore))
                 CheckTimeLeft();
-
-
-            TotalTime_Text.text = $"Time Left: {Time.ToString()}";
         }
 
         public int GetTime()
@@ -704,7 +722,7 @@ namespace AYellowpaper.SerializedCollections
                             Ending_Image.DOFade(1, 0.25f);
                         });
 
-                        
+
 
                         if ((int)Action == 1)
                         {
