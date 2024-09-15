@@ -77,6 +77,10 @@ namespace AYellowpaper.SerializedCollections
             else
                 Description_Text.text = "Can chat for a bit or give @ a treat.";
 
+            string change = GameManager.Instance.SetChildName(Description_Text.text);
+            Description_Text.text = change;
+            Description_Text.ForceMeshUpdate();
+
             Description.gameObject.SetActive(true);
 
             if (outline.color == Color.black)

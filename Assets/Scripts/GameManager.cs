@@ -119,9 +119,22 @@ namespace AYellowpaper.SerializedCollections
             }
         }
 
+
+        //sets string
         public void SetParent(string change)
         {
             ParentName = change;
+
+            OnChangeParent.Invoke();
+        }
+
+        //sets string and invokes an action
+        public void SetChild(string change)
+        {
+            previous = ChildName;
+            ChildName = change;
+
+            OnChangeChildName.Invoke();
         }
 
         public void SetChildPronoun(string noun)
@@ -136,15 +149,16 @@ namespace AYellowpaper.SerializedCollections
             Debug.Log(ChildNoun[2]);
         }
 
-        public string SetChildName(string text)
+        //takes in old child text name and replaces it wiith th ecorrect version
+        public string SetChildName(string oldName)
         {
-            string change = text;
-            if (text.Contains("@"))
-                change = text.Replace("@", ChildName);
+            string changeTo = oldName;
+            if (oldName.Contains("@"))
+                changeTo = oldName.Replace("@", ChildName);
             else if (previous != "")
-                change = text.Replace(previous, ChildName);
+                changeTo = oldName.Replace(previous, ChildName);
 
-            return change;
+            return changeTo;
         }
 
         public string SetParentName(string text)
@@ -873,14 +887,7 @@ namespace AYellowpaper.SerializedCollections
             }
         }
 
-        public void SetName(string name)
-        {
-            previous = ChildName;
-            ChildName = name;
-
-            OnChangeChildName.Invoke();
-            Debug.Log(name);
-        }
+        
 
         public void SetGloves(bool value)
         {
