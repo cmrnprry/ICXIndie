@@ -19,6 +19,7 @@ public enum EndingActions
 
 public enum Pronouns
 {
+    plural = 0, singular = 1
 }
 
 
@@ -31,6 +32,7 @@ namespace AYellowpaper.SerializedCollections
 
         [HideInInspector] public string ChildName = "Chris"; private string previous = "";
         [HideInInspector] public List<string> ChildNoun = new List<string> { "they", "them", "their" };
+        private Pronouns current = Pronouns.plural;
         [HideInInspector] public string ParentName = "Mom";
         [HideInInspector] public float childTired = 0;
         [HideInInspector] public bool wearingGloves = false;
@@ -67,8 +69,9 @@ namespace AYellowpaper.SerializedCollections
         [Header("Ending")]
         public List<Sprite> Ending_Sprites;
         public Image Ending_Image;
-        public Transform Ending_Parent;
-        public TextMeshProUGUI Example_text;
+        public Animator Ending_Continue;
+        public TextMeshProUGUI Ending_TextBox;
+        private bool CanContinue = false;
 
         private List<BuyableItems> BoughtItems = new List<BuyableItems>(); // list of everythign we have bought
         public List<InteractionObject> InteractionObjectList = new List<InteractionObject>(); //list of all the objects we can interact with at home
@@ -143,6 +146,8 @@ namespace AYellowpaper.SerializedCollections
             ChildNoun[0] = split[0];
             ChildNoun[1] = split[1];
             ChildNoun[2] = split[2];
+
+            current = (ChildNoun[0] == "they") ? Pronouns.plural : Pronouns.singular;
 
             Debug.Log(ChildNoun[0]);
             Debug.Log(ChildNoun[1]);
@@ -428,11 +433,23 @@ namespace AYellowpaper.SerializedCollections
                 remainingTime;
         }
 
+        private string ToUpperCase(string str)
+        {
+            if (string.IsNullOrEmpty(str))
+                return string.Empty;
+
+            char[] a = str.ToCharArray();
+            a[0] = char.ToUpper(a[0]);
+
+            return new string(a);
+        }
+
         ///////////////////////////////////////////////////////// SECOND PHASE /////////////////////////////////////////////////////////
         private Coroutine routine = null;
         [SerializedDictionary("End Text", "Action")]
-        private SerializedDictionary<string, EndingActions> Ending_Text = new SerializedDictionary<string, EndingActions>();
+        private Dictionary<string, EndingActions> Ending_Text = new Dictionary<string, EndingActions>();
         [HideInInspector] public bool Finished = false;
+
         public void EndDayButton()
         {
             StartCoroutine(EndDayTransition());
@@ -475,34 +492,34 @@ namespace AYellowpaper.SerializedCollections
             bool watermelon = ActionsPreformed.CheckAction("Watermelon"); //tired -= 0.5 | likes it but has opposite effect
 
             //usually good, but can be bad
-            bool bear = ActionsPreformed.CheckAction("Fix_Bear"); //if fixed: tired += 1 | plays with it, but breaks it again else: tired -= 0.5 | makes him frustrated
-            bool playmat = ActionsPreformed.CheckAction("Treats"); // if pb: tired += 1  if candy: tired -= 2 || makes him hyper, but will crash and puke soon  else: tired -= 1
+            bool bear = ActionsPreformed.CheckAction("Fix_Bear"); //if fixed: tired += 1 | plays with it, but breaks it again else: tired -= 0.5 | makes {ChildNoun[1]} frustrated
+            bool playmat = ActionsPreformed.CheckAction("Treats"); // if pb: tired += 1  if candy: tired -= 2 || makes {ChildNoun[1]} hyper, but will crash and puke soon  else: tired -= 1
             bool tv = ActionsPreformed.CheckAction("TV"); //if cartoon: tired += 1   if nature: tired += 2 | neighbors annoyed by barking / howling ?
 
             //Mothing bad, but depends on other things
-            bool bed = ActionsPreformed.CheckAction("Bed"); // tired += 0.5 | digs around but doesn't reall care   if you give him a lot of chocolate or tire him out, he will nest in there
+            bool bed = ActionsPreformed.CheckAction("Bed"); // tired += 0.5 | digs around but doesn't reall care   if you give {ChildNoun[1]} a lot of chocolate or tire {ChildNoun[1]} out, {ChildNoun[0]} will nest in there
 
             //prevents escape
             bool windows = ActionsPreformed.CheckAction("Window"); //tired += 0.5 \ tires an escape
 
+            string plural = current == Pronouns.singular ? "s" : "";
 
             //START TEXT
             string chocolateString = $"As the full moon rises, {ChildName} excitedly runs around the basement while you finish any last minute preparations.";
             if (ChildObject.FedChocolate)
             {
                 chocolateAmount += 1;
-                chocolateString = $"As the full moon rises, {ChildName} is pulling on your clothes, asking for more sweets. You tell him to go sit down while you try to finish any last minute preparations.";
+                chocolateString = $"As the full moon rises, {ChildName} is pulling on your clothes, asking for more sweets. You tell {ChildNoun[1]} to go sit down while you try to finish any last minute preparations.";
             }
             EndingText(chocolateString);
 
             string next = (windows) ? $"It isn't long before the moon light shines into the basement through cracks in the wooden boards, and your little {ChildName} fully transforms." : $"It isn't long before the moon light shines into the basement through the windows, and your little {ChildName} fully transforms.";
-            EndingText(next, EndingActions.Bone_crunching);
 
-            EndingText($"It never sounds or looks pleasent, but he says he doesn't hurt when you ask.");
+            EndingText(next + $"\nIt never sounds or looks pleasent, but {ChildNoun[0]} say{plural} it doesn't hurt when you ask.", EndingActions.Bone_crunching);
 
-            next = $"It isn't long before he is running around the room, sniffing around all the things you left out for him.";
+            next = $"It isn't long before {ChildName} is running around the room, sniffing around all the things left out.";
             if (ChildObject.FedChocolate)
-                next += $" The chocolate you fed him earlier seemed to make him more hyper than normal.";
+                next += $" The chocolate you fed {ChildNoun[1]} earlier seemed to make {ChildNoun[1]} more hyper than normal.";
 
             EndingText(next);
 
@@ -522,14 +539,13 @@ namespace AYellowpaper.SerializedCollections
                     temp_bool = true;
                     if (chocolateAmount > 0)
                     {
-                        EndingText($"While running in circles, {ChildName} locks eyes with his bear stuffie, grabs it in his jaws and violently shakes it.", EndingActions.Teddy);
-                        EndingText($"The bear never stood a chance.");
+                        EndingText($"While running in circles, {ChildName} locks eyes with {ChildNoun[2]} bear stuffie, grabs it in {ChildNoun[2]} jaws and violently shakes it.\nThe bear never stood a chance.", EndingActions.Teddy);
                     }
 
                     else
                     {
-                        EndingText($"While running in circles, {ChildName} sees his bear, and starts playing with. He throws it around in the air, attempting to catch it before it hits the ground.", EndingActions.Teddy);
-                        EndingText($"By the time he's done with it, his sharp teeth have caused your stitches to rip and the bear to fall apart.");
+                        EndingText($"While running in circles, {ChildName} sees {ChildNoun[2]} bear, and starts playing with. {ChildName} throws it around in the air, attempting to catch it before it hits the ground.\nBy the time {ChildName}'s done with it, {ChildNoun[2]} sharp teeth have ripped your stitches, and the bear, apart.", EndingActions.Teddy);
+                        EndingText($"");
                     }
 
 
@@ -539,26 +555,27 @@ namespace AYellowpaper.SerializedCollections
                 {
                     temp_bool = false;
                     if (chocolateAmount > 0)
-                        EndingText($"While running in circles, {ChildName} sees his broken bear, and grabs it in his jaws, violently shaking it. The already ruined bear is ripped to pieces, and you worry you won't be able to fix it later.", EndingActions.Teddy);
+                        EndingText($"While running in circles, {ChildName} sees {ChildNoun[2]} broken bear, and grabs it in {ChildNoun[2]} jaws, violently shaking it. The already ruined bear is ripped to pieces. You worry you won't be able to fix it later.", EndingActions.Teddy);
                     else
-                        EndingText($"While running in circles, {ChildName} sees his broken bear, and noses it before whining at it. He tries to play with it, but the stuffed toy falls into further disrepair.", EndingActions.Teddy);
+                        EndingText($"While running in circles, {ChildName} sees {ChildNoun[2]} broken bear, and noses it before whining at it. {ChildName} tries to play with it, but the stuffed toy falls into further disrepair.", EndingActions.Teddy);
 
                     childTired -= 0.5f;
                 }
             }
             if (cat_tower)
             {
+                string tower_text = "";
                 if (bear && temp_bool)
-                    EndingText($"Finished playing with his bear, {ChildName} turns to his tower. He runs up the ladder and perches on top before something in the room catches his attention.");
+                    tower_text = ($"Finished playing with {ChildNoun[2]} bear, {ChildName} turns to {ChildNoun[2]} tower. {ChildName} runs up the ladder and perches on top before something in the room catches {ChildNoun[2]} attention.");
                 else if (bear && !temp_bool)
-                    EndingText($"Tired of his broken toy, {ChildName} turns to his tower. He runs up the ladder and perches on top before something in the room catches his attention.");
+                    tower_text = ($"Tired of {ChildNoun[2]} broken toy, {ChildName} turns to {ChildNoun[2]} tower. {ChildName} runs up the ladder and perches on top before something in the room catches {ChildNoun[2]} attention.");
                 else
-                    EndingText($"{ChildName} turns to his tower. He runs up the ladder and perches on top before something in the room catches his attention.");
+                    tower_text = ($"{ChildName} turns to {ChildNoun[2]} tower. {ChildName} runs up the ladder and perches on top before something in the room catches {ChildNoun[2]} attention.");
 
                 if (ChildObject.FedChocolate)
-                    EndingText($"He leaps from the top of his perch, and sprints to his new fixation.", EndingActions.Jump);
+                    EndingText(tower_text + $"\n{ChildName} leaps from {ChildNoun[2]} perch, and sprints to {ChildNoun[2]} new fixation.", EndingActions.Jump);
                 else
-                    EndingText($"{ChildName} whines and readies himself before jumping from the top of his perch, and prances to his new fixation.", EndingActions.Jump);
+                    EndingText(tower_text + $"\n{ChildName} whines and readies himself before jumping from the top of {ChildNoun[2]} perch, and prances to {ChildNoun[2]} new fixation.", EndingActions.Jump);
 
                 childTired += 0.5f;
             }
@@ -571,17 +588,17 @@ namespace AYellowpaper.SerializedCollections
                         childTired += 1;
                         chocolateAmount += 1;
 
-                        EndingText($"{ChildName} pounces on the mat and sniffs out all the treats hidden in it. He wolfs down all the chocolate treats he could find, and then begins to zoom around the room.", EndingActions.Sniffs);
+                        EndingText($"{ChildName} pounces on the mat, sniffs out all the chocolate treats hidden in it, and wolfs down everything {ChildNoun[0]} could find. Not too long after {ChildName} zooms around the room.", EndingActions.Sniffs);
                         break;
                     case BuyableItems.Peanutbutter:
                         childTired += 2;
 
-                        EndingText($"{ChildName} pounces on the mat and sniffs out all the treats hidden in it. His tail goes a mile a minute, and once he notices, begins to chase it.", EndingActions.Sniffs);
+                        EndingText($"{ChildName} pounces on the mat and sniffs out all the peanut butter treats hidden in it.\n{ToUpperCase(ChildNoun[2])} tail goes a mile a minute, and once {ChildName} notices, begins to chase it.", EndingActions.Sniffs);
                         break;
                     default: // didn't put anything
                         childTired -= 1f;
 
-                        EndingText($"{ChildName} sniffs and digs at the mat, but once he realizes there's nothing there, moves on.", EndingActions.Sniffs);
+                        EndingText($"{ChildName} sniffs and digs at the mat, but after realizing there's nothing there, moves on. {ToUpperCase(ChildNoun[2])} tail droops.", EndingActions.Sniffs);
                         break;
                 }
             }
@@ -591,30 +608,31 @@ namespace AYellowpaper.SerializedCollections
                 string temp = "";
                 if (ActionsPreformed.FindOptionIndex("TV") == 0)
                 {
-                    temp = $"The intro song of cartoon starts playing. {ChildName}'s ears instantly perk up, and he runs over. He sits and wags his tail, cocking his head from side to side as the characters on screen ask questions.";
+                    temp = $"The intro song of kid's cartoon starts playing. {ChildNoun[2]} ears instantly perk up, and {ChildName} runs over to the TV. Sitting and wagging {ChildNoun[2]} tail, {ChildNoun[0]} cock{plural} {ChildNoun[2]} head from side to side as the characters on screen ask questions.";
                     childTired += 1;
                 }
                 else
                 {
-                    temp = $"The wolf pack on the nature show playing start howling.  {ChildName}'s ears instantly perk up, and he runs over. He wags his tail and begins to bark and howl with the wolves on screen.";
+                    temp = $"The wolf pack on the nature show playing start howling. {ChildNoun[2]} ears instantly perk up, and {ChildName} runs over to the TV. {ToUpperCase(ChildNoun[0])} bark{plural} and howl{plural} with the wolves on screen, tail going a mile a minute.";
                     childTired += 2;
                 }
 
-                EndingText(temp);
-                EndingText($"He watches the show happily, until he tries to jump up and presses a button, turning it off. He whines and paws at the TV, trying to turn it back on. When he can't, {ChildName} grwos frustrated and bites and pulls at the bars surrounding the TV.", EndingActions.TV_Break);
-                EndingText($"{ChildName} easily pulls and bends the metal. It isn't long before the the TV lays in a wrecked pile on the floor. Satisfied with his destruction, he trots away.", EndingActions.TV);
+                EndingText(temp + $"\n{ChildName} watches the show happily, until {ChildNoun[0]} jump{plural} up and presses a button, turning it off. {ChildName} whines and paws at the TV, trying to turn it back on. When {ChildNoun[0]} can't, {ChildName} grows frustrated, biting and pulling at the bars surrounding the TV.", EndingActions.TV_Break);
+
+                EndingText($"\n{ChildName} easily pulls and bends the metal. It isn't long before the the TV lays in a wrecked pile on the floor. Satisfied with {ChildNoun[2]} destruction, {ChildName} trots away.", EndingActions.TV);
             }
             if (watermelon)
             {
+                string tv_text = "";
                 if (tv)
                 {
-                    EndingText("The taste of metal and electronics seemed to leave a bad taste in his mouth, and he makes his way to the watermelon on the floor.");
+                    tv_text = ($"The taste of metal and electronics seemed to leave a bad taste in {ChildNoun[2]} mouth, and {ChildName} trots over to the watermelon on the floor.");
                 }
 
                 if (treatTypes == BuyableItems.Chocolate)
-                    EndingText($"{ChildName} gives the watermelon halves a few tentative licks, but instead of chewing or eating, he begins to dig into them. It makes a huge mess, but he seems to be having fun.");
+                    EndingText(tv_text + $"\n{ChildName} gives the watermelon halves a few tentative licks, but instead of chewing or eating, {ChildNoun[0]} dig into them. It makes a huge mess, but {ChildNoun[0]} seem{plural} to be having fun.");
                 else
-                    EndingText($"{ChildName} gives the watermelon halves a few tentative licks before ripping it to bits. You're not sure how much he's actually eating vesus how much is mush on the floor, but he seems to be having fun.");
+                    EndingText(tv_text + $"\n{ChildName} gives the watermelon halves a few tentative licks before ripping it to bits. You're not sure how much {ChildNoun[0]}'s actually eating vesus how much is mush on the floor, but {ChildNoun[0]} seem{plural} to be having fun.");
 
                 childTired += 1.5f;
             }
@@ -626,7 +644,7 @@ namespace AYellowpaper.SerializedCollections
                     temp = "Covered in watermelon bits, ";
                 }
 
-                temp += (chocolateAmount > 0) ? $"{ChildName} sniffs out the meat pumpkin and bats it around for a while. He gnaws on the pumpkin, but quickly moves on. The sugar high seems to be wearing off." : $"{ChildName} sniffs out the meat pumpkin and bats it around, gnawing on the pumpkin and scarfing down any meat pieces that fall out. ";
+                temp += (chocolateAmount > 0) ? $"{ChildName} sniffs out the meat pumpkin and bats it around for a while. {ToUpperCase(ChildNoun[0])} gnaw{plural} on the pumpkin, but quickly moves on. The sugar high seems to be wearing off." : $"{ChildName} sniffs out the meat pumpkin and bats it around, gnawing on the pumpkin and scarfing down any meat pieces that fall out. ";
 
                 float tired = (chocolateAmount > 0) ? 1f : 1.5f;
                 EndingText(temp, EndingActions.Munch);
@@ -640,50 +658,54 @@ namespace AYellowpaper.SerializedCollections
                 string temp = "";
                 if (chocolateAmount >= 2)
                 {
-                    EndingText($"{ChildName} is slowly walking around the room, and stops next his bed, heaving. Before you can do anything, he vomits everything all over his. He wimpers and curls up next to it.", EndingActions.Vomit);
-                    EndingText($"The rest of the night passes quickly. You stay by his side the entire time, rubbing his back and giving him water.  {ChildName} vomits a few more times before he transforms back.");
-                    EndingText($"You and {ChildName} spend the rest of the day curled up together. You make a mental note to not give him chocolate again, no matter how much he begs.");
+                    string bad_end = "";
+                    EndingText($"{ChildName} is slowly walking around the room, and stops next {ChildNoun[2]} bed, heaving. Before you can do anything, {ChildNoun[0]} vomit{plural} everything all over {ChildNoun[2]}. {ChildNoun[0]} wimper{plural} and curl{plural} up next to it.", EndingActions.Vomit);
+
+                    bad_end = ($"The rest of the night passes quickly. You stay by {ChildNoun[2]} side the entire time, rubbing {ChildNoun[2]} back and giving {ChildNoun[1]} water.  {ChildName} vomits a few more times before {ChildNoun[0]} transform{plural} back.");
+                    EndingText(bad_end + $"You and {ChildName} spend the rest of the day curled up together. You make a mental note to not give {ChildNoun[1]} chocolate again, no matter how much {ChildNoun[0]} beg{plural}.");
                     routine = StartCoroutine(ShowEndText());
                     Finished = true;
                     return;
                 }
                 else if (chocolateAmount > 0)
                 {
-                    temp = $"{ChildName} hops on his bed and begins to dig in it. He stops, heaves for a moment, then continues to dig.";
+                    temp = $"{ChildName} hops on {ChildNoun[2]} bed and begins to dig in it. {ToUpperCase(ChildNoun[0])} stop{plural}, heaves for a moment, then continues to dig.";
                 }
                 else
-                    temp = $"{ChildName} hops on his bed and begins to dig in it.";
+                    temp = $"{ChildName} hops on {ChildNoun[2]} bed and begins to dig in it.";
 
 
                 //TODO: FIGURE OUT THIS NUMBER
                 if (childTired >= 5)
                 {
-                    temp += " He turns in circles before plopping down and falling asleep.";
+                    temp += $" {ChildNoun[0]} turn{plural} in circles before plopping down and falling asleep.";
                     EndingText(temp, EndingActions.Happy);
-                    EndingText($"The rest of the night passes quickly and quietly. {ChildName} stays in his bed all night, allowing you to get some sleep of your own.");
-                    EndingText($"You wake in the morning to a messy basement, and a well slept child. You pat yourself on the back, and wake {ChildName} to get ready for the day.");
+                    EndingText($"The rest of the night passes quickly and quietly. {ChildName} stays in {ChildNoun[2]} bed all night, allowing you to get some sleep of your own. You wake in the morning to a messy basement, and a well slept child. You pat yourself on the back, and wake {ChildName} to get ready for the day.");
                     routine = StartCoroutine(ShowEndText());
                     Finished = true;
                     return;
                 }
 
 
-                temp += " He continues to dig in his bed, and even starts biting and tearing at it";
+                temp += $"\n{ChildName} continues to dig in {ChildNoun[2]} bed, and even starts biting and tearing at it.";
                 EndingText(temp, EndingActions.Bed);
                 EndingText($"{ChildName} rips the bed open, pulling all the stuffing out before eyeing the basement windows.", EndingActions.Ripping);
             }
             if (!windows)
             {
-                EndingText($"{ChildName} paces around, looking up at the unboarded windows. He whines and paws at the walls before standing up on his hind legs. {ChildName} backs up and jumps, squeezing out of the basement window and into the backyard.", EndingActions.Run_away);
+                EndingText($"{ChildName} paces around, looking up at the unboarded windows. {ToUpperCase(ChildNoun[0])} whine{plural} and paw{plural} at the walls before standing up on {ChildNoun[2]} hind legs.\n{ChildName} backs up and jumps, squeezing out of the basement window and into the backyard.", EndingActions.Run_away);
                 CheckNightTime(chocolateAmount);
             }
             else
             {
-                EndingText($"{ChildName} paces around, and attempts to escape, but the wooden boards hold firm. Unable to escape through the window, he scratches at the basement door.", EndingActions.Scratching);
-                EndingText($"When you try to stop him, he turns around and bites your hand. You suppress a swear, and wrap your hand in your shirt.", EndingActions.Bitten);
-                EndingText($"{ChildName} almost immediately realizes his error, and licks your leg in apology. You tell him to go lay down, and he slinks to his destroyed bed.");
-                EndingText($"The rest of the night passes quickly and quietly. {ChildName} stayed next to his bed the rest of the night, allowing you to leave the basement and clean your wound. It heals completely before the sun is fully up, and you curse yourself for you carelessness.");
-                EndingText($"The next day consisted of explaining to {ChildName} how being a wolf does not mean he can act how he wants, and calling around to other family members to figure out how future full moons will go.");
+                EndingText($"{ChildNoun[0]} pace{plural} around, and attempts to escape, but the wooden boards hold firm. Unable to escape through the window, {ChildName} scratches at the basement door.", EndingActions.Scratching);
+
+
+                EndingText($"When you try to stop {ChildNoun[1]}, {ChildNoun[0]} turn{plural} around and bites your hand. You suppress a swear, and wrap your hand in your shirt.\n{ ChildName} almost immediately realizes { ChildNoun[2]} error, and licks your leg in apology.You tell { ChildNoun[1]} to go lay down, and { ChildNoun[0]} slink{plural} to { ChildNoun[2]} destroyed bed.", EndingActions.Bitten);
+
+                EndingText($"The rest of the night passes quickly and quietly. {ChildName} stayed next to {ChildNoun[2]} bed the rest of the night, allowing you to leave the basement and clean your wound. It heals completely before the sun is fully up, and you curse yourself for you carelessness.\nThe next day consisted of explaining to {ChildName} how being a wolf does not mean {ChildNoun[0]} can act how {ChildNoun[0]} want{plural}, and calling around to other family members to figure out how future full moons will go.");
+
+                Finished = true;
             }
 
             routine = StartCoroutine(ShowEndText());
@@ -691,6 +713,12 @@ namespace AYellowpaper.SerializedCollections
 
         public void Continue()
         {
+            if (IsWriting)
+            {
+                CanContinue = true;
+                return;
+            }
+
             NightSource.Play();
             EndGame.SetActive(false);
         }
@@ -701,31 +729,23 @@ namespace AYellowpaper.SerializedCollections
             Ending_Text.Add(text, action);
         }
 
+        private bool IsWriting = true;
         private IEnumerator ShowEndText()
         {
-            //For each text chunk in Ending_Text, lets create a chunk of text
-            foreach (var pair in Ending_Text)
+            var index = 1;
+            foreach(var pair in Ending_Text)
             {
-                TextMeshProUGUI Text_Object = Instantiate(Example_text, Ending_Parent);
-                Text_Object.alpha = 0;
-                Text_Object.text = pair.Key;
-                Text_Object.gameObject.SetActive(true);
-                Text_Object.ForceMeshUpdate();
-            }
+                //reset text and make it invisible
+                Ending_TextBox.alpha = 0;
+                Ending_TextBox.text = pair.Key;
+                Ending_TextBox.ForceMeshUpdate();
 
-            yield return new WaitForFixedUpdate();
+                //Get the Text Info
+                TMP_TextInfo textInfo = Ending_TextBox.textInfo;
 
-            for (int kk = 0; kk < Ending_Parent.childCount; kk++)
-            {
-                TextMeshProUGUI Text = Ending_Parent.GetChild(kk).gameObject.GetComponent<TextMeshProUGUI>();
-                string contents = Text.text;
-
-                //Get teh Text Info
-                TMP_TextInfo textInfo = Text.textInfo;
-
-                if (Ending_Text[contents] != EndingActions.None)
+                if (pair.Value != EndingActions.None)
                 {
-                    var Action = Ending_Text[contents];
+                    var Action = pair.Value;
 
                     if ((int)Action <= 6) //images
                     {
@@ -778,9 +798,9 @@ namespace AYellowpaper.SerializedCollections
 
                 }
 
-                for (int ii = 0; ii <= contents.Length; ii++)
+                for (int ii = 0; ii <= Ending_TextBox.text.Length; ii++)
                 {
-                    if (ii == contents.Length)
+                    if (ii == Ending_TextBox.text.Length)
                     {
                         yield return new WaitForSeconds(1.5f);
                         continue;
@@ -801,14 +821,37 @@ namespace AYellowpaper.SerializedCollections
                     newVertexColors[vertexIndex + 2].a = 255;
                     newVertexColors[vertexIndex + 3].a = 255;
 
-                    Text.UpdateVertexData(TMP_VertexDataUpdateFlags.Colors32);
+                    Ending_TextBox.UpdateVertexData(TMP_VertexDataUpdateFlags.Colors32);
 
                     yield return new WaitForSeconds(0.03f);
                 }
 
-                Text.alpha = 225;
+                Ending_TextBox.alpha = 225;
+                Ending_Continue.enabled = true;
+                IsWriting = (index != Ending_Text.Count);
+
+                yield return new WaitForFixedUpdate();
+                yield return new WaitUntil(() => Input.GetKeyDown(KeyCode.Space) || CanContinue);
+                yield return new WaitForFixedUpdate();
+
+                Ending_Continue.enabled = false;
+                Ending_Continue.gameObject.GetComponent<TextMeshProUGUI>().alpha = 0;
+
+                if (!IsWriting)
+                    Ending_Continue.gameObject.GetComponent<Button>().onClick.Invoke();
+
+                CanContinue = false;
+                index++;
             }
+
+            yield return new WaitForFixedUpdate();
         }
+
+        public void SetContinue(bool val)
+        {
+            CanContinue = true;
+        }
+
 
         //TO DO: SHOW BABY MOVE FROM PLACE TO PLACE
         //MEANING IF TRAP BAITED, DOTWEEN BETWEEN THEM
@@ -887,7 +930,7 @@ namespace AYellowpaper.SerializedCollections
             }
         }
 
-        
+
 
         public void SetGloves(bool value)
         {
@@ -906,12 +949,6 @@ namespace AYellowpaper.SerializedCollections
             AdjustVolume(0.5f, 0.5f, 0);
             AdjustVolume(0.35f, 0.5f, 1);
 
-            foreach (Transform child in Ending_Parent)
-            {
-                if (child.gameObject.activeSelf)
-                    Destroy(child.gameObject);
-            }
-
             EndGame.SetActive(true);
             bool wiggle = (childTired >= 5) ? false : true;
 
@@ -921,56 +958,46 @@ namespace AYellowpaper.SerializedCollections
             }
             else
             {
-                EndingText($"You grab {ChildName} before he can escape past the fence.");
+                EndingText($"You grab {ChildName} before {ChildNoun[0]} can escape past the fence.");
             }
             if (wearingGloves)
             {
-                EndingText($"{ChildName} snaps at you, but the thick gloves prevent him from breaking the skin.");
-                EndingText("You tell him a firm \"No!\", and he puts his ears backs, pouting.");
+                EndingText($"{ChildName} snaps at you, but the thick gloves prevent {ChildNoun[1]} from breaking the skin.\nYou tell {ChildNoun[1]} a firm \"No!\", and {ChildName} puts {ChildNoun[2]} ears backs, pouting.");
 
                 if (!wiggle || flag == 4)
                 {
-                    EndingText($"You manage to wrangle {ChildName} back into the house, despite his attempts to wiggle away.");
-                    EndingText("He gives in quickly, and settles into your arms, quickly falling asleep.");
-                    EndingText($"You double check all the doors and windows, and wait out the rest of the night with {ChildName}.", EndingActions.Happy);
-                    EndingText($"This full moon was eventful to say the least, but everything was fine in the end.");
+                    EndingText($"You manage to wrangle {ChildNoun[1]} back into the house, despite {ChildName} attempts to wriggle away. {ChildName} gives in quickly once you sit on the couch with him, and settles into your arms, quickly falling asleep.\nYou brethe out a deep sigh of relief, wait out the rest of the night with {ChildNoun[1]}.", EndingActions.Happy);
+
+                    EndingText($"This full moon was eventful to say the least, but turned out fine in the end.");
                 }
                 else
                 {
-                    EndingText($"You try to wrangle {ChildName} back into the house, but he fights you every step of the way.");
-                    EndingText("He whines and pants, continuously nipping at your hands and arms, trying to break free.");
-                    EndingText("He suddenly stops, looks at you and snaps at your face.");
-                    EndingText("You stumble back, losing your grip and he leaps from your arms, and over the fence.", EndingActions.Run_away);
-                    EndingText("You say a string of curses before running after him, spending half the night searching for him.");
-                    EndingText($"You eventually find {ChildName} rooting around a neighbors trash. Plugging your nose, you grab him and rush home.");
-                    EndingText($"It's nearly sunrise by the time you get home, and {ChildName} vomits the second you enter the house. You clean him up, put him to bed, and then tend to the mess.", EndingActions.Vomit);
-                    EndingText($"This full moon was eventful to say the least, but at least {ChildName} vomiting was the worst of it in the end.");
+                    EndingText($"You try to wrangle {ChildNoun[1]} back into the house, but {ChildName} fights you every step of the way. {ChildName} whines and pants, continuously nipping at your hands and arms, trying to break free.\n{ChildName} suddenly stops, looks at you and snaps at your face.\nYou stumble back, losing your grip, allowing {ChildNoun[0]} to leap from your arms, and over the fence.", EndingActions.Run_away);
+
+                    EndingText($"You say a string of curses before running after {ChildNoun[1]}, spending half the night searching for {ChildNoun[1]}.\nYou find {ChildName} rooting around a neighbors trash, covered in gross and eating something {ChildNoun[0]} shouldn't. Plugging your nose, you grab {ChildNoun[1]} and rush home.\nIt's nearly sunrise by the time you get back, and {ChildName} vomits the second you enter the house. You clean {ChildNoun[1]} up, put {ChildNoun[1]} to bed, and then tend to the rest of the mess.", EndingActions.Vomit);
+
+                    EndingText($"This full moon was eventful to say the least, but at least cleaning up vomit was the worst of it in the end.");
                 }
             }
             else
             {
-                EndingText($"{ChildName} snaps at you, sinking his teeth into your hand.", EndingActions.Bitten);
-
+                EndingText($"{ChildName} snaps at you the second you touch {ChildNoun[1]}, sinking {ChildNoun[2]} teeth into your hand.", EndingActions.Bitten);
 
                 if (!wiggle || flag == 4)
                 {
-                    EndingText($"You suppress a curse, but keep your grip on {ChildName}.");
-                    EndingText("He continues to try wriggle out of your grip, but you give him one sharp glare and he settles down.");
-                    EndingText($"You carry {ChildName} back into the house, check the windows and doors, and place him down next to you while you clean your wound.");
-                    EndingText($"{ChildName}, sits next to you, ears back, and purposely doesn't look at you. He eventually noses your arm, and licks your hand in an apology.");
-                    EndingText($"The rest of the night passes quickly and quietly. {ChildName} stayed next to his bed the rest of the night, allowing you to leave the basement and clean your wound. It heals completely before the sun is fully up, and you curse yourself for you carelessness.");
-                    EndingText($"The next day consisted of explaining to {ChildName} how being a wolf does not mean he can act how he wants, and calling around to other family members to figure out how future full moons will go.");
+                    EndingText($"You suppress a curse, but keep your grip on {ChildNoun[1]}. {ChildName} continues to try wriggle out of your grip, but you give {ChildNoun[1]} one sharp glare and {ChildName} settles down.\nYou carry {ChildNoun[1]} back into the house, quickly check the windows and doors are locked, and place {ChildNoun[1]} down next to you while you clean your wound.");
 
+                    EndingText($"{ChildName} sits next to you, ears back, purposely not looking at you. {ChildName} eventually noses your arm, and licks your hand in an apology.");
+
+                    EndingText($"The rest of the night passes quickly and quietly. {ChildName} stayed next to {ChildNoun[2]} bed the rest of the night. It heals completely before the sun is fully up.\nThe next day was a long one of dealing with a massive tantrum from {ChildName} after being grounded, while calling around to other family members to figure out how future full moons will go.");
                 }
                 else
                 {
-                    EndingText($"You supress a curse, but lose your grip on {ChildName}.");
-                    EndingText("He takes the chance, leaps out of your grasp and over the fence.", EndingActions.Run_away);
-                    EndingText($"You rush into the house, hastily wrap your wound, and run after him.");
-                    EndingText($"You eventually find {ChildName} rooting around a neighbors trash. Plugging your nose, you grab him and rush home.");
-                    EndingText($"It's nearly sunrise by the time you get home, and {ChildName} vomits the second you enter the house.", EndingActions.Vomit);
-                    EndingText($"The rest of the night passes quickly and quietly. {ChildName} stayed next to his bed the rest of the night, allowing you to leave the basement and clean your wound. It heals completely before the sun is fully up, and you curse yourself for you carelessness.");
-                    EndingText($"The next day consisted of explaining to {ChildName} how being a wolf does not mean he can act how he wants, and calling around to other family members to figure out how future full moons will go.");
+                    EndingText($"You supress a curse, but lose your grip on {ChildNoun[1]}. {ChildName} takes the chance, leaps out of your grasp and over the fence.\nYou rush into the house, hastily wrap your wound, and run after {ChildNoun[1]}.\nYou find {ChildName} rooting around a neighbors trash, covered in gross and eating something {ChildNoun[0]} shouldn't. Plugging your nose, you grab {ChildNoun[1]} and rush home.", EndingActions.Run_away);
+
+                    EndingText($"It's nearly sunrise by the time you get home, and {ChildName} vomits the second you enter the house.\nYou clean {ChildNoun[1]} up, put {ChildNoun[1]} to bed, and then tend to the rest of the mess.", EndingActions.Vomit);
+
+                    EndingText($"The rest of the night passes quickly and quietly. {ChildName} stayed next to {ChildNoun[2]} bed the rest of the night, allowing you to leave the basement and clean your wound. It heals completely before the sun is fully up.\nThe next day was a long one of dealing with a massive tantrum from {ChildName} after being grounded, while calling around to other family members to figure out how future full moons will go.");
                 }
             }
 

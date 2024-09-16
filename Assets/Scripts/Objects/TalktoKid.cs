@@ -63,7 +63,7 @@ namespace AYellowpaper.SerializedCollections
                     button.onClick.AddListener(() =>
                     {
                         OnClick(item.topic);
-                        //Option_Parent.parent.gameObject.SetActive(false);
+                        GameManager.Instance.RemoveTime(2);
                     });
                     button.gameObject.SetActive(true);
                     button.gameObject.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = item.topic_title;
