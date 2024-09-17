@@ -28,12 +28,12 @@ namespace AYellowpaper.SerializedCollections
 
         private void Start()
         {
-            SetNames();
             CreateTalking();
         }
 
         private void OnEnable()
         {
+            SetNames();
             GameManager.OnChangeChildName += SetNames;
         }
 
@@ -65,6 +65,7 @@ namespace AYellowpaper.SerializedCollections
                         OnClick(item.topic);
                         GameManager.Instance.RemoveTime(2);
                     });
+
                     button.gameObject.SetActive(true);
                     button.gameObject.transform.GetChild(0).gameObject.GetComponent<TextMeshProUGUI>().text = item.topic_title;
                     index++;
@@ -72,7 +73,6 @@ namespace AYellowpaper.SerializedCollections
             }
 
         }
-
 
         //when player clicks on the button
         public void OnClick(int topic)

@@ -83,8 +83,6 @@ namespace AYellowpaper.SerializedCollections
 
         private void OnDisable()
         {
-            DepopulateList();
-
             if (ParentCoroutine != null)
                 StopCoroutine(ParentCoroutine);
 
@@ -96,6 +94,9 @@ namespace AYellowpaper.SerializedCollections
 
             if (BabyMessageCoroutine != null)
                 StopCoroutine(BabyMessageCoroutine);
+
+            DepopulateList();
+
         }
 
         private void OnEnable()
@@ -480,10 +481,10 @@ namespace AYellowpaper.SerializedCollections
 
         private void DepopulateList()
         {
-            //foreach (Transform child in ListParent)
-            //{
-            //    Destroy(child.gameObject);
-            //}
+            foreach (Transform child in BabySpeech_Parent.gameObject.transform)
+            {
+                Destroy(child.gameObject);
+            }
         }
 
         public void ReturnHome()

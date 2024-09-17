@@ -23,19 +23,22 @@ namespace AYellowpaper.SerializedCollections
         public List<AudioClip> bored_sounds;
 
         [Header("Buttons")]
-        public Button Watermelon;
-        public TextMeshProUGUI WatermelonText;
+        public Button Watermelon, Chocolate;
+        public TextMeshProUGUI WatermelonText, ChocolateText;
 
         private void OnEnable()
         {
             PrepareObject.OnPrepareItem += ChildBoredMeter;
             PrepareObject.OnWaterMelonPrepared += WaterMelonPrepared;
+
+            if (!Chocolate.interactable && GameManager.Instance.HasBought(BuyableItems.Chocolate))
+                ChocolateBought();
         }
 
         private void OnDisable()
         {
             PrepareObject.OnPrepareItem -= ChildBoredMeter;
-            PrepareObject.OnWaterMelonPrepared -= WaterMelonPrepared;
+            PrepareObject.OnWaterMelonPrepared += WaterMelonPrepared;
         }
 
 
@@ -73,13 +76,9 @@ namespace AYellowpaper.SerializedCollections
                 return;
 
             if (isMess)
-                Description_Text.text = "I have to have something to occupy @ while I clean.";
+                Description_Text.text = $"I have to have something to occupy {GameManager.Instance.ChildName} while I clean.";
             else
-                Description_Text.text = "Can chat for a bit or give @ a treat.";
-
-            string change = GameManager.Instance.SetChildName(Description_Text.text);
-            Description_Text.text = change;
-            Description_Text.ForceMeshUpdate();
+                Description_Text.text = $"Can chat for a bit or give {GameManager.Instance.ChildName} a treat.";
 
             Description.gameObject.SetActive(true);
 
@@ -126,6 +125,7 @@ namespace AYellowpaper.SerializedCollections
             if (mess == 1)
                 Mess[2].gameObject.SetActive(false);
 
+            Options.transform.GetChild(0).gameObject.SetActive(false);
             source.PlayDelayed(0.15f);
             FadeChildImage(temp_outline, true);
         }
@@ -145,6 +145,7 @@ namespace AYellowpaper.SerializedCollections
             }
 
             isMess = false;
+            Options.transform.GetChild(0).gameObject.SetActive(true);
             BoredMeter = 0;
 
             //Set temp outline
@@ -230,9 +231,15 @@ namespace AYellowpaper.SerializedCollections
 
         public void WaterMelonPrepared()
         {
-            var parent = Options.transform;
             Watermelon.interactable = true;
             WatermelonText.text = "Feed Watermelon";
+            WatermelonPrepared = true;
+        }
+
+        public void ChocolateBought()
+        {
+            Chocolate.interactable = true;
+            ChocolateText.text = "Feed Chocolate";
             WatermelonPrepared = true;
         }
 
