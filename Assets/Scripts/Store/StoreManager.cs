@@ -96,7 +96,6 @@ namespace AYellowpaper.SerializedCollections
                 StopCoroutine(BabyMessageCoroutine);
 
             DepopulateList();
-
         }
 
         private void OnEnable()
@@ -357,12 +356,10 @@ namespace AYellowpaper.SerializedCollections
             else if (BabySpeech_Parent.childCount >= 5)
             {
                 BabyMeter += 3;
-                removeTiem = true;
             }
             else if (BabySpeech_Parent.childCount >= 3)
             {
                 BabyMeter += 1;
-                removeTiem = true;
             }
 
             if (removeTiem)

@@ -13,10 +13,6 @@ namespace AYellowpaper.SerializedCollections
         private Sequence mySequence;
         public BuyableItems Item;
 
-        public delegate void ClickAction();
-        public static event ClickAction OnBuyItem;
-        public static event ClickAction OnBuyChocolate;
-
         private void Start()
         {
             outline = GetComponent<Image>();
@@ -41,10 +37,6 @@ namespace AYellowpaper.SerializedCollections
             {
                 StoreManager.Instance.SpawnParentMessage("I already have this.");
                 return;
-            }
-            else if (Item == BuyableItems.Chocolate)
-            {
-                OnBuyChocolate.Invoke();
             }
 
             mySequence = DOTween.Sequence();

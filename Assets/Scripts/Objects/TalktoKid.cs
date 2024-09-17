@@ -28,12 +28,15 @@ namespace AYellowpaper.SerializedCollections
 
         private void Start()
         {
+            SetNames();
             CreateTalking();
         }
 
         private void OnEnable()
         {
-            SetNames();
+            if (GameManager.Instance != null)
+                SetNames();
+
             GameManager.OnChangeChildName += SetNames;
         }
 
