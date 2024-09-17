@@ -6803,7 +6803,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &178263255
 RectTransform:
   m_ObjectHideFlags: 0
@@ -23776,7 +23776,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -155.39996, y: -169.79999}
-  m_SizeDelta: {x: 420, y: 0}
+  m_SizeDelta: {x: 420, y: 288.35822}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &694854162
 MonoBehaviour:
@@ -30635,8 +30635,9 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 188348786}
-        m_TargetAssemblyTypeName: MainMenuScript, Assembly-CSharp
-        m_MethodName: SetName
+        m_TargetAssemblyTypeName: AYellowpaper.SerializedCollections.MainMenuScript,
+          Assembly-CSharp
+        m_MethodName: SetParentName
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -37745,8 +37746,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_text
-      value: Examle Text Examle Text Examle Text Examle Text Examle Text Examle Text
-        Examle Text Examle Text Examle Text
+      value: Looking forward to anything?
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_fontSize
@@ -37770,7 +37770,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4244390197178379989, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -100
+      value: -500
+      objectReference: {fileID: 0}
+    - target: {fileID: 4244390197178379989, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 4244390197178379989, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -37778,7 +37782,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4244390197178379989, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -2.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4803291690563349963, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_Pivot.x
@@ -47868,11 +47872,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4244390197178379989, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_SizeDelta.x
-      value: -100
+      value: -500
       objectReference: {fileID: 0}
     - target: {fileID: 4244390197178379989, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_SizeDelta.y
-      value: -20
+      value: -30
       objectReference: {fileID: 0}
     - target: {fileID: 4244390197178379989, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -56976,7 +56980,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6768567560934446555, guid: 68652bdd4ff5bd54689b05f52f10e749, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6768567560934446555, guid: 68652bdd4ff5bd54689b05f52f10e749, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -56984,10 +56988,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6768567560934446555, guid: 68652bdd4ff5bd54689b05f52f10e749, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6768567560934446555, guid: 68652bdd4ff5bd54689b05f52f10e749, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6768567560934446555, guid: 68652bdd4ff5bd54689b05f52f10e749, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6768567560934446555, guid: 68652bdd4ff5bd54689b05f52f10e749, type: 3}
@@ -56997,9 +57005,13 @@ PrefabInstance:
     - target: {fileID: 6768567560934446555, guid: 68652bdd4ff5bd54689b05f52f10e749, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 1087096984}
+      objectReference: {fileID: 188348786}
     - target: {fileID: 6768567560934446555, guid: 68652bdd4ff5bd54689b05f52f10e749, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1087096984}
+    - target: {fileID: 6768567560934446555, guid: 68652bdd4ff5bd54689b05f52f10e749, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
       objectReference: {fileID: 959061892}
     - target: {fileID: 6768567560934446555, guid: 68652bdd4ff5bd54689b05f52f10e749, type: 3}
@@ -57011,15 +57023,23 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6768567560934446555, guid: 68652bdd4ff5bd54689b05f52f10e749, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6768567560934446555, guid: 68652bdd4ff5bd54689b05f52f10e749, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ShowScreen
       objectReference: {fileID: 0}
     - target: {fileID: 6768567560934446555, guid: 68652bdd4ff5bd54689b05f52f10e749, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: Play
+      value: ShowScreen
       objectReference: {fileID: 0}
     - target: {fileID: 6768567560934446555, guid: 68652bdd4ff5bd54689b05f52f10e749, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: Play
+      objectReference: {fileID: 0}
+    - target: {fileID: 6768567560934446555, guid: 68652bdd4ff5bd54689b05f52f10e749, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
       value: SetActive
       objectReference: {fileID: 0}
     - target: {fileID: 6768567560934446555, guid: 68652bdd4ff5bd54689b05f52f10e749, type: 3}
@@ -57028,18 +57048,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6768567560934446555, guid: 68652bdd4ff5bd54689b05f52f10e749, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: UnityEngine.AudioSource, UnityEngine
+      value: AYellowpaper.SerializedCollections.MainMenuScript, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6768567560934446555, guid: 68652bdd4ff5bd54689b05f52f10e749, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6768567560934446555, guid: 68652bdd4ff5bd54689b05f52f10e749, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6768567560934446555, guid: 68652bdd4ff5bd54689b05f52f10e749, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6768567560934446555, guid: 68652bdd4ff5bd54689b05f52f10e749, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6768567560934446555, guid: 68652bdd4ff5bd54689b05f52f10e749, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6768567560934446555, guid: 68652bdd4ff5bd54689b05f52f10e749, type: 3}
@@ -57049,17 +57077,21 @@ PrefabInstance:
     - target: {fileID: 6768567560934446555, guid: 68652bdd4ff5bd54689b05f52f10e749, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 178263254}
     - target: {fileID: 6768567560934446555, guid: 68652bdd4ff5bd54689b05f52f10e749, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6768567560934446555, guid: 68652bdd4ff5bd54689b05f52f10e749, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6768567560934446555, guid: 68652bdd4ff5bd54689b05f52f10e749, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 6768567560934446555, guid: 68652bdd4ff5bd54689b05f52f10e749, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     m_RemovedComponents:
@@ -61100,7 +61132,7 @@ MonoBehaviour:
     spoken: 0
   - topic: 0
     topic_title: Shopping
-    parent: When we leave, don't let go of the cart or my hand. Got it?"
+    parent: When we leave, don't let go of the cart or my hand. Got it?
     kid: Uh huh. I know, @.
     spoken: 0
   - topic: 0

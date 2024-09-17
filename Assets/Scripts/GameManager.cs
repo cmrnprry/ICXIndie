@@ -128,7 +128,7 @@ namespace AYellowpaper.SerializedCollections
         {
             ParentName = change;
 
-            OnChangeParent.Invoke();
+            OnChangeParent?.Invoke();
         }
 
         //sets string and invokes an action
@@ -137,7 +137,7 @@ namespace AYellowpaper.SerializedCollections
             previous = ChildName;
             ChildName = change;
 
-            OnChangeChildName.Invoke();
+            OnChangeChildName?.Invoke();
         }
 
         public void SetChildPronoun(string noun)
