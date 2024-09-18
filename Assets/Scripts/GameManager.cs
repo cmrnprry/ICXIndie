@@ -733,15 +733,32 @@ namespace AYellowpaper.SerializedCollections
         private IEnumerator ShowEndText()
         {
             var index = 1;
-            foreach(var pair in Ending_Text)
+            foreach (var pair in Ending_Text)
             {
                 //reset text and make it invisible
                 Ending_TextBox.alpha = 0;
                 Ending_TextBox.text = pair.Key;
                 Ending_TextBox.ForceMeshUpdate();
 
+                //See what size the text should be
+                Ending_TextBox.enableAutoSizing = true;
+
+                yield return new WaitForFixedUpdate();
+
+                var size = Ending_TextBox.fontSize;
+                Debug.Log(Ending_TextBox.fontSize);
+
+                yield return new WaitForFixedUpdate();
+
+                Ending_TextBox.enableAutoSizing = false;
+                Ending_TextBox.fontSize = size;
+                Debug.Log(Ending_TextBox.fontSize);
+
                 //Get the Text Info
                 TMP_TextInfo textInfo = Ending_TextBox.textInfo;
+                Ending_TextBox.text = "";
+                Ending_TextBox.alpha = 225;
+                Ending_TextBox.ForceMeshUpdate();
 
                 if (pair.Value != EndingActions.None)
                 {
@@ -798,35 +815,40 @@ namespace AYellowpaper.SerializedCollections
 
                 }
 
-                for (int ii = 0; ii <= Ending_TextBox.text.Length; ii++)
+                for (int ii = 0; ii <= pair.Key.Length; ii++)
                 {
-                    if (ii == Ending_TextBox.text.Length)
+                    if (ii == pair.Key.Length)
                     {
                         yield return new WaitForSeconds(1.5f);
                         continue;
                     }
 
+                    Ending_TextBox.text += pair.Key[ii];
+
+
                     // Get the index of the material used by the current character.
-                    int materialIndex = textInfo.characterInfo[ii].materialReferenceIndex;
+                    //int materialIndex = textInfo.characterInfo[ii].materialReferenceIndex;
 
-                    // Get the vertex colors of the mesh used by this text element (character or sprite).
-                    var newVertexColors = textInfo.meshInfo[materialIndex].colors32;
 
-                    // Get the index of the first vertex used by this text element.
-                    int vertexIndex = textInfo.characterInfo[ii].vertexIndex;
+                    //// Get the vertex colors of the mesh used by this text element (character or sprite).
+                    //var newVertexColors = textInfo.meshInfo[materialIndex].colors32;
 
-                    // Set all to full alpha
-                    newVertexColors[vertexIndex + 0].a = 255;
-                    newVertexColors[vertexIndex + 1].a = 255;
-                    newVertexColors[vertexIndex + 2].a = 255;
-                    newVertexColors[vertexIndex + 3].a = 255;
+                    //// Get the index of the first vertex used by this text element.
+                    //int vertexIndex = textInfo.characterInfo[ii].vertexIndex;
 
-                    Ending_TextBox.UpdateVertexData(TMP_VertexDataUpdateFlags.Colors32);
+                    //// Set all to full alpha
+                    //newVertexColors[vertexIndex + 0].a = 255;
+                    //newVertexColors[vertexIndex + 1].a = 255;
+                    //newVertexColors[vertexIndex + 2].a = 255;
+                    //newVertexColors[vertexIndex + 3].a = 255;
 
-                    yield return new WaitForSeconds(0.03f);
+                    //Ending_TextBox.UpdateVertexData(TMP_VertexDataUpdateFlags.Colors32);
+
+
+                    yield return new WaitForSeconds(0.015f);
                 }
 
-                Ending_TextBox.alpha = 225;
+                //Ending_TextBox.alpha = 225;
                 Ending_Continue.enabled = true;
                 IsWriting = (index != Ending_Text.Count);
 

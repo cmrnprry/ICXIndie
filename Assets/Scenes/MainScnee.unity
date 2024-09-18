@@ -819,10 +819,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_text
-      value: Buy anything useful, but try to be quick! Your child will ask for items
-        and your attention. Use the mouse to click and drag his speech bubbles off
-        screen to quell his questions. Ignore him for too long and he will throw
-        a tantrum!
+      value: "Buy anything useful, but try to be quick! Your child will ask for items
+        and your attention. \n\nUse the mouse to click and drag the speech bubbles
+        off screen to quell any questions. Ignore you child for too long and he will
+        throw a tantrum!"
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_fontSize
@@ -830,7 +830,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_fontSizeMax
-      value: 130
+      value: 52
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_fontSizeBase
@@ -866,7 +866,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4244390197178379989, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 915
+      value: 890
       objectReference: {fileID: 0}
     - target: {fileID: 4244390197178379989, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_SizeDelta.y
@@ -874,7 +874,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4244390197178379989, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -472.32
+      value: -467.65
       objectReference: {fileID: 0}
     - target: {fileID: 4244390197178379989, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -17013,8 +17013,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_text
-      value: You only have a certain amount of time to make the preparations. Every
-        action you take will take some amount of time. Manage it wisely!
+      value: "You only have a certain amount of time to make the preparations. Every
+        action you take will take some amount of time. \n\nManage it wisely!"
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_fontSize
@@ -17062,7 +17062,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4244390197178379989, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 915
+      value: 890
       objectReference: {fileID: 0}
     - target: {fileID: 4244390197178379989, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_SizeDelta.y
@@ -17070,7 +17070,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4244390197178379989, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -472.32
+      value: -467.65
       objectReference: {fileID: 0}
     - target: {fileID: 4244390197178379989, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -26524,9 +26524,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_text
-      value: Move to different areas of the house by clicking the door and selecting
-        where you want to go. You can also choose to go to the store to buy items
-        you may need.
+      value: "Move to different areas of the house by clicking the door and selecting
+        where you want to go. \n\nYou can also choose to go to the store to buy items
+        you may need."
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_fontSize
@@ -26570,7 +26570,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4244390197178379989, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 915
+      value: 890
       objectReference: {fileID: 0}
     - target: {fileID: 4244390197178379989, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_SizeDelta.y
@@ -26578,7 +26578,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4244390197178379989, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -472.32
+      value: -467.65
       objectReference: {fileID: 0}
     - target: {fileID: 4244390197178379989, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -30854,9 +30854,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_text
-      value: Use the mouse to click interactable objects. Objects that are interactable
-        will gain a yellow highlight on hover. Some items you may not have or will
-        need to be prepared beforehand.
+      value: 'Use the mouse to click interactable objects. Objects that are interactable
+        will gain a yellow highlight on hover.
+
+
+        Some items you may not have
+        or will need to be prepared beforehand.'
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_fontSize
@@ -30864,7 +30867,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_fontSizeMax
-      value: 130
+      value: 52
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_fontSizeBase
@@ -30872,7 +30875,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_enableAutoSizing
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_paragraphSpacing
@@ -34860,8 +34863,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_text
-      value: If you run out of time or end the day early, you can then see how the
-        night goes.
+      value: If you're satisfied with your preparations, you can choose to end the
+        day early. Night will come automatically if you run out of time.
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_fontSize
@@ -34872,8 +34875,20 @@ PrefabInstance:
       value: 130
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
+      propertyPath: m_lineSpacing
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
+      propertyPath: m_wordSpacing
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_fontSizeBase
       value: 52
+      objectReference: {fileID: 0}
+    - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
+      propertyPath: m_characterSpacing
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_enableAutoSizing
@@ -36397,8 +36412,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_text
-      value: 'While at the store, you can buy things that will help you prepare for
-        the full moon. Any item that is buyable will highlight yellow on hover. '
+      value: "While at the store, you can buy things that will help you prepare for
+        the full moon. Any item that is buyable will highlight yellow on hover. \n\nThe
+        cart and shopping list can be moved by clicking and dragging."
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_fontSize
@@ -36442,7 +36458,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4244390197178379989, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 915
+      value: 890
       objectReference: {fileID: 0}
     - target: {fileID: 4244390197178379989, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_SizeDelta.y
@@ -36450,7 +36466,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4244390197178379989, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -472.32
+      value: -467.65
       objectReference: {fileID: 0}
     - target: {fileID: 4244390197178379989, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -46067,7 +46083,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4244390197178379989, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 915
+      value: 890
       objectReference: {fileID: 0}
     - target: {fileID: 4244390197178379989, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_SizeDelta.y
@@ -46075,7 +46091,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4244390197178379989, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -472.32
+      value: -467.65
       objectReference: {fileID: 0}
     - target: {fileID: 4244390197178379989, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -51867,20 +51883,28 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_text
-      value: If you run out of time or end the day early, you can then see how the
-        night goes.
+      value: If you're satisfied with your preparations, you can choose to end the
+        day early. Night will come automatically if you run out of time.
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_fontSize
-      value: 52
+      value: 51.7
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_fontSizeMax
-      value: 130
+      value: 54
+      objectReference: {fileID: 0}
+    - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
+      propertyPath: m_lineSpacing
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_fontSizeBase
-      value: 52
+      value: 51.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
+      propertyPath: m_overflowMode
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_enableAutoSizing
@@ -51889,6 +51913,14 @@ PrefabInstance:
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_paragraphSpacing
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
+      propertyPath: m_horizontalMapping
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
+      propertyPath: m_wordWrappingRatios
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_HorizontalAlignment
@@ -51912,7 +51944,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4244390197178379989, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 915
+      value: 890
       objectReference: {fileID: 0}
     - target: {fileID: 4244390197178379989, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_SizeDelta.y
@@ -51920,7 +51952,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4244390197178379989, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -472.32
+      value: -467.65
       objectReference: {fileID: 0}
     - target: {fileID: 4244390197178379989, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -58760,16 +58792,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_text
-      value: 'While at the store, you can buy things that will help you prepare for
-        the full moon. Any item that is buyable will highlight yellow on hover. '
+      value: "While at the store, you can buy things that will help you prepare for
+        the full moon. Any item that is buyable will highlight yellow on hover. \n\nThe
+        cart and shopping list can be moved by clicking and dragging."
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_fontSize
-      value: 52
+      value: 50.35
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_fontSizeMax
-      value: 130
+      value: 52
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_fontSizeBase
@@ -58777,7 +58810,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_enableAutoSizing
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_paragraphSpacing
@@ -61417,9 +61450,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_text
-      value: To calm a tantrum, quickly drag all speech bubbles off screen, and buy
-        anything that he might want. Alternatively, you can just go home, but it
-        will take longer than when he's not crying.
+      value: "To calm a tantrum, quickly drag all speech bubbles off screen, and
+        buy anything that your child might want. \n\nAlternatively, you can choose
+        to go home, but it will take longer than when your child isn't crying."
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_fontSize
@@ -61427,7 +61460,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_fontSizeMax
-      value: 130
+      value: 52
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_fontSizeBase
@@ -61463,7 +61496,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4244390197178379989, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 915
+      value: 890
       objectReference: {fileID: 0}
     - target: {fileID: 4244390197178379989, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_SizeDelta.y
@@ -61471,7 +61504,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4244390197178379989, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -472.32
+      value: -467.65
       objectReference: {fileID: 0}
     - target: {fileID: 4244390197178379989, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -61847,9 +61880,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_text
-      value: Use the mouse to click interactable objects. Objects that are interactable
-        will gain a yellow highlight on hover. Some items you may not have or will
-        need to be prepared beforehand.
+      value: 'Use the mouse to click interactable objects. Objects that are interactable
+        will gain a yellow highlight on hover.
+
+
+        Some items you may not have
+        or will need to be prepared beforehand.'
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_fontSize
@@ -61893,7 +61929,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4244390197178379989, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 915
+      value: 890
       objectReference: {fileID: 0}
     - target: {fileID: 4244390197178379989, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_SizeDelta.y
@@ -61901,7 +61937,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4244390197178379989, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -472.32
+      value: -467.65
       objectReference: {fileID: 0}
     - target: {fileID: 4244390197178379989, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -62917,18 +62953,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_text
-      value: Buy anything useful, but try to be quick! Your child will ask for items
-        and your attention. Use the mouse to click and drag his speech bubbles off
-        screen to quell his questions. Ignore him for too long and he will throw
-        a tantrum!
+      value: "Buy anything useful, but try to be quick! Your child will ask for items
+        and your attention. \n\nUse the mouse to click and drag the speech bubbles
+        off screen to quell any questions. Ignore you child for too long and he will
+        throw a tantrum!"
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_fontSize
-      value: 52
+      value: 48.8
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_fontSizeMax
-      value: 130
+      value: 52
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_fontSizeBase
@@ -62936,7 +62972,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_enableAutoSizing
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_paragraphSpacing
@@ -66740,9 +66776,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_text
-      value: Move to different areas of the house by clicking the door and selecting
-        where you want to go. You can also choose to go to the store to buy items
-        you may need.
+      value: "Move to different areas of the house by clicking the door and selecting
+        where you want to go. \n\nYou can also choose to go to the store to buy items
+        you may need."
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_fontSize
@@ -66980,17 +67016,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_text
-      value: To calm a tantrum, quickly drag all speech bubbles off screen, and buy
-        anything that he might want. Alternatively, you can just go home, but it
-        will take longer than when he's not crying.
+      value: "To calm a tantrum, quickly drag all speech bubbles off screen, and
+        buy anything that your child might want. \n\nAlternatively, you can choose
+        to go home, but it will take longer than when your child isn't crying."
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_fontSize
-      value: 52
+      value: 50.85
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_fontSizeMax
-      value: 130
+      value: 52
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_fontSizeBase
@@ -66998,7 +67034,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_enableAutoSizing
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3389552489340447872, guid: a0b0829ad5689414faecc4ecc4f21ab9, type: 3}
       propertyPath: m_paragraphSpacing

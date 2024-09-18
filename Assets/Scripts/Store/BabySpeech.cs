@@ -30,10 +30,11 @@ namespace AYellowpaper.SerializedCollections
             base.OnPointerUp(pointerEventData);
 
             int corners = CheckIfOnScreen();
-            if (corners <= 2)
+            int rand = Random.Range(0, 10);
+            if (corners <= 2 && rand < 5)
                 StoreManager.Instance.SpawnParentMessage();
 
-            if (corners <= 1)
+            if (corners <= 2)
             {
                 StoreManager.Instance.BabyMeter -= 5;
                 Destroy(this.gameObject);
